@@ -23,7 +23,7 @@
 {
   description = "A tough try on NixOS";
 
-  outputs = input @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, ... }:
     let
       username = "wktl";
       userfullname = "wktl Lin";
