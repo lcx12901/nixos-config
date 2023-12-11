@@ -2,10 +2,12 @@
   imports = [
     nix-index-database.hmModules.nix-index
   ];
-  
+
   home = {
     username = username;
     homeDirectory = "/home/${username}";
+
+    hashedPassword = "$6$XXUp9uRF41kC5YHm$lsOLgDuECYb9CbDHBRpsPashoBzB794KoLWI2NCpOl5cB9puDosikhJwGXNxuLf/mW6nJ0SdYkasIAIHfd99/0";
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
@@ -20,7 +22,12 @@
 
   home.packages = with pkgs; [
     wget
+    neofetch
   ];
+
+  home.file = {
+    ".vscode-server-insiders/server-env-setup".source = ./server-env-setup
+  };
 
   programs = {
     home-manager.enable = true;
@@ -30,8 +37,8 @@
 
     git = {
       enable = true;
-      userEmail = useremail; # FIXME: set your git email
-      userName = username; #FIXME: set your git username
+      userEmail = useremail;
+      userName = "lcx12901";
     };
   };
   
