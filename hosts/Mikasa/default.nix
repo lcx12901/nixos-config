@@ -1,4 +1,4 @@
-{ username, inputs, pkgs, ...}:
+{ username, nixpkgs, pkgs, ...}:
 {
 
   time.timeZone = "Asia/Shanghai";
@@ -51,12 +51,12 @@
 
     registry = {
       nixpkgs = {
-        flake = inputs.nixpkgs;
+        flake = nixpkgs;
       };
     };
 
     nixPath = [
-      "nixpkgs=${inputs.nixpkgs.outPath}"
+      "nixpkgs=${nixpkgs.outPath}"
       "nixos-config=/etc/nixos/configuration.nix"
       "/nix/var/nix/profiles/per-user/root/channels"
     ];
