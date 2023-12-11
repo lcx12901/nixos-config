@@ -29,7 +29,7 @@
       userfullname = "wktl Lin";
       useremail = "wktl1991504424@gmail.com";
 
-      system = "x86_64-linux";
+      x64_system = "x86_64-linux";
       allSystems = [x64_system];
 
       nixosSystem = import ./lib/nixosSystem.nix;
