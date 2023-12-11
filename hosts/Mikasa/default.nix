@@ -29,6 +29,8 @@
 
   services.openssh.enable = true;
 
+  users.mutableUsers = false;
+
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
