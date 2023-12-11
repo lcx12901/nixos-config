@@ -23,6 +23,10 @@
     "d /home/${username}/.config 0755 ${username} users"
   ];
 
+  environment.systemPackages = with pkgs; [
+    wget
+  ];
+
   environment.enableAllTerminfo = true;
 
   security.sudo.wheelNeedsPassword = false;
