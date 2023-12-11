@@ -46,7 +46,7 @@
         {
           inherit username userfullname useremail;
           pkgs = import nixpkgs {
-            inherit system; # refer the `system` parameter form outer scope recursively
+            system = x64_system; # refer the `system` parameter form outer scope recursively
             # To use chrome, we need to allow the installation of non-free software
             config.allowUnfree = true;
           };
