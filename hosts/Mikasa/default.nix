@@ -1,4 +1,4 @@
-{ username, inputs, ...}:
+{ username, inputs, pkgs, ...}:
 {
 
   time.timeZone = "Asia/Shanghai";
