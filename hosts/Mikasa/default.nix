@@ -22,6 +22,8 @@
     ];
   };
 
+  programs.nix-ld.dev.enable = true;
+
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
