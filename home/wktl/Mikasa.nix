@@ -26,7 +26,7 @@
   ];
 
   home.file = {
-    ".vscode-server-insiders/server-env-setup".source = ./server-env-setup
+    ".vscode-server-insiders/server-env-setup".source = ./server-env-setup;
   };
 
   programs = {
