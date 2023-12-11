@@ -1,4 +1,4 @@
-{...} @ args:
+{ username, inputs, ...}:
 {
 
   time.timeZone = "Asia/Shanghai";
