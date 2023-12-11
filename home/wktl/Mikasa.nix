@@ -7,8 +7,6 @@
     username = username;
     homeDirectory = "/home/${username}";
 
-    hashedPassword = "$6$XXUp9uRF41kC5YHm$lsOLgDuECYb9CbDHBRpsPashoBzB794KoLWI2NCpOl5cB9puDosikhJwGXNxuLf/mW6nJ0SdYkasIAIHfd99/0";
-
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
     # when a new Home Manager release introduces backwards

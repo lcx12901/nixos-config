@@ -34,6 +34,7 @@
     extraGroups = [
       "wheel"
     ];
+    hashedPassword = "$6$XXUp9uRF41kC5YHm$lsOLgDuECYb9CbDHBRpsPashoBzB794KoLWI2NCpOl5cB9puDosikhJwGXNxuLf/mW6nJ0SdYkasIAIHfd99/0";
   };
 
   programs.nix-ld.dev.enable = true;
