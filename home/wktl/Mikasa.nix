@@ -1,4 +1,8 @@
 { username, useremail, nix-index-database, pkgs, ... }: {
+  imports = [
+    nix-index-database.hmModules.nix-index
+  ];
+  
   home = {
     username = username;
     homeDirectory = "/home/${username}";
