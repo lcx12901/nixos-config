@@ -74,6 +74,11 @@
   # WSL 比其他任何东西都更接近容器
   boot.isContainer = true;
 
+  environment.etc.hosts.enable = false;
+  environment.etc."resolv.conf".enable = false;
+
+  networking.dhcpcd.enable = false;
+
   nix = {
     settings = {
       trusted-users = [username];
