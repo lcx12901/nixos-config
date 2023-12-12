@@ -1,5 +1,5 @@
 {
-  import = [
+  imports = [
     ./locale.nix
     ./fish.nix
     ./nix.nix

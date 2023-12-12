@@ -1,6 +1,6 @@
 { username, nixpkgs, pkgs, ...}:
 {
-  import = [
+  imports = [
     ../common/global
     ../common/wsl.nix
   ];
