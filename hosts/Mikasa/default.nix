@@ -71,14 +71,12 @@
     docker-desktop.enable = false;
   };
 
+  # WSL 比其他任何东西都更接近容器
+  boot.isContainer = true;
+
   nix = {
     settings = {
       trusted-users = [username];
-      # FIXME: use your access tokens from secrets.json here to be able to clone private repos on GitHub and GitLab
-      # access-tokens = [
-      #   "github.com=${secrets.github_token}"
-      #   "gitlab.com=OAuth2:${secrets.gitlab_token}"
-      # ];
 
       accept-flake-config = true;
       auto-optimise-store = true;
