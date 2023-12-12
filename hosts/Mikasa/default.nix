@@ -65,6 +65,8 @@
       { src = "${coreutils}/bin/readlink"; }
     ];
 
+    nativeSystemd = true;
+
     # Enable integration with Docker Desktop (needs to be installed)
     docker-desktop.enable = false;
   };
@@ -81,18 +83,6 @@
       accept-flake-config = true;
       auto-optimise-store = true;
     };
-
-    registry = {
-      nixpkgs = {
-        flake = nixpkgs;
-      };
-    };
-
-    nixPath = [
-      "nixpkgs=${nixpkgs.outPath}"
-      "nixos-config=/etc/nixos/configuration.nix"
-      "/nix/var/nix/profiles/per-user/root/channels"
-    ];
 
     package = pkgs.nixFlakes;
     extraOptions = ''experimental-features = nix-command flakes'';
