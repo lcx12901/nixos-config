@@ -1,4 +1,4 @@
-{ username, nixpkgs, pkgs, ...}:
+{ username, pkgs, ...}:
 {
   imports = [
     ../common/global
