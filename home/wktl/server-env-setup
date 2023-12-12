@@ -13,7 +13,7 @@ PATH=$PATH:/run/current-system/sw/bin/
 NIXOS_VERSION=$(nixos-version | cut -d "." -f1,2)
 echo "NIXOS_VERSION detected as \"$NIXOS_VERSION\""
 
-NIXPKGS_BRANCH=nixos-$NIXOS_VERSION
+NIXPKGS_BRANCH=nixos-unstable
 PKGS_EXPRESSION=nixpkgs/$NIXPKGS_BRANCH#pkgs
 
 # Get directory where this shell script is located
