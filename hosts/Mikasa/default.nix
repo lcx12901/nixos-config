@@ -96,6 +96,19 @@
     };
   };
 
+  # Disable systemd units that don't make sense on WSL
+  systemd.services."serial-getty@ttyS0".enable = false;
+  systemd.services."serial-getty@hvc0".enable = false;
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@".enable = false;
+
+  systemd.services.firewall.enable = false;
+  systemd.services.systemd-resolved.enable = false;
+  systemd.services.systemd-udevd.enable = false;
+
+  # Don't allow emergency mode, because we don't have a console.
+  systemd.enableEmergencyMode = false;
+
 
   system.stateVersion = "23.05";
 }
