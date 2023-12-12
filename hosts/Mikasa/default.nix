@@ -49,7 +49,7 @@
     hashedPassword = "$6$XXUp9uRF41kC5YHm$lsOLgDuECYb9CbDHBRpsPashoBzB794KoLWI2NCpOl5cB9puDosikhJwGXNxuLf/mW6nJ0SdYkasIAIHfd99/0";
   };
 
-  programs.nix-ld.dev.enable = true;
+  programs.nix-ld.enable = true;
 
   wsl = {
     enable = true;
@@ -58,6 +58,12 @@
     wslConf.network.generateHosts = false;
     defaultUser = username;
     startMenuLaunchers = true;
+
+    extraBin = with pkgs; [
+      { src = "${coreutils}/bin/uname"; }
+      { src = "${coreutils}/bin/dirname"; }
+      { src = "${coreutils}/bin/readlink"; }
+    ];
 
     # Enable integration with Docker Desktop (needs to be installed)
     docker-desktop.enable = false;
