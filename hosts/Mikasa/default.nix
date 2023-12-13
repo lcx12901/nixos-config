@@ -5,6 +5,8 @@
     ../common/wsl.nix
   ];
 
+  # time.timeZone = "Asia/Shanghai";
+
   networking.hostName = "Mikasa";
 
   systemd.tmpfiles.rules = [
