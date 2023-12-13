@@ -4,5 +4,6 @@
     ./fish.nix
     ./nix.nix
     ./nix-ld.nix
+    ./timeZone.nix
   ];
 }
