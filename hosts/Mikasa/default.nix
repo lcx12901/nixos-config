@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     wget
+    vim
   ];
 
   security.sudo.wheelNeedsPassword = false;
