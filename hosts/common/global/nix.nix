@@ -6,6 +6,7 @@
       auto-optimise-store = true;
       warn-dirty = false;
     };
+    optimise.automatic = true;
     package = pkgs.nixFlakes;
     extraOptions = ''experimental-features = nix-command flakes'';
     gc = {
