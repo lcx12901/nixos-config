@@ -1,4 +1,4 @@
-{ username, pkgs, ...}:
+{ username, pkgs, agenix, ...}:
 {
   imports = [
     ../common/global
@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     wget
     vim
+    agenix.packages.${pkgs.system}.default
   ];
 
   security.sudo.wheelNeedsPassword = false;

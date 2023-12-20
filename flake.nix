@@ -23,7 +23,7 @@
 {
   description = "A tough try on NixOS";
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, agenix, ... }:
     let
       username = "wktl";
       userfullname = "wktl Lin";
@@ -97,5 +97,7 @@
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix.url = "github:ryantm/agenix";
   };
 }
