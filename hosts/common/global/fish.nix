@@ -9,6 +9,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    fishPlugins.pure
+    fishPlugins.z
+    fishPlugins.grc
+    grc
+    fishPlugins.autopair
   ];
 }
