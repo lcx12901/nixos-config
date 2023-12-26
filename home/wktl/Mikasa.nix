@@ -1,6 +1,7 @@
 { username, useremail, nix-index-database, pkgs, ... }: {
   imports = [
     nix-index-database.hmModules.nix-index
+    ./global
   ];
 
   home = {
@@ -31,12 +32,6 @@
     nix-index.enable = true;
     nix-index.enableZshIntegration = true;
     nix-index-database.comma.enable = true;
-
-    git = {
-      enable = true;
-      userEmail = useremail;
-      userName = "lcx12901";
-    };
   };
   
 }

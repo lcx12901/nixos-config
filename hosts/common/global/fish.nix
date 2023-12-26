@@ -9,6 +9,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # fish plugins
     fishPlugins.z
     fishPlugins.grc
     grc

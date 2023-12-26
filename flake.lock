@@ -219,17 +219,34 @@
         ]
       },
       "locked": {
-        "lastModified": 1703368619,
-        "narHash": "sha256-ZGPMYL7FMA6enhuwby961bBANmoFX14EA86m2/Jw5Jo=",
+        "lastModified": 1703527373,
+        "narHash": "sha256-AjypRssRtS6F3xkf7rE3/bXkIF2WJOZLbTIspjcE1zM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a2523ea0343b056ba240abbac90ab5f116a7aa7b",
+        "rev": "80679ea5074ab7190c4cce478c600057cfb5edae",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
         "type": "github"
+      }
+    },
+    "mysecrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1703570152,
+        "narHash": "sha256-YdDvg8r8z5t50HubBDvQINV2QfpXO2ftRMffpdj6Dcw=",
+        "ref": "refs/heads/master",
+        "rev": "e6002ddc847f91d0649674ef9480bb1b2eebd3fb",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
       }
     },
     "nix-index-database": {
@@ -281,11 +298,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1703211095,
-        "narHash": "sha256-Mne3a6cP3XJrWxrCXtz5XkfC+9NQsMV/QpOESvjKt6c=",
+        "lastModified": 1703521177,
+        "narHash": "sha256-V95s2ypDpdaFGbeG3pvazEE7qdjwZknoauv89DJQvz0=",
         "owner": "nix-community",
         "repo": "NixOS-WSL",
-        "rev": "04816e47a012515f45a2e5d491a558b538806d74",
+        "rev": "ec53b11f0c78572a2b0b5263ae1c46293daaf55f",
         "type": "github"
       },
       "original": {
@@ -362,11 +379,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1703466531,
-        "narHash": "sha256-oXt1pXz3Mo7SV+0NlQTzsMn4YD+mkpWcMbi/deMgtxM=",
+        "lastModified": 1703573551,
+        "narHash": "sha256-pzReTgPZbilN/jXNe59LSRa5Q02wi68XcQj1jn1/YJI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0a9473eec8f1a18bd2c42dbaecbad3410f044475",
+        "rev": "a961113c09bda61f82f29979f1fa24989ac005e4",
         "type": "github"
       },
       "original": {
@@ -427,6 +444,7 @@
         "agenix": "agenix",
         "daeuniverse": "daeuniverse",
         "home-manager": "home-manager_2",
+        "mysecrets": "mysecrets",
         "nix-index-database": "nix-index-database",
         "nix-ld": "nix-ld",
         "nixos-wsl": "nixos-wsl",
