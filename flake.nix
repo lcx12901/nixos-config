@@ -42,6 +42,14 @@
         home-module = import ./home/wktl/Mikasa.nix;
       };
 
+      Nezuko_modules = {
+        nixos-modules = [
+          nixos-wsl.nixosModules.wsl
+          ./hosts/Nezuko
+        ];
+        home-module = import ./home/wktl/Nezuko.nix;
+      };
+
       x64_specialArgs =
         {
           inherit username userfullname useremail;
@@ -62,7 +70,10 @@
           specialArgs = x64_specialArgs;
         };
       in {
+        # WSL
         Mikasa = nixosSystem (Mikasa_modules // base_args);
+        # VM
+        Nezuko = nixosSystem (Nezuko_modules // base_args);
       };
 
       # format the nix code in this flake
@@ -96,10 +107,6 @@
     nix-ld = {
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    daeuniverse = {
-      url = "github:daeuniverse/flake.nix";
     };
 
     agenix = {
