@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   services.btrfs = {
     autoScrub = {
       enable = true;
