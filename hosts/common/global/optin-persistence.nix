@@ -1,6 +1,6 @@
-{ lib, inputs, config, ... }: {
+{ lib, specialArgs, config, ... }: {
   imports = [
-    inputs.impermanence.nixosModules.impermanence
+    specialArgs.impermanence.nixosModules.impermanence
   ];
 
   environment.persistence = {
