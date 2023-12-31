@@ -16,8 +16,6 @@ in
       ++ [
         specialArgs.nix-ld.nixosModules.nix-ld
         specialArgs.agenix.nixosModules.default
-        # specialArgs.daeuniverse.nixosModules.dae
-        specialArgs.daeuniverse.nixosModules.daed
         {
           # make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.
           nix.registry.nixpkgs.flake = nixpkgs;
