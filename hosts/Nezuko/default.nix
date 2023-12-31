@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
 
     ../common/global
-    ../common/global/optin-persistence.nix
+    # ../common/global/optin-persistence.nix
 
     ../common/users/wktl
 
