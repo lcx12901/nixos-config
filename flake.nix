@@ -99,6 +99,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hardware.url = "github:nixos/nixos-hardware";
+
+    impermanence.url = "github:nix-community/impermanence";
+
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -116,9 +120,9 @@
 
     # it's a private repository, use ssh protocol to authenticate via ssh-agent/ssh-key, and shallow clone to save time
     # need system key, by sudo ssh-keygen -f /etc/ssh/ssh_host_key -N '' -t rsa to change  
-    mysecrets = {
-      url = "git+ssh://git@github.com/lcx12901/nix-secrets.git?shallow=1";
-      flake = false;
-    };
+    # mysecrets = {
+    #   url = "git+ssh://git@github.com/lcx12901/nix-secrets.git?shallow=1";
+    #   flake = false;
+    # };
   };
 }

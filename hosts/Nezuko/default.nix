@@ -1,8 +1,10 @@
 {
-
   imports = [
+    ./hardware-configuration.nix
+
     ../common/global
     ../common/users/wktl
+    ../common/optional/brtfs.nix
     ../common/optional/systemd-boot.nix
   ];
 
