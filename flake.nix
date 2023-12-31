@@ -44,7 +44,6 @@
 
       Nezuko_modules = {
         nixos-modules = [
-          nixos-wsl.nixosModules.wsl
           ./hosts/Nezuko
         ];
         home-module = import ./home/wktl/Nezuko.nix;
