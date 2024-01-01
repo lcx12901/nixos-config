@@ -4,7 +4,7 @@
   ];
 
   environment.persistence = {
-    "/persist" = {
+    "/persistent" = {
       hideMounts = true;
       directories = [
         "/etc/ssh"
