@@ -52,6 +52,7 @@
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/12CE-A600";
       fsType = "vfat";
+      neededForBoot = true;
     };
 
   swapDevices = [ { device = "/swap/swapfile"; } ];
