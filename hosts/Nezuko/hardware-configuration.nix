@@ -8,45 +8,45 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=root compress=zstd noatime" ];
+      options = [ "subvol=root" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=home compress=zstd noatime" ];
+      options = [ "subvol=home" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=nix compress=zstd noatime" ];
+      options = [ "subvol=nix" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/persist" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=persist compress=zstd noatime" ];
+      options = [ "subvol=persist" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=log compress=zstd noatime" ];
+      options = [ "subvol=log" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/306e1a2a-4dfc-4927-bbfe-8bcff2fbcc37";
+    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
-      options = [ "subvol=swap noatime" ];
+      options = [ "subvol=swap" "noatime" ];
     };
 
   fileSystems."/boot" =
