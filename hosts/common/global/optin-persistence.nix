@@ -13,10 +13,6 @@
         "/var/lib"
       ];
 
-      files = [
-        "/etc/systemd/system/ddns-go.service"
-      ];
-
       users.wktl = {
         directories = [
           # ".local/share"
