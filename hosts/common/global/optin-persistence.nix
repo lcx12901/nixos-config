@@ -6,15 +6,22 @@
   environment.persistence = {
     "/persist" = {
       hideMounts = true;
-      # directories = [
-      #   "/var/log"
-      #   "/var/lib"
-      # ];
+      directories = [
+        "/etc/ssh"
+        "/var/log"
+        "/var/lib"
+      ];
 
       users.wktl = {
         directories = [
           # ".local/share"
           # ".local/state"
+          "nixos-config"
+          
+          {
+            directory = ".ssh";
+            mode = "0700";
+          }
         ];
       };
     };
