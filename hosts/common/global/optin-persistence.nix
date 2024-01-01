@@ -7,11 +7,8 @@
     "/persist" = {
       hideMounts = true;
       directories = [
-        "/var/lib/systemd"
-        "/var/lib/nixos"
-        "/srv"
         "/var/log"
-        "/etc/ssh"
+        "/var/lib"
       ];
 
       users.wktl = {

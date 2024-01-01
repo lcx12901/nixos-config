@@ -38,19 +38,19 @@
   };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+    { device = "/dev/disk/by-uuid/eb86d917-561f-431d-bc4a-dbce38097963";
       fsType = "btrfs";
       options = [ "subvol=@nix" "noatime" "compress-force=zstd:1" ];
     };
 
   fileSystems."/tmp" =
-    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+    { device = "/dev/disk/by-uuid/eb86d917-561f-431d-bc4a-dbce38097963";
       fsType = "btrfs";
       options = [ "subvol=@tmp" ];
     };
 
   fileSystems."/persistent" =
-    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+    { device = "/dev/disk/by-uuid/eb86d917-561f-431d-bc4a-dbce38097963";
       fsType = "btrfs";
       options = [ "subvol=@persistent" "compress-force=zstd:1" ];
       # impermanence's data is required for booting.
@@ -58,13 +58,13 @@
     };
 
   fileSystems."/snapshots" =
-    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+    { device = "/dev/disk/by-uuid/eb86d917-561f-431d-bc4a-dbce38097963";
       fsType = "btrfs";
       options = [ "subvol=@snapshots" "compress-force=zstd:1" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+    { device = "/dev/disk/by-uuid/eb86d917-561f-431d-bc4a-dbce38097963";
       fsType = "btrfs";
       options = [ "subvol=@swap" "ro" ];
     };
@@ -80,7 +80,7 @@
   };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9FD5-2466";
+    { device = "/dev/disk/by-uuid/7942-B55E";
       fsType = "vfat";
     };
 
