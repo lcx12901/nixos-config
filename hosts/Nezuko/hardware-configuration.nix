@@ -8,10 +8,14 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+
+  # clear /tmp on boot to get a stateless /tmp directory.
+  boot.tmp.cleanOnBoot = true;
 
   # supported fil systems, so we can mount any removable disks with these filesystems
   boot.supportedFilesystems = [
@@ -24,53 +28,65 @@
     "cifs" # mount windows share
   ];
 
-  # clear /tmp on boot to get a stateless /tmp directory.
-  boot.tmp.cleanOnBoot = true;
-
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
-      fsType = "btrfs";
-      options = [ "subvol=root" "compress=zstd" "noatime" ];
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
-      fsType = "btrfs";
-      options = [ "subvol=home" "compress=zstd" "noatime" ];
-    };
+  # equal to `mount -t tmpfs tmpfs /`
+  fileSystems."/" = {
+    device = "tmpfs";
+    fsType = "tmpfs";
+    # set mode to 755, otherwise systemd will set it to 777, which cause problems.
+    # relatime: Update inode access times relative to modify or change time.
+    options = ["relatime" "mode=755"];
+  };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
+    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
       fsType = "btrfs";
-      options = [ "subvol=nix" "compress=zstd" "noatime" ];
+      options = [ "subvol=@nix" "noatime" "compress-force=zstd:1" ];
     };
 
-  fileSystems."/persist" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
+  fileSystems."/tmp" =
+    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
       fsType = "btrfs";
-      options = [ "subvol=persist" "compress=zstd" "noatime" ];
+      options = [ "subvol=@tmp" ];
+    };
+
+  fileSystems."/persistent" =
+    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
+      fsType = "btrfs";
+      options = [ "subvol=@persistent" "compress-force=zstd:1" ];
+      # impermanence's data is required for booting.
       neededForBoot = true;
     };
 
-  fileSystems."/var/log" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
+  fileSystems."/snapshots" =
+    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
       fsType = "btrfs";
-      options = [ "subvol=log" "compress=zstd" "noatime" ];
+      options = [ "subvol=@snapshots" "compress-force=zstd:1" ];
     };
 
   fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
+    { device = "/dev/disk/by-uuid/90d9f32c-99bb-4b7b-b46e-54a9cc6b4525";
       fsType = "btrfs";
-      options = [ "subvol=swap" "noatime" ];
+      options = [ "subvol=@swap" "ro" ];
     };
+  
+  # remount swapfile in read-write mode
+  fileSystems."/swap/swapfile" = {
+    # the swapfile is located in /swap subvolume, so we need to mount /swap first.
+    depends = ["/swap"];
+
+    device = "/swap/swapfile";
+    fsType = "none";
+    options = ["bind" "rw"];
+  };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/12CE-A600";
+    { device = "/dev/disk/by-uuid/9FD5-2466";
       fsType = "vfat";
-      neededForBoot = true;
     };
 
-  swapDevices = [ { device = "/swap/swapfile"; } ];
+  swapDevices = [ 
+    { device = "/swap/swapfile"; }
+  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
