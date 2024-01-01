@@ -13,9 +13,12 @@
       ];
 
       users.wktl = {
-        "nixos-config"
-        ".local/share"
-        ".local/state"
+        directories = [
+          "nixos-config"
+        
+          ".local/share"
+          ".local/state"
+        ];
       };
     };
   };
