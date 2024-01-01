@@ -14,8 +14,6 @@
 
       users.wktl = {
         directories = [
-          "nixos-config"
-        
           ".local/share"
           ".local/state"
         ];

@@ -13,6 +13,20 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  # supported fil systems, so we can mount any removable disks with these filesystems
+  boot.supportedFilesystems = [
+    "ext4"
+    "btrfs"
+    "xfs"
+    "ntfs"
+    "fat"
+    "vfat"
+    "cifs" # mount windows share
+  ];
+
+  # clear /tmp on boot to get a stateless /tmp directory.
+  boot.tmp.cleanOnBoot = true;
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/fc0e90d8-3e14-4c51-b99f-2001c29e0b30";
       fsType = "btrfs";
