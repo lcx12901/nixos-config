@@ -6,15 +6,15 @@
   environment.persistence = {
     "/persist" = {
       hideMounts = true;
-      directories = [
-        "/var/log"
-        "/var/lib"
-      ];
+      # directories = [
+      #   "/var/log"
+      #   "/var/lib"
+      # ];
 
       users.wktl = {
         directories = [
-          ".local/share"
-          ".local/state"
+          # ".local/share"
+          # ".local/state"
         ];
       };
     };
