@@ -5,11 +5,18 @@
 
   environment.persistence = {
     "/persist" = {
+      hideMounts = true;
       directories = [
         "/var/lib/systemd"
         "/var/lib/nixos"
         "/srv"
       ];
+
+      users.wktl = {
+        "nixos-config"
+        ".local/share"
+        ".local/state"
+      };
     };
   };
 }
