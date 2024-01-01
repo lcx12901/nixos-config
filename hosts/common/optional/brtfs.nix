@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{
   services.btrfs = {
     autoScrub = {
       enable = true;
@@ -7,7 +7,7 @@
     };
   };
 
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
+  boot.initrd.postDeviceCommands = ''
     mkdir /mnt
     mount -t btrfs /dev/nvme0n1p2 /mnt
     btrfs subvolume delete /mnt/root
