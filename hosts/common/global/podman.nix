@@ -16,7 +16,7 @@ in
     ddns-go = {
       image = "jeessy/ddns-go:latest";
       autoStart = true;
-      extraOptions = [ "--network=host" ];
+      extraOptions = [ "--network=host" "--pull=always" ];
     };
   };
 }

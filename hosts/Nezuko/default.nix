@@ -9,7 +9,6 @@
 
     ../common/optional/brtfs.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/ddns-go.nix
   ];
 
   networking.hostName = "Nezuko";
