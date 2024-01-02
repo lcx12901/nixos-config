@@ -150,6 +150,23 @@
         "type": "github"
       }
     },
+    "mysecrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1704183851,
+        "narHash": "sha256-Y8gd+eGy17YGZ65BvOK1jSz/irvCCkr2N0oRDYY+wCs=",
+        "ref": "refs/heads/master",
+        "rev": "a73f558d1adf463c97ad2a167297c3e985c8860e",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
+      }
+    },
     "nix-index-database": {
       "inputs": {
         "nixpkgs": [
@@ -230,11 +247,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1704160731,
-        "narHash": "sha256-EKeiL8TgXcoOVfbc0QUpY0nCw1IIiQtWNWB57/dMAx4=",
+        "lastModified": 1704181006,
+        "narHash": "sha256-ge4nigu1r4zU+mIf1J8jmr4/qXCDJdGItPVXPpAsJR8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "820a4b9b2f9111fb71d41794b38ffd46bb7e81ed",
+        "rev": "f3ab696ba7cb134655e10046fa20a0c416fa0870",
         "type": "github"
       },
       "original": {
@@ -249,6 +266,7 @@
         "hardware": "hardware",
         "home-manager": "home-manager_2",
         "impermanence": "impermanence",
+        "mysecrets": "mysecrets",
         "nix-index-database": "nix-index-database",
         "nix-ld": "nix-ld",
         "nixos-wsl": "nixos-wsl",
