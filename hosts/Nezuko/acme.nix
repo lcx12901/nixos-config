@@ -5,6 +5,7 @@
     certs."nezuko.lincx.top" = {
       domain = "*.nezuko.lincx.top";
       dnsProvider = "cloudflare";
+      dnsResolver = "1.1.1.1:53";
       credentialsFile = config.age.secrets."cloudflareGlobalAPIKey.age".path;
     };
   };
