@@ -25,6 +25,9 @@
             mode = "0700";
           }
         ];
+        files = [
+          ".config/gh/hosts.yml"
+        ];
       };
     };
   };
