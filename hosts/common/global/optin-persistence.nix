@@ -18,6 +18,7 @@
           # ".local/share"
           # ".local/state"
           "nixos-config"
+          "nix-secrets"
           
           {
             directory = ".ssh";
