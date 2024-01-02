@@ -35,7 +35,6 @@ in {
     };
     "cloudflareGlobalApiKey.age" = {
       file = "${mysecrets}/cloudflareGlobalApiKey.age";
-      mode = "0600";
       owner = username;
     };
   };
