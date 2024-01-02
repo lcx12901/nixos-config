@@ -33,8 +33,8 @@ in {
       mode = "0600";
       owner = username;
     };
-    "cloudflareGlobalApiKey.age" = {
-      file = "${mysecrets}/cloudflareGlobalApiKey.age";
+    "cloudflareGlobalAPIKey.age.age" = {
+      file = "${mysecrets}/cloudflareGlobalAPIKey.age.age";
       owner = username;
     };
   };
