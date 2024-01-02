@@ -11,6 +11,8 @@
         "/etc/ssh"
         "/var/log"
         "/var/lib"
+        "/run/agenix"
+        "/run/agenix.d"
       ];
 
       users.wktl = {
