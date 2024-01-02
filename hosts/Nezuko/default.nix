@@ -9,6 +9,8 @@
 
     ../common/optional/brtfs.nix
     ../common/optional/systemd-boot.nix
+
+    ./acme.nix
   ];
 
   networking.hostName = "Nezuko";
