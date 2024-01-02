@@ -7,5 +7,6 @@
     ./fish.nix
     ./openssh.nix
     ./packages.nix
+    ./podman.nix
   ];
 }
