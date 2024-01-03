@@ -39,6 +39,7 @@ in {
     };
     "config.dae" = {
       file = "${mysecrets}/dae.config.age";
+      symlink = true;
       owner = username;
     };
   };
