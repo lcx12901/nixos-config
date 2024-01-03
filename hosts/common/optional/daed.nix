@@ -2,7 +2,7 @@
   services.daed = {
     enable = true;
     configDir = "/etc/daed";
-    listen = "0.0.0.0:2023";
+    listen = "::2023";
     openFirewall = {
       enable = true;
       port = 12345;
