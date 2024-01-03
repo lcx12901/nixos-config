@@ -81,11 +81,11 @@
     },
     "hardware": {
       "locked": {
-        "lastModified": 1704124233,
-        "narHash": "sha256-lBHs/yUtkcGgapHRS31oOb5NqvnVrikvktGOW8rK+sE=",
+        "lastModified": 1704228290,
+        "narHash": "sha256-M3y1ADeFVdPTV/bJXvO5QHDYFujzpJNblkfIgECTxGc=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "f752581d6723a10da7dfe843e917a3b5e4d8115a",
+        "rev": "5bf829d72ccdc05be3343afd81bd922d5748ef4e",
         "type": "github"
       },
       "original": {
@@ -153,10 +153,10 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1704208557,
-        "narHash": "sha256-Rea53sECzH/TZn7rbygu1Zndbd+jcdTHaHZAYHu0Rqw=",
+        "lastModified": 1704212971,
+        "narHash": "sha256-D2kqo1g2r7gzYH87AsfvvQqybGzAv5GYWcubkLLoPVg=",
         "ref": "refs/heads/master",
-        "rev": "b374f204d5c1b49e8cf35bfb7f8e04a949e860cd",
+        "rev": "aa4aab7f57f027349c620000a32c2509ddcb3f6d",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
@@ -247,11 +247,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1704199801,
-        "narHash": "sha256-sg+RrgeW6sTn8x4XKLtz9Yxczq1gbHMf3O3OWTY6HNI=",
+        "lastModified": 1704243841,
+        "narHash": "sha256-hRrEptcr8303fpzxrvfzxEbS/FvmlXA4Nb/jc9GzIxI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "6a4c627e8b6504f328d60a0cb1f373f6f6e3f40e",
+        "rev": "bd8edaefd4b718f18a54b50dfc019d4984165bd4",
         "type": "github"
       },
       "original": {

@@ -19,6 +19,7 @@
           # ".local/state"
           "nixos-config"
           "nix-secrets"
+          ".containers"
           
           {
             directory = ".ssh";
