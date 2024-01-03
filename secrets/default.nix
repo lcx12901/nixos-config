@@ -40,6 +40,6 @@ in {
     "config.dae" = {
       file = "${mysecrets}/dae.config.age";
       owner = username;
-    }
+    };
   };
 }
