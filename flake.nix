@@ -44,7 +44,7 @@
 
       Nezuko_modules = {
         nixos-modules = [
-          daeuniverse.nixosModules.daed
+          daeuniverse.nixosModules.dae
           ./hosts/Nezuko
         ];
         home-module = import ./home/wktl/Nezuko.nix;
