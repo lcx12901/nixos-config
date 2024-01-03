@@ -1,4 +1,4 @@
-{ config, daeuniverse, ... }: {
+{ config, pkgs, daeuniverse, ... }: {
   services.dae = {
     enable = true;
     disableTxChecksumIpGeneric = false;
