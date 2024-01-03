@@ -2,6 +2,7 @@
 let
   dockerEnabled = config.virtualisation.docker.enable;
   hasOptinPersistence = config.environment ? "persistence";
+  volumesRoot = "${lib.optionalString hasOptinPersistence "/persistent"}/home/${username}/.containers";
 in
 {
   virtualisation.podman = {
@@ -17,7 +18,7 @@ in
     ddns-go = {
       image = "jeessy/ddns-go:latest";
       autoStart = true;
-      volumes = [ "${lib.optionalString hasOptinPersistence "/persistent"}/home/${username}/.containers/ddns-go:/root" ];
+      volumes = [ "${volumesRoot}/ddns-go:/root" ];
       extraOptions = [ "--network=host" "--pull=newer" ];
     };
   };
