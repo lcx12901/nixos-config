@@ -37,8 +37,8 @@ in {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
     };
-    "config.dae" = {
-      file = "${mysecrets}/dae.config.age";
+    "sing-box.config.age" = {
+      file = "${mysecrets}/sing-box.config.age";
     };
   };
 }
