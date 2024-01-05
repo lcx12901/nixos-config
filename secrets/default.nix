@@ -43,10 +43,4 @@ in {
       owner = username;
     };
   };
-
-  environment.etc = {
-    "sing-box/config.json" = {
-      source = config.age.secrets."sing-box-config".path;
-    };
-  };
 }
