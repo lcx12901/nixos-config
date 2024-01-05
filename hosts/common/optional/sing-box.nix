@@ -6,6 +6,6 @@
 
   services.sing-box = {
     enable = true;
-    settings = "${config.age.secrets.sing-box.config.dae.path}";
+    settings = "${config.age.secrets.sing-box-config.path}";
   };
 }
