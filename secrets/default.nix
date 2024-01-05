@@ -46,7 +46,7 @@ in {
 
   environment.etc = {
     "sing-box/config.json" = {
-      source = age.secrets."sing-box-config".path;
+      source = config.age.secrets."sing-box-config".path;
     };
   };
 }
