@@ -39,6 +39,8 @@ in {
     };
     "sing-box-config" = {
       file = "${mysecrets}/sing-box.config.age";
+      mode = "0600";
+      owner = username;
     };
   };
 }
