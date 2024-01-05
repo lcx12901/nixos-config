@@ -6,6 +6,11 @@
 
   services.sing-box = {
     enable = true;
-    settings = config.age.secrets.sing-box-config.path;
+  };
+
+  systemd.services.sing-box = {
+    preStart = ''
+    '';
+    wantedBy = [ "multi-user.target" ];
   };
 }
