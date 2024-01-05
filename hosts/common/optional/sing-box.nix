@@ -17,7 +17,7 @@
           external_ui = "ui";
           secret = builtins.readFile config.age.secrets."sing-box.secret".path;
           default_mode = "rule";
-        }
+        };
       };
       dns = {
         servers = [
