@@ -42,11 +42,11 @@ in {
       mode = "0600";
       user = username;
     };
+  };
 
-    environment.etc = {
-      "sing-box/config.json" = {
-        source = config.age.secrets."sing-box-config".path;
-      };
+  environment.etc = {
+    "sing-box/config.json" = {
+      source = config.age.secrets."sing-box-config".path;
     };
   };
 }
