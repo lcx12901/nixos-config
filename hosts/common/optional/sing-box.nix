@@ -6,6 +6,6 @@
 
   services.sing-box = {
     enable = true;
-    settings = builtins.readFile config.age.secrets.sing-box-config.path;
+    settings = config.age.secrets.sing-box-config.path;
   };
 }
