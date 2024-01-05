@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 let
-  config = builtins.readFile config.age.secrets."sing-box-config".path;
+  singBoxConfig = builtins.readFile config.age.secrets."sing-box-config".path;
 in {
 
   environment.systemPackages = with pkgs; [
@@ -9,6 +9,6 @@ in {
 
   services.sing-box = {
     enable = true;
-    settings = config;
+    settings = singBoxConfig;
   };
 }
