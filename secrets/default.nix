@@ -40,7 +40,13 @@ in {
     "sing-box-config" = {
       file = "${mysecrets}/sing-box.config.age";
       mode = "0600";
-      owner = username;
+      user = username;
+    };
+
+    environment.etc = {
+      "sing-box/config.json" = {
+        source = config.age.secrets."sing-box-config".path;
+      };
     };
   };
 }
