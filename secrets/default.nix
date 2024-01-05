@@ -27,6 +27,11 @@ in {
     "${lib.optionalString hasOptinPersistence "/persistent"}/home/${username}/.ssh/wktl"
   ];
 
+  age.secrets."sing-box-config" = {
+    file = "${mysecrets}/sing-box.config.age";
+    owner = username;
+  };
+
   age.secrets = {
     "nextcloud.pwd" = {
       file = "${mysecrets}/nextcloud.age";
@@ -36,17 +41,6 @@ in {
     "cloudflareGlobalAPIKey.age" = {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
-    };
-    "sing-box-config" = {
-      file = "${mysecrets}/sing-box.config.age";
-      mode = "0600";
-      owner = username;
-    };
-  };
-
-  environment.etc = {
-    "sing-box/config.json" = {
-      source = config.age.secrets."sing-box-config".path;
     };
   };
 }
