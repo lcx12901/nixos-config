@@ -16,7 +16,7 @@
 
   networking.hostName = "Nezuko";
 
-  networking.nameservers = [ "192.168.31.1" "8.8.8.8" ];
+  networking.nameservers = [ "223.5.5.5" ];
 
   system.stateVersion = "23.11";
 }
