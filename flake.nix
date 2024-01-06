@@ -23,7 +23,7 @@
 {
   description = "A tough try on NixOS";
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, daeuniverse, ... }:
     let
       username = "wktl";
       userfullname = "wktl Lin";
@@ -44,6 +44,7 @@
 
       Nezuko_modules = {
         nixos-modules = [
+          daeuniverse.nixosModules.daed
           ./hosts/Nezuko
         ];
         home-module = import ./home/wktl/Nezuko.nix;
@@ -116,6 +117,8 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    daeuniverse.url = "github:daeuniverse/flake.nix";
 
     # it's a private repository, use ssh protocol to authenticate via ssh-agent/ssh-key, and shallow clone to save time
     # need system key, by sudo ssh-keygen -f /etc/ssh/ssh_host_key -N '' -t rsa to change  

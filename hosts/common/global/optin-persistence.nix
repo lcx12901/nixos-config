@@ -9,6 +9,7 @@
       # The path to be saved is first moved to the `/persistent` directory
       directories = [
         "/etc/ssh"
+        "/etc/daed"
         "/var/log"
         "/var/lib"
       ];

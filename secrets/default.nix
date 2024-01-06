@@ -37,30 +37,5 @@ in {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
     };
-
-    "sing-box-secret" = {
-      file = "${mysecrets}/sing-box.secret.age";
-      owner = username;
-    };
-    "sing-box-server" = {
-      file = "${mysecrets}/sing-box.server.age";
-      owner = username;
-    };
-    "sing-box-server-port" = {
-      file = "${mysecrets}/sing-box.server-port.age";
-      owner = username;
-    };
-    "sing-box-uuid" = {
-      file = "${mysecrets}/sing-box.uuid.age";
-      owner = username;
-    };
-    "sing-box-public-key" = {
-      file = "${mysecrets}/sing-box.public-key.age";
-      owner = username;
-    };
-    "sing-box-short-id" = {
-      file = "${mysecrets}/sing-box.short-id.age";
-      owner = username;
-    };
   };
 }
