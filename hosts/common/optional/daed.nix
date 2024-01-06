@@ -1,11 +1,7 @@
-{ pkgs, daeuniverse, ... }: {
+{ daeuniverse, ... }: {
   environment.systemPackages =
   with daeuniverse.packages.x86_64-linux;
-    [ 
-      daed 
-      pkgs.v2ray-geoip 
-      pkgs.v2ray-domain-list-community 
-    ];
+    [ daed ];
 
   services.daed = {
       enable = true;
