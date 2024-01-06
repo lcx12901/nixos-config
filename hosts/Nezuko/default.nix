@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
 
@@ -15,6 +15,10 @@
   ];
 
   networking.hostName = "Nezuko";
+
+  environment.systemPackages = with pkgs; [
+    pkgs.clash-meta
+  ];
 
   networking.nameservers = [ "192.168.31.1" "8.8.8.8" ];
 
