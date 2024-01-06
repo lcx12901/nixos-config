@@ -29,6 +29,7 @@
         ];
         files = [
           ".config/gh/hosts.yml"
+          ".local/share/fish/fish_history"
         ];
       };
     };
