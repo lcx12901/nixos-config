@@ -8,7 +8,6 @@
     ../common/users/wktl
 
     ../common/optional/brtfs.nix
-    ../common/optional/daed.nix
     ../common/optional/systemd-boot.nix
 
     ./acme.nix
