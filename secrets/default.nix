@@ -39,7 +39,8 @@ in {
     };
     "pgadmin.passwdFile" = {
       file = "${mysecrets}/pgadmin.passwdFile.age";
-      owner = username;
+      mode = "0440";
+      owner = config.users.users.pgadmin.name;
     };
   };
 }
