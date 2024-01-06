@@ -9,7 +9,8 @@
       # The path to be saved is first moved to the `/persistent` directory
       directories = [
         "/etc/ssh"
-        "/etc/dae"
+        "/etc/xray"
+        "/etc/sing-box"
         "/var/log"
         "/var/lib"
       ];
