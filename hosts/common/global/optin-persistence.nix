@@ -10,7 +10,6 @@
       directories = [
         "/etc/ssh"
         "/etc/xray"
-        "/etc/sing-box"
         "/var/log"
         "/var/lib"
       ];
