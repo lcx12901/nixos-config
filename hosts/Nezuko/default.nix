@@ -18,7 +18,7 @@
 
   networking.nameservers = [ "119.29.29.29" ];
 
-  networking.proxy.default = "http://127.0.0.1:7890";
+  networking.proxy.default = "http://127.0.0.1:10809";
 
   system.stateVersion = "23.11";
 }
