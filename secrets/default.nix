@@ -37,5 +37,9 @@ in {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
     };
+    "pgadmin.passwdFile" = {
+      file = "${mysecrets}/pgadmin.passwdFile.age";
+      owner = username;
+    };
   };
 }
