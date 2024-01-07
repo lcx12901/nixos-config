@@ -1,4 +1,4 @@
-{ config, username, useremail, ... }: {
+{ config, pkgs, username, useremail, ... }: {
   services.pgadmin = {
     enable = true;
     openFirewall = true;
