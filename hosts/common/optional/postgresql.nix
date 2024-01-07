@@ -10,7 +10,7 @@
     enable = true;
     enableTCPIP = true;
     ensureUsers = [
-      { name = "postgres"; }
+      { name = username; }
     ];
     ensureDatabases = [ "mydatabase" ];
   };
