@@ -12,8 +12,8 @@
     enableTCPIP = true;
     authentication = ''
       #type database DBuser origin-address auth-method
-      host postgres postgres 0.0.0.0/0 md5
-      host postgres postgres ::/0 md5
+      host  all      all     127.0.0.1/32   trust
+      host all       all     ::1/128        trust
     '';
   };
 }
