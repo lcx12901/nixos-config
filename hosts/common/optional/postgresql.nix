@@ -6,6 +6,7 @@
     initialPasswordFile = config.age.secrets."pgadmin.passwdFile".path;
   };
 
+  networking.firewall.allowedTCPPorts = [ 5432 ];
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
@@ -13,8 +14,5 @@
       { name = username; }
     ];
     ensureDatabases = [ "mydatabase" ];
-    initialScript = pkgs.writeText "backend-initScript" ''
-      alter user wktl superuser createrole createdb replication;
-    '';
   };
 }
