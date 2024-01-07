@@ -1,9 +1,4 @@
 { config, pkgs, username, useremail, ... }: {
-  services.pgadmin = {
-    enable = true;
-    initialEmail = useremail;
-    initialPasswordFile = config.age.secrets."pgadmin.passwdFile".path;
-  };
 
   networking.firewall.allowedTCPPorts = [ 5432 ];
 
