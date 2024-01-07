@@ -6,7 +6,6 @@
     initialPasswordFile = config.age.secrets."pgadmin.passwdFile".path;
   };
 
-  networking.firewall.allowedTCPPorts = [ 5432 ];
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
