@@ -33,14 +33,15 @@
         sslCertificateKey = "/var/lib/acme/nezuko.lincx.top/key.pem";
       };
       proxy = port: base {
-        "/".proxyPass = "http://127.0.0.1:" + toString(port);
+        "/" = {
+          proxyPass = "http://127.0.0.1:" + toString(port);
+          extraConfig = ''
+            proxy_set_header Referer "http://127.0.0.1"
+          '';
+        };
       };
     in {
-      "pgadmin.nezuko.lincx.top" = proxy 5050 // {
-        locations."/".extraConfig = ''
-          proxy_set_header Referer "http://127.0.0.1"
-        '';
-      };
+      "pgadmin.nezuko.lincx.top" = proxy 5050;
     };
   };
 
