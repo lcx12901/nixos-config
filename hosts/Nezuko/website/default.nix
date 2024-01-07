@@ -36,7 +36,11 @@
         "/".proxyPass = "http://127.0.0.1:" + toString(port);
       };
     in {
-      "pgadmin.nezuko.lincx.top" = proxy 5050;
+      "pgadmin.nezuko.lincx.top" = proxy 5050 // {
+        extraConfig = ''
+          proxy_set_header Referer "http://127.0.0.1"
+        '';
+      };
     };
   };
 
