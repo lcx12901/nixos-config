@@ -12,7 +12,7 @@
     ../common/optional/proxy.nix
     ../common/optional/systemd-boot.nix
 
-    ./acme.nix
+    ./website
   ];
 
   networking.hostName = "Nezuko";
