@@ -13,5 +13,8 @@
       { name = username; }
     ];
     ensureDatabases = [ "mydatabase" ];
+    initialScript = pkgs.writeText "backend-initScript" ''
+      alter user wktl superuser createrole createdb replication;
+    '';
   };
 }
