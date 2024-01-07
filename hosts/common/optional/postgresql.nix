@@ -10,9 +10,10 @@
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
-    ensureUsers = [
-      { name = username; }
-    ];
-    ensureDatabases = [ "mydatabase" ];
+    authentication = ''
+      #type database DBuser origin-address auth-method
+      host postgres postgres 0.0.0.0/0 md5
+      host postgres postgres ::/0 md5
+    '';
   };
 }
