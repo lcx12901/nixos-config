@@ -39,4 +39,6 @@
       "pgadmin.nezuko.lincx.top" = proxy 5050;
     };
   };
+
+  networking.firewall.allowedTCPPorts = [ 302 404 ];
 }
