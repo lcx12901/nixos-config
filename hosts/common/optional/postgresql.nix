@@ -1,4 +1,4 @@
-{ config, useremail, ... }: {
+{ config, username, useremail, ... }: {
   services.pgadmin = {
     enable = true;
     openFirewall = true;
@@ -9,5 +9,9 @@
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
+    ensureUsers = [
+      { name = username; }
+    ];
+    ensureDatabases = [ "mydatabase" ];
   };
 }
