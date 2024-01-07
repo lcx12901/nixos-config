@@ -37,7 +37,7 @@
       };
     in {
       "pgadmin.nezuko.lincx.top" = proxy 5050 // {
-        extraConfig = ''
+        "/".extraConfig = ''
           proxy_set_header Referer "http://127.0.0.1"
         '';
       };
