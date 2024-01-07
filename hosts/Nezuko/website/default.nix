@@ -36,9 +36,9 @@
         "/" = {
           proxyPass = "http://127.0.0.1:" + toString(port) + "/";
           extraConfig = ''
-            proxy_set_header Host $host; \n
-            proxy_set_header X-Scheme $scheme; \n
-            proxy_redirect off; \n
+            proxy_set_header Host $host;
+            proxy_set_header X-Scheme $scheme;
+            proxy_redirect off;
           '';
         };
       };
