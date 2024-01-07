@@ -37,5 +37,10 @@ in {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
     };
+    "pgadmin.passwdFile" = {
+      file = "${mysecrets}/pgadmin.passwdFile.age";
+      mode = "0440";
+      owner = config.users.users.pgadmin.name;
+    };
   };
 }

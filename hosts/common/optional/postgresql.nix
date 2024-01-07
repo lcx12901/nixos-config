@@ -1,4 +1,12 @@
 { config, pkgs, username, useremail, ... }: {
+  services.pgadmin = {
+    enable = true;
+    initialEmail = useremail;
+    initialPasswordFile = config.age.secrets."pgadmin.passwdFile".path;
+  };
+
+  networking.firewall.allowedTCPPorts = [ 5432 ];
+
   services.postgresql = {
     enable = true;
     enableTCPIP = true;
@@ -8,6 +16,4 @@
       host all       all     ::1/128        trust
     '';
   };
-
-  networking.firewall.allowedTCPPorts = [ 5432 ];
 }
