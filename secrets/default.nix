@@ -39,7 +39,7 @@ in {
     };
     "pgadmin.envFile" = {
       file = "${mysecrets}/pgadmin.envFile.age";
-      owner = config.users.users.podman.name;
+      owner = username;
     };
   };
 }
