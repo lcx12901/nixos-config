@@ -45,7 +45,7 @@ in {
     "redis.nextcloud.passwd" = {
       file = "${mysecrets}/pgadmin.envFile.age";
       mode = "0440";
-      owner = if config.services.redis.servers."nextcloud".enable then "redis-nextcloud" else username;
+      owner = if config.services.redis.servers."nextcloud".enable then "redis" else username;
     };
   };
 }
