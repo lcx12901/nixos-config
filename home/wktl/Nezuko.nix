@@ -15,10 +15,6 @@
     neofetch
   ];
 
-  home.file = {
-    ".vscode-server-insiders/server-env-setup".source = ./server-env-setup;
-  };
-
   programs = {
     home-manager.enable = true;
     nix-index.enable = true;

@@ -8,5 +8,6 @@
     ./openssh.nix
     ./packages.nix
     ./podman.nix
+    ./fonts.nix
   ];
 }
