@@ -31,7 +31,7 @@ in {
     "nextcloud.pwd" = {
       file = "${mysecrets}/nextcloud.age";
       mode = "0440";
-      owner = if config.users.users.nextcloud then config.users.users.nextcloud.name else username;
+      owner = if config.services.nextcloud.enable then config.users.users.nextcloud.name else username;
     };
     "cloudflareGlobalAPIKey.age" = {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
