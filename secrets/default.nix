@@ -42,5 +42,9 @@ in {
       mode = "0440";
       group = "podman";
     };
+    "redis.nextcloud.passwd" = {
+      file = "${mysecrets}/pgadmin.envFile.age";
+      owner = "redis-nextcloud";
+    };
   };
 }
