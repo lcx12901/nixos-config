@@ -21,7 +21,7 @@
     # Use recommended settings
     recommendedGzipSettings = true;
     recommendedOptimisation = true;
-    recommendedProxySettings = true;
+    # recommendedProxySettings = true;
     recommendedTlsSettings = true;
 
     virtualHosts =

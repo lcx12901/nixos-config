@@ -39,7 +39,8 @@ in {
     };
     "pgadmin.envFile" = {
       file = "${mysecrets}/pgadmin.envFile.age";
-      owner = username;
+      mode = "0440";
+      group = "podman";
     };
   };
 }
