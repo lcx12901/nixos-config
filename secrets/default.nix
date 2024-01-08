@@ -10,8 +10,6 @@
 let
   # `attrset ? attrpath`，返回 bool 值， 判断属性集中是否存在某个属性
   hasOptinPersistence = config.environment ? "persistence";
-
-  hasPodman = config.users.users ? "podman";
 in {
   imports = [
     agenix.nixosModules.default
@@ -39,10 +37,9 @@ in {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";
       owner = username;
     };
-    "pgadmin.passwdFile" = {
-      file = "${mysecrets}/pgadmin.passwdFile.age";
-      mode = "0440";
-      owner = if hasPodman then config.users.users.pgadmin.name else username;
+    "pgadmin.envFile" = {
+      file = "${mysecrets}/pgadmin.envFile.age";
+      owner = config.users.users.podman.name;
     };
   };
 }
