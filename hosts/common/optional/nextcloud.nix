@@ -1,9 +1,12 @@
-{ config, username, ... }: {
+{ config, pkgs, username, ... }: {
   services.nextcloud = {
     enable = true;
     hostName = "nextcloud.nezuko.lincx.top";
     https = true;
     configureRedis = true;
+    package = with pkgs; [
+      nextcloud28
+    ];
     extraOptions = {
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
