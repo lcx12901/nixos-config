@@ -23,6 +23,7 @@
     config = {
       dbtype = "pgsql";
       adminuser = username;
+      adminpassFile = config.age.secrets."nextcloud.pwd".path;
     };
     maxUploadSize = "2G";
   };
