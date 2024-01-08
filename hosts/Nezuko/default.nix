@@ -9,9 +9,9 @@
 
     ../common/optional/brtfs.nix
     ../common/optional/container.nix
+    ../common/optional/nextcloud.nix
     ../common/optional/postgresql.nix
     ../common/optional/proxy.nix
-    ../common/optional/redis.nix
     ../common/optional/systemd-boot.nix
 
     ./website

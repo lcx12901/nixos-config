@@ -10,8 +10,5 @@
       host  all      all     10.88.0.1/16   trust
       host all       all     ::1/128        trust
     '';
-    initialScript = pkgs.writeText "backend-initScript" ''
-      
-    '';
   };
 }
