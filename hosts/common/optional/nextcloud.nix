@@ -18,6 +18,10 @@
         "OC\\Preview\\TXT"
         "OC\\Preview\\XBitmap"
         "OC\\Preview\\HEIC"
+        "OC\\Preview\\Movie"
+        "OC\\Preview\\MKV"
+        "OC\\Preview\\MP4"
+        "OC\\Preview\\AVI"
       ];
     };
     database.createLocally = true;

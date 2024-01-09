@@ -26,7 +26,15 @@ in {
         "${volumesRoot}/aria2/config:/config"
         "${volumesRoot}/aria2/download:/downloads"
       ];
-      extraOptions = [ "--network=host" "log-opt=max-size=1m" "--pull=newer" ];
+      environment = {
+        IPV6_MODE = "true";
+      };
+      extraOptions = [ "--network=host" "--log-opt=max-size=1m" "--pull=newer" ];
+    };
+    ariang = {
+      image = "p3terx/ariang:latest";
+      autoStart = true;
+      extraOptions = [ "--network=host" "--log-opt=max-size=1m" "--pull=newer" ];
     };
   };
 }

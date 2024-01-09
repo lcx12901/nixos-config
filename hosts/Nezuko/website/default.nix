@@ -37,6 +37,16 @@
           proxyPass = "http://127.0.0.1:5050/";
         };
       };
+      "aria2.nezuko.lincx.top" = base // {
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:6800/";
+        };
+      };
+      "ariang.nezuko.lincx.top" = base // {
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:6880/";
+        };
+      };
       "nextcloud.nezuko.lincx.top" = base;
     };
   };
