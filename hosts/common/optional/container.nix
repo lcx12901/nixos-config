@@ -17,5 +17,16 @@ in {
       extraOptions = [ "--pull=newer" ];
       environmentFiles = [ config.age.secrets."pgadmin.envFile".path ];
     };
+
+    aria2-pro = {
+      image = "p3terx/aria2-pro:latest";
+      autoStart = true;
+      environmentFiles = [ config.age.secrets."aria2.envFile".path ];
+      volumes = [ 
+        "${volumesRoot}/aria2/config:/config"
+        "${volumesRoot}/aria2/download:/downloads"
+      ];
+      extraOptions = [ "--network=host" "log-opt=max-size=1m" "--pull=newer" ];
+    };
   };
 }

@@ -42,10 +42,10 @@ in {
       mode = "0440";
       group = "podman";
     };
-    "redis.nextcloud.passwd" = {
-      file = "${mysecrets}/redis.nextcloud.passwd.age";
+    "aria2.envFile" = {
+      file = "${mysecrets}/aria2.envFile.age";
       mode = "0440";
-      owner = username;
+      group = "podman";
     };
   };
 }
