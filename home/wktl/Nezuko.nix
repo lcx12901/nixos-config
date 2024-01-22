@@ -2,6 +2,8 @@
   imports = [
     nix-index-database.hmModules.nix-index
     ./global
+    ./features/desktop/hyprland
+    ./features/desktop/waybar
   ];
 
   home = {

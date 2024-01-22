@@ -14,6 +14,8 @@
     ../common/optional/proxy.nix
     ../common/optional/systemd-boot.nix
 
+    ../common/desktop/hyprland
+
     ./website
   ];
 

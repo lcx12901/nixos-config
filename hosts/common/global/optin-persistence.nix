@@ -21,6 +21,7 @@
           "nixos-config"
           "nix-secrets"
           ".containers"
+          ".vscode-server"
           
           {
             directory = ".ssh";
