@@ -94,7 +94,7 @@
       interval= 2;
     };
     disk = {
-      # path = "/";
+      path = "/persistent";
       format = "󰋊 {percentage_used}%";
       interval= 60;
     };

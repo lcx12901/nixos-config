@@ -4,6 +4,8 @@
     ./global
     ./features/desktop/hyprland
     ./features/desktop/waybar
+    ./features/desktop/wofi
+    ./features/desktop/gtk
   ];
 
   home = {

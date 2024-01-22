@@ -14,6 +14,10 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 3;
+
   # clear /tmp on boot to get a stateless /tmp directory.
   boot.tmp.cleanOnBoot = true;
 
@@ -26,6 +30,19 @@
     "fat"
     "vfat"
     "cifs" # mount windows share
+  ];
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [];
+  };
+  hardware.enableRedistributableFirmware = true;
+  powerManagement.cpuFreqGovernor = "performance";
+
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
   ];
 
   # equal to `mount -t tmpfs tmpfs /`

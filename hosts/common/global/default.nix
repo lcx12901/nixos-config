@@ -9,5 +9,6 @@
     ./packages.nix
     ./podman.nix
     ./fonts.nix
+    ./pipewire.nix
   ];
 }

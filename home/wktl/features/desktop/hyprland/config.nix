@@ -10,6 +10,7 @@
       exec-once = systemctl --user import-environment &
       exec-once = hash dbus-update-activation-environment 2>/dev/null &
       exec-once = dbus-update-activation-environment --systemd &
+      exec-once = hyprctl setcursor Nordzy-cursors 22 &
       exec-once = waybar &
 
       input {
@@ -126,9 +127,10 @@
       bind = $mainMod, Return, exec, kitty
       bind = ALT, Return, exec, kitty --title float_kitty
       bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
-      bind = $mainMod, F, fullscreen, 0
-      bind = $mainMod SHIFT, F, fullscreen, 1
-      bind = $mainMod, Space, togglefloating,
+      bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
+      bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
+      bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态
+      bind = $mainMod, C, killactive,              # 关闭活动窗口
 
       # switch focus
       bind = $mainMod, left, movefocus, l
@@ -178,6 +180,13 @@
       # mouse binding
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
+
+      # windowrule
+      windowrule = float,audacious
+      windowrule = workspace 8 silent, audacious
+      windowrule = pin,wofi
+      windowrule = float,wofi
+      windowrule = noborder,wofi
     ";
   };
 }
