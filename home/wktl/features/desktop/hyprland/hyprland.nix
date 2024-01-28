@@ -1,7 +1,7 @@
 { pkgs, ...}: {
 
   home.packages = with pkgs; [
-    swaybg
+    swww
     wofi
     wayland
     direnv

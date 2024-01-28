@@ -3,9 +3,6 @@
     nix-index-database.hmModules.nix-index
     ./global
     ./features/desktop/hyprland
-    ./features/desktop/waybar
-    ./features/desktop/wofi
-    ./features/desktop/gtk
   ];
 
   home = {
@@ -17,6 +14,8 @@
 
   home.packages = with pkgs; [
     neofetch
+    parsec-bin
+    vlc
   ];
 
   programs = {

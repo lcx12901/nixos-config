@@ -23,7 +23,7 @@
 {
   description = "A tough try on NixOS";
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nixos-wsl, nix-ld, vscode-server, ... }:
+  outputs = inputs @ { self, nixpkgs, nur, home-manager, nixos-wsl, nix-ld, vscode-server, ... }:
     let
       username = "wktl";
       userfullname = "wktl Lin";
@@ -58,6 +58,7 @@
           inherit username userfullname useremail;
           pkgs = import nixpkgs {
             system = x64_system; # refer the `system` parameter form outer scope recursively
+            overlays = [ nur.overlay ];
             # To use chrome, we need to allow the installation of non-free software
             config.allowUnfree = true;
           };

@@ -22,6 +22,7 @@
           "nix-secrets"
           ".containers"
           ".vscode-server"
+          ".config/chromium"
           
           {
             directory = ".ssh";

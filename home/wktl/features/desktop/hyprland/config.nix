@@ -1,6 +1,6 @@
-{
+{ pkgs, ... }: {
   wayland.windowManager.hyprland = {
-    extraConfig = "
+    extraConfig = ''
       $mainMod = SUPER
 
       monitor=,highrr,auto,1
@@ -10,8 +10,17 @@
       exec-once = systemctl --user import-environment &
       exec-once = hash dbus-update-activation-environment 2>/dev/null &
       exec-once = dbus-update-activation-environment --systemd &
+      exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1 &
       exec-once = hyprctl setcursor Nordzy-cursors 22 &
       exec-once = waybar &
+      exec-once = swww init
+      exec-once = swww img ~/.config/wallpapers/72125571_p0.jpg
+
+      # fcitx5
+      windowrule=pseudo,fcitx    # enable this will make fcitx5 works, but fcitx5-configtool will not work!
+      exec-once = fcitx5 -d --replace     # start fcitx5 daemon
+      bind=ALT,E,exec,pkill fcitx5 -9;sleep 1;fcitx5 -d --replace; sleep 1;fcitx5-remote -r
+
 
       input {
         kb_layout = us
@@ -124,9 +133,9 @@
       bind = $mainMod, F1, exec, show-keybinds
 
       # keybindings
-      bind = $mainMod, Return, exec, kitty
-      bind = ALT, Return, exec, kitty --title float_kitty
-      bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
+      bind = $mainMod, Return, exec, kitty -o 'font_size=14'
+      # bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
+      bind = $mainMod, G, exec, chromium --gtk-version=4 --enable-features=UseOZonePlatform --ozone-platform=wayland
       bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
       bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
       bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态
@@ -187,6 +196,6 @@
       windowrule = pin,wofi
       windowrule = float,wofi
       windowrule = noborder,wofi
-    ";
+    '';
   };
 }
