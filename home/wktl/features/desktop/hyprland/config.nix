@@ -143,6 +143,7 @@
       bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
       bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态
       bind = $mainMod, C, killactive,              # 关闭活动窗口
+      bind = $mainMod SHIFT, W, exec, pkill waybar || waybar &
 
       # switch focus
       bind = $mainMod, left, movefocus, l
@@ -199,6 +200,7 @@
       windowrule = pin,wofi
       windowrule = float,wofi
       windowrule = noborder,wofi
+      windowrule = float,yesplaymusic
     '';
   };
 }

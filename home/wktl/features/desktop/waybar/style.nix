@@ -10,7 +10,7 @@
   },
   ...
 }: {
-  programs.waybar.style = ''
+    programs.waybar.style = ''
     * {
         border: none;
         border-radius: 0px;
@@ -59,21 +59,21 @@
     }
 
     #tray, #pulseaudio, #network, #cpu, #memory, #disk,
-    #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward{
+    #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward,#custom-playerlabel{
         background: #${custom.palette.tertiary_background_hex};
         font-weight: bold;
         margin: 5px 0px;
     }
 
     #cpu {
-        color: #${custom.tertiary_accent};
+        color: #${custom.palette.Tomato_accent_hex};
         border-radius: 10px 0px 0px 24px;
         padding-left: 15px;
         padding-right: 9px;
         margin-left: 7px;
     }
     #memory {
-        color: #${custom.tertiary_accent};
+        color: #${custom.palette.LemonChiffon_accent_hex};
         border-radius: 0px 0 0px 0px;      
         padding-left: 9px;
         padding-right: 9px;
@@ -107,7 +107,7 @@
     }
     
     #clock {
-        color: #${custom.tertiary_accent};
+        color: #${custom.palette.primary_accent_hex};
         background: #${custom.palette.tertiary_background_hex};
         border-radius: 0px 0px 0px 40px;
         padding: 10px 10px 15px 25px;
@@ -142,10 +142,16 @@
         padding: 0 5px;
     }
     #custom-playerctl.foward {
-        color: #${custom.primary_accent};
-        border-radius: 0px 10px 24px 0px;
-        padding-right: 12px;
-        margin-right: 7px
+      color: #${custom.primary_accent};
+      border-radius: 0px 10px 24px 0px;
+      padding-right: 12px;
+      margin-right: 7px;
+    }
+    #custom-playerlabel {
+      color: #${custom.primary_accent};
+      border-radius: 24px 10px 24px 10px;
+      padding-left: 10px;
+      padding-right: 15px;
     }
     #window{
         background: #${custom.palette.tertiary_background_hex};

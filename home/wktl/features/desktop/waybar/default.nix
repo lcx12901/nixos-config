@@ -12,6 +12,8 @@ let
     palette = rec {
       primary_accent_hex = "cba6f7";
       secondary_accent_hex = "89b4fa";
+      Tomato_accent_hex = "FF6347";
+      LemonChiffon_accent_hex = "FFFACD";
       tertiary_accent_hex = "f5f5f5";
       primary_background_hex = "11111B";
       secondary_background_hex = "1b1b2b";
