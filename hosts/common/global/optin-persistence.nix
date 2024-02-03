@@ -23,6 +23,7 @@
           ".vscode-server"
           ".config/chromium"
           ".config/yesplaymusic"
+          ".config/discord"
 
           {
             directory = ".ssh";

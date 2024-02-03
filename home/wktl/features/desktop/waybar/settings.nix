@@ -20,9 +20,9 @@
     margin-right= 0;
     modules-left= [
       "custom/launcher" 
-      # "custom/playerctl#backward" 
-      # "custom/playerctl#play" 
-      # "custom/playerctl#foward" 
+      "custom/playerctl#backward" 
+      "custom/playerctl#play" 
+      "custom/playerctl#foward"
     ];
     modules-center= [
       "hyprland/workspaces"

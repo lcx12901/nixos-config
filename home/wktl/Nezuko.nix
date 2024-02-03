@@ -18,6 +18,11 @@
     vlc
     yesplaymusic
     telegram-desktop
+
+    playerctl   # controller for media players
+    pavucontrol # pulseaudio volume controle (GUI)
+    pamixer     # pulseaudio command line mixer
+    unzip
   ];
 
   programs = {

@@ -18,6 +18,10 @@
     ];
 
     userSettings = {
+      "update.mode" = "none";
+      "extensions.autoUpdate" = false;
+      "vsicons.dontShowNewVersionMessage" = true;
+
       "workbench.colorTheme" = "Tokyo Night Storm";
       "workbench.iconTheme" = "vscode-icons";
 
@@ -26,9 +30,9 @@
       "editor.cursorBlinking" = "smooth";
       "editor.tabSize" = 2;
       "editor.lineNumbers" = "relative";
-      "editor.fontFamily" = "JetBrainsMono Nerd Font Mono";
-      "editor.codeLensFontFamily" = "JetBrainsMono Nerd Font Mono";
-      "scm.inputFontFamily" = "JetBrainsMono Nerd Font Mono";
+      "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'monospace', monospace";
+      "editor.codeLensFontFamily" = "'JetBrainsMono Nerd Font'";
+      "scm.inputFontFamily" = "'JetBrainsMono Nerd Font'";
 
       "window.zoomLevel" = 0.5;
       "window.titleBarStyle" = "custom";
@@ -39,7 +43,7 @@
 
       "terminal.integrated.inheritEnv" = true;
       "terminal.integrated.gpuAcceleration" = "on";
-      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font Mono";
+      "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font'";
       "terminal.integrated.enableImages" = true;
       "terminal.integrated.smoothScrolling" = true;
       "terminal.external.lincxExec" = "kitty";
