@@ -21,9 +21,9 @@
 
   networking.hostName = "Nezuko";
 
-  networking.nameservers = [ "119.29.29.29" ];
+  networking.nameservers = [ "1.1.1.1 8.8.8.8" ];
 
-  networking.proxy.default = "http://127.0.0.1:10809";
+  #networking.proxy.default = "http://127.0.0.1:7890";
 
   environment.systemPackages = with pkgs; [
     ffmpeg

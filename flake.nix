@@ -137,5 +137,10 @@
       url = "git+ssh://git@github.com/lcx12901/nix-secrets.git?shallow=1";
       flake = false;
     };
+
+    clash-subscribe = {
+      url = "git+ssh://git@github.com/lcx12901/iQZone.git?shallow=1";
+      flake = false;
+    };
   };
 }
