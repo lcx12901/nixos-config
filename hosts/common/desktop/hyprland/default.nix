@@ -1,4 +1,4 @@
-{ specialArgs, pkgs, ... }: {
+{ specialArgs, pkgs, username, ... }: {
   # XDG portal
   xdg.portal = { 
     enable = true;
@@ -11,8 +11,10 @@
 
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "";
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
     displayManager = {
       sddm = {
         enable = true;

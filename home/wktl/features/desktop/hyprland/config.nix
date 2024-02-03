@@ -13,6 +13,7 @@
       exec-once = ${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1 &
       exec-once = hyprctl setcursor Nordzy-cursors 22 &
       exec-once = waybar &
+      exec-once = mako
       exec-once = swww init
       exec-once = swww img ~/.config/wallpapers/72125571_p0.jpg
 
@@ -133,9 +134,11 @@
       bind = $mainMod, F1, exec, show-keybinds
 
       # keybindings
-      bind = $mainMod, Return, exec, kitty -o 'font_size=14'
+      bind = $mainMod, W, exec, pkill wofi || wofi --show drun
+      bind = $mainMod, Return, exec, kitty
       # bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
       bind = $mainMod, G, exec, chromium --gtk-version=4 --enable-features=UseOZonePlatform --ozone-platform=wayland
+      # bind = $mainMod, V, exec, codium --enable-features=UseOZonePlatform --ozone-platform=wayland
       bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
       bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
       bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态

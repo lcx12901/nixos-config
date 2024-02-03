@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     swww
     wofi
+    mako
     wayland
     direnv
   ];
@@ -11,9 +12,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland = {
-      enable = true;
-    };
+    #xwayland = {
+    #  enable = true;
+    #};
     enableNvidiaPatches = false;
     systemd.enable = true;
   };

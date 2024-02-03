@@ -16,6 +16,8 @@
     neofetch
     parsec-bin
     vlc
+    yesplaymusic
+    telegram-desktop
   ];
 
   programs = {

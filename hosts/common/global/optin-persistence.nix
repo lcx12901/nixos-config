@@ -23,7 +23,8 @@
           ".containers"
           ".vscode-server"
           ".config/chromium"
-          
+          ".config/yesplaymusic"
+
           {
             directory = ".ssh";
             mode = "0700";

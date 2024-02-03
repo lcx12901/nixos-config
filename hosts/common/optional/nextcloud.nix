@@ -5,7 +5,7 @@
     https = true;
     configureRedis = true;
     package = pkgs.nextcloud28;
-    extraOptions = {
+    settings = {
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
         "OC\\Preview\\GIF"

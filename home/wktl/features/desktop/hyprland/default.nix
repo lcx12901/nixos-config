@@ -5,11 +5,13 @@
     ./config.nix
     ./variables.nix
 
+    ../kitty
     ../waybar
     ../wofi
     ../gtk
     ../wallpapers
     ../fcitx5
     ../chromium
+    ../vscodium
   ];
 }
