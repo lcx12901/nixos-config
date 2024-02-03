@@ -16,15 +16,19 @@
 
       users.wktl = {
         directories = [
-          # ".local/share"
           # ".local/state"
           "nixos-config"
           "nix-secrets"
+
           ".containers"
+
           ".vscode-server"
+
           ".config/chromium"
           ".config/yesplaymusic"
           ".config/discord"
+
+          ".local/share/TelegramDesktop"
 
           {
             directory = ".ssh";
