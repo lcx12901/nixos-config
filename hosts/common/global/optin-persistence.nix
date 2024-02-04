@@ -30,6 +30,8 @@
 
           ".local/share/TelegramDesktop"
 
+          "Coding"
+
           {
             directory = ".ssh";
             mode = "0700";
