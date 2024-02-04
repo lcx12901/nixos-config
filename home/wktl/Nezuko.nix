@@ -18,6 +18,10 @@
     vlc
     yesplaymusic
     telegram-desktop
+    gnome.nautilus   # Gnome File Manager
+
+    nodePackages.nodejs
+    nodePackages.pnpm
 
     playerctl   # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)

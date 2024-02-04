@@ -78,6 +78,8 @@
       "terminal.integrated.enableImages" = true;
       "terminal.integrated.smoothScrolling" = true;
       "terminal.external.lincxExec" = "kitty";
+
+      "gitlens.ai.experimental.provider" = "openai";
     };
   };
 }
