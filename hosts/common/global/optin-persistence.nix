@@ -25,6 +25,7 @@
           ".vscode-server"
 
           ".config/chromium"
+          ".config/VSCodium"
           ".config/yesplaymusic"
           ".config/discord"
 

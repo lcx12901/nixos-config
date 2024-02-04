@@ -23,6 +23,30 @@
         sha256 = "sha256-dOicya0B2sriTcDSdCyhtp0Mcx5b6TUaFKVb0YU3jUc=";
       }
       {
+        name = "vscode-import-cost";
+        publisher = "wix";
+        version = "3.3.0";
+        sha256 = "sha256-GQ26Cmu9F/6+3NMoxsb1BHqKqaVAx+qWNW0rYBHdiHI=";
+      }
+      {
+        name = "code-spell-checker";
+        publisher = "streetsidesoftware";
+        version = "3.0.1";
+        sha256 = "sha256-KeYE6/yO2n3RHPjnJOnOyHsz4XW81y9AbkSC/I975kQ=";
+      }
+      {
+        name = "errorlens";
+        publisher = "usernamehw";
+        version = "3.16.0";
+        sha256 = "sha256-Y3M/A5rYLkxQPRIZ0BUjhlkvixDae+wIRUsBn4tREFw=";
+      }
+      {
+        name = "vscode-colorize";
+        publisher = "kamikillerto";
+        version = "0.11.1";
+        sha256 = "sha256-VS+L994j4xZNUWicIU/L00anjAHl2Xztx2Ia9GVYAsE=";
+      }
+      {
         name = "nix-ide";
         publisher = "jnoortheen";
         version = "0.2.2";
