@@ -23,10 +23,10 @@
           ".containers"
 
           ".vscode-server"
-
+          
+          ".config/go-musicfox"
           ".config/chromium"
-          ".config/VSCodium"
-          ".config/yesplaymusic"
+          ".config/VSCodium/User"
           ".config/discord"
 
           ".local/share/TelegramDesktop"

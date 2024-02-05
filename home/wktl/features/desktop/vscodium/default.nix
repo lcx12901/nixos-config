@@ -89,7 +89,7 @@
       "editor.codeLensFontFamily" = "'JetBrainsMono Nerd Font'";
       "scm.inputFontFamily" = "'JetBrainsMono Nerd Font'";
 
-      "window.zoomLevel" = 0.5;
+      "window.zoomLevel" = 1;
       "window.titleBarStyle" = "custom";
 
       "files.autoSave" = "onWindowChange";

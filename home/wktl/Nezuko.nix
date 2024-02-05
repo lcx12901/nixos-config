@@ -16,7 +16,7 @@
     neofetch
     parsec-bin
     vlc
-    yesplaymusic
+    go-musicfox
     telegram-desktop
     gnome.nautilus   # Gnome File Manager
 

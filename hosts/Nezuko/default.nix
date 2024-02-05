@@ -15,6 +15,7 @@
     ../common/optional/systemd-boot.nix
 
     ../common/desktop/hyprland
+    ../common/desktop/virtualisation
 
     ./website
   ];

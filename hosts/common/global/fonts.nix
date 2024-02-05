@@ -22,6 +22,8 @@
       source-han-sans # 思源黑体
       source-han-serif # 思源宋体
 
+      wqy_zenhei
+
       # nerdfonts
       # https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/data/fonts/nerdfonts/shas.nix
       (nerdfonts.override {
@@ -40,10 +42,11 @@
     # user defined fonts
     # the reason there's Noto Color Emoji everywhere is to override DejaVu's
     # B&W emojis that would sometimes show instead of some Color emojis
+    # add WenQuanYi Zen Hei Mono, to fix too many fallback fonts in kitty
     fontconfig.defaultFonts = {
-      serif = ["Noto Serif CJK SC" "Noto Serif CJK TC" "Noto Serif CJK JP" "Noto Color Emoji"];
-      sansSerif = ["Noto Sans CJK SC" "Noto Sans CJK TC" "Noto Sans CJK JP" "Noto Color Emoji"];
-      monospace = ["JetBrainsMono Nerd Font Mono" "Noto Color Emoji"];
+      serif = ["WenQuanYi Zen Hei" "Noto Serif CJK SC" "Noto Serif CJK TC" "Noto Serif CJK JP" "Noto Color Emoji"];
+      sansSerif = ["WenQuanYi Zen Hei" "Noto Sans CJK SC" "Noto Sans CJK TC" "Noto Sans CJK JP" "Noto Color Emoji"];
+      monospace = ["JetBrainsMono Nerd Font Mono" "WenQuanYi Zen Hei Mono" "Noto Color Emoji"];
       emoji = ["Noto Color Emoji"];
     };
   };
