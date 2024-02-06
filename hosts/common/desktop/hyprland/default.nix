@@ -1,4 +1,6 @@
-{ specialArgs, pkgs, username, ... }: {
+{ specialArgs, pkgs, username, ... }: let 
+  cornersSddmTheme = pkgs.callPackage ../../../../packages/cornersSddmTheme {};
+in {
   # XDG portal
   xdg.portal = { 
     enable = true;
@@ -9,6 +11,14 @@
     ];
   };
 
+  # need qt5 for sddm theme
+  environment.systemPackages = with pkgs; [
+    cornersSddmTheme
+    libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.qt5.qtsvg
+    libsForQt5.qt5.qtquickcontrols2
+  ];
+
   services.xserver = {
     enable = true;
     xkb = {
@@ -18,6 +28,7 @@
     displayManager = {
       sddm = {
         enable = true;
+        theme = "corners";
       };
     };
   };
