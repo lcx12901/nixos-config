@@ -200,7 +200,8 @@
       windowrule = pin,wofi
       windowrule = float,wofi
       windowrule = noborder,wofi
-      windowrule = float,yesplaymusic
+
+      windowrulev2 = float,class:^(org.telegram.desktop|telegramdesktop)$
     '';
   };
 }

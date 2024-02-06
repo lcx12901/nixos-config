@@ -19,7 +19,7 @@
     # sudo nix store gc --debug
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
       # Keep the last 3 generations
       options = "--delete-older-than 7d";
     };
