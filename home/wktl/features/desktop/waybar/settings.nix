@@ -23,6 +23,7 @@
       # "custom/playerctl#backward" 
       # "custom/playerctl#play" 
       # "custom/playerctl#foward"
+      "temperature"
       "custom/playerlabel"
     ];
     modules-center = [
@@ -58,6 +59,12 @@
         default = "";
         sort-by-number = true;
       };
+    };
+    temperature = {
+      hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
+      critical-threshold = 80;
+      format = "{temperatureC}°C {icon}";
+      format-icons = [ "" "" "" ];
     };
     "custom/playerctl#backward"= {
       format = "󰙣 "; 
@@ -98,8 +105,8 @@
       };
     };
     memory = {
-      format = "󰟜 {}%";
-      format-alt = "󰟜 {used} GiB"; # 
+      format = " {}%";
+      format-alt = " {used} GiB"; # 
       interval = 2;
     };
     cpu = {
@@ -114,10 +121,11 @@
     };
     network = {
       format-wifi = "  {signalStrength}%";
-      format-ethernet = "󰀂 ";
-      tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
+      format-ethernet = " {bandwidthUpBits}  {bandwidthDownBits}";
+      tooltip-format = "Connected to {essid}{ifname} ip {ipaddr}/{cidr} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";
+      interval = 2;
     };
     tray = {
       icon-size = 20;

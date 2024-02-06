@@ -1,5 +1,5 @@
 {
-  custom ? {
+custom ? {
     font = "JetBrainsMono Nerd Font";
     fontsize = "12";
     primary_accent = "cba6f7";
@@ -7,8 +7,8 @@
     tertiary_accent = "cdd6f4";
     background = "11111B";
     opacity = ".98";
-  },
-  ...
+}
+, ...
 }: {
     programs.waybar.style = ''
     * {
@@ -58,13 +58,18 @@
         background-size: 200% 200%;
     }
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk,
+    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #temperature,
     #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward,#custom-playerlabel{
         background: #${custom.palette.tertiary_background_hex};
         font-weight: bold;
         margin: 5px 0px;
     }
-
+    #temperature {
+        color: #${custom.palette.LightGreen_accent_hex};
+        border-radius: 24px 10px 24px 10px;
+        padding-left: 10px;
+        padding-right: 15px;
+    }
     #cpu {
         color: #${custom.palette.Tomato_accent_hex};
         border-radius: 10px 0px 0px 24px;
@@ -73,8 +78,8 @@
         margin-left: 7px;
     }
     #memory {
-        color: #${custom.palette.LemonChiffon_accent_hex};
-        border-radius: 0px 0 0px 0px;      
+        color: #${custom.palette.DarkOrange_accent_hex};
+        border-radius: 0px 0 0px 0px;
         padding-left: 9px;
         padding-right: 9px;
     }

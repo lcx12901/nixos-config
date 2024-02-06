@@ -13,7 +13,8 @@ let
       primary_accent_hex = "cba6f7";
       secondary_accent_hex = "89b4fa";
       Tomato_accent_hex = "FF6347";
-      LemonChiffon_accent_hex = "FFFACD";
+      DarkOrange_accent_hex = "FF8C00";
+      LightGreen_accent_hex = "90EE90";
       tertiary_accent_hex = "f5f5f5";
       primary_background_hex = "11111B";
       secondary_background_hex = "1b1b2b";
