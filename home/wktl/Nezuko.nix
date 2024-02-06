@@ -1,4 +1,9 @@
-{ username, pkgs, nix-index-database, ... }: {
+{
+  username,
+  pkgs,
+  nix-index-database,
+  ...
+}: {
   imports = [
     nix-index-database.hmModules.nix-index
     ./global
@@ -18,14 +23,14 @@
     vlc
     go-musicfox
     telegram-desktop
-    gnome.nautilus   # Gnome File Manager
+    gnome.nautilus # Gnome File Manager
 
     nodePackages.nodejs
     nodePackages.pnpm
 
-    playerctl   # controller for media players
+    playerctl # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)
-    pamixer     # pulseaudio command line mixer
+    pamixer # pulseaudio command line mixer
     unzip
   ];
 

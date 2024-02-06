@@ -1,4 +1,10 @@
-{ username, useremail, nix-index-database, pkgs, ... }: {
+{
+  username,
+  useremail,
+  nix-index-database,
+  pkgs,
+  ...
+}: {
   imports = [
     nix-index-database.hmModules.nix-index
     ./global
@@ -33,5 +39,4 @@
     nix-index.enableZshIntegration = true;
     nix-index-database.comma.enable = true;
   };
-  
 }

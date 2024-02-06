@@ -1,5 +1,5 @@
 {
-custom ? {
+  custom ? {
     font = "JetBrainsMono Nerd Font";
     fontsize = "12";
     primary_accent = "cba6f7";
@@ -7,10 +7,10 @@ custom ? {
     tertiary_accent = "cdd6f4";
     background = "11111B";
     opacity = ".98";
-}
-, ...
+  },
+  ...
 }: {
-    programs.waybar.style = ''
+  programs.waybar.style = ''
     * {
         border: none;
         border-radius: 0px;
@@ -85,7 +85,7 @@ custom ? {
     }
     #disk {
         color: #${custom.tertiary_accent};
-        border-radius: 0px 24px 10px 0px;      
+        border-radius: 0px 24px 10px 0px;
         padding-left: 9px;
         padding-right: 15px;
     }
@@ -106,11 +106,11 @@ custom ? {
     }
     #network {
         color: #${custom.tertiary_accent};
-        border-radius: 0px 24px 10px 0px;      
+        border-radius: 0px 24px 10px 0px;
         padding-left: 9px;
         padding-right: 15px;
     }
-    
+
     #clock {
         color: #${custom.palette.primary_accent_hex};
         background: #${custom.palette.tertiary_background_hex};

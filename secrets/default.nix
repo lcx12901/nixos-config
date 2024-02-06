@@ -6,8 +6,7 @@
   mysecrets,
   username,
   ...
-}:
-let
+}: let
   # `attrset ? attrpath`，返回 bool 值， 判断属性集中是否存在某个属性
   hasOptinPersistence = config.environment ? "persistence";
 in {
@@ -31,7 +30,10 @@ in {
     "nextcloud.pwd" = {
       file = "${mysecrets}/nextcloud.age";
       mode = "0440";
-      owner = if config.services.nextcloud.enable then config.users.users.nextcloud.name else username;
+      owner =
+        if config.services.nextcloud.enable
+        then config.users.users.nextcloud.name
+        else username;
     };
     "cloudflareGlobalAPIKey.age" = {
       file = "${mysecrets}/cloudflareGlobalAPIKey.age";

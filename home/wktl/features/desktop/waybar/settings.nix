@@ -19,9 +19,9 @@
     margin-left = 0;
     margin-right = 0;
     modules-left = [
-      "custom/launcher" 
-      # "custom/playerctl#backward" 
-      # "custom/playerctl#play" 
+      "custom/launcher"
+      # "custom/playerctl#backward"
+      # "custom/playerctl#play"
       # "custom/playerctl#foward"
       "temperature"
       "custom/playerlabel"
@@ -30,22 +30,22 @@
       "hyprland/workspaces"
     ];
     modules-right = [
-      "tray" 
+      "tray"
       "cpu"
       "memory"
       "disk"
-      "pulseaudio" 
+      "pulseaudio"
       "network"
-      "clock" 
+      "clock"
     ];
 
-    clock= {
+    clock = {
       format = " {:%H:%M}";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       format-alt = " {:%d/%m}";
     };
-    "wlr/workspaces"= {
+    "hyprland/workspaces" = {
       active-only = false;
       all-outputs = false;
       disable-scroll = false;
@@ -64,15 +64,15 @@
       hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
       critical-threshold = 80;
       format = "{temperatureC}°C {icon}";
-      format-icons = [ "" "" "" ];
+      format-icons = ["" "" ""];
     };
-    "custom/playerctl#backward"= {
-      format = "󰙣 "; 
+    "custom/playerctl#backward" = {
+      format = "󰙣 ";
       on-click = "playerctl previous";
       on-scroll-up = "playerctl volume .05+";
       on-scroll-down = "playerctl volume .05-";
     };
-    "custom/playerctl#play"= {
+    "custom/playerctl#play" = {
       format = "{icon}";
       return-type = "json";
       exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
@@ -85,7 +85,7 @@
         Stopped = "<span> </span>";
       };
     };
-    "custom/playerctl#foward"= {
+    "custom/playerctl#foward" = {
       format = "󰙡 ";
       on-click = "playerctl next";
       on-scroll-up = "playerctl volume .05+";
@@ -125,7 +125,7 @@
       tooltip-format = "Connected to {essid}{ifname} ip {ipaddr}/{cidr} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";
-      interval = 2;
+      interval = 1;
     };
     tray = {
       icon-size = 20;
@@ -143,7 +143,7 @@
     "custom/launcher" = {
       format = "";
       on-click = "pkill wofi || wofi --show drun";
-      on-click-right = "pkill wofi || wallpaper-picker"; 
+      on-click-right = "pkill wofi || wallpaper-picker";
       tooltip = "false";
     };
   };

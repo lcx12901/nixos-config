@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   boot.kernelModules = ["vfio-pci"];
 
   boot.extraModprobeConfig = "options kvm_amd nested=1";

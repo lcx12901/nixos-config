@@ -1,7 +1,10 @@
-{ pkgs, clash-subscribe, ... }: let 
+{
+  pkgs,
+  clash-subscribe,
+  ...
+}: let
   mihomo-meta = pkgs.callPackage ../../../packages/mihomo {};
 in {
-
   environment.systemPackages = [
     mihomo-meta
   ];
@@ -11,8 +14,8 @@ in {
 
   systemd.services.mihomo-meta = {
     description = "mihomo-meta Daemon";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
+    after = ["network.target"];
+    wantedBy = ["multi-user.target"];
 
     serviceConfig = {
       Type = "simple";

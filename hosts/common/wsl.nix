@@ -1,4 +1,8 @@
-{ username, pkgs, ... }: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
@@ -8,9 +12,9 @@
     startMenuLaunchers = true;
 
     extraBin = with pkgs; [
-      { src = "${coreutils}/bin/uname"; }
-      { src = "${coreutils}/bin/dirname"; }
-      { src = "${coreutils}/bin/readlink"; }
+      {src = "${coreutils}/bin/uname";}
+      {src = "${coreutils}/bin/dirname";}
+      {src = "${coreutils}/bin/readlink";}
     ];
 
     nativeSystemd = true;

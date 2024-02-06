@@ -1,4 +1,8 @@
-{ config, lib, ... }: {
+{
+  config,
+  lib,
+  ...
+}: {
   security.acme = {
     acceptTerms = true;
     defaults.email = "wktl1991504424@gmail.com";
@@ -11,7 +15,7 @@
     };
   };
 
-  users.users.nginx.extraGroups = [ "acme" ];
+  users.users.nginx.extraGroups = ["acme"];
 
   services.nginx = {
     enable = true;
@@ -24,32 +28,37 @@
     # recommendedProxySettings = true;
     recommendedTlsSettings = true;
 
-    virtualHosts =
-    let
+    virtualHosts = let
       base = {
         forceSSL = true;
         sslCertificate = "/var/lib/acme/nezuko.lincx.top/cert.pem";
         sslCertificateKey = "/var/lib/acme/nezuko.lincx.top/key.pem";
       };
     in {
-      "pgadmin.nezuko.lincx.top" = base // {
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:5050/";
+      "pgadmin.nezuko.lincx.top" =
+        base
+        // {
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:5050/";
+          };
         };
-      };
-      "aria2.nezuko.lincx.top" = base // {
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:6800/";
+      "aria2.nezuko.lincx.top" =
+        base
+        // {
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:6800/";
+          };
         };
-      };
-      "ariang.nezuko.lincx.top" = base // {
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:6880/";
+      "ariang.nezuko.lincx.top" =
+        base
+        // {
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:6880/";
+          };
         };
-      };
       "nextcloud.nezuko.lincx.top" = base;
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 302 404 ];
+  networking.firewall.allowedTCPPorts = [302 404];
 }

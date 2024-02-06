@@ -1,5 +1,11 @@
-{ config, pkgs, username, useremail, ... }: {
-  networking.firewall.allowedTCPPorts = [ 5432 ];
+{
+  config,
+  pkgs,
+  username,
+  useremail,
+  ...
+}: {
+  networking.firewall.allowedTCPPorts = [5432];
 
   services.postgresql = {
     enable = true;

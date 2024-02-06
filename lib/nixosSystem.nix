@@ -5,8 +5,7 @@
   specialArgs,
   nixos-modules,
   home-module,
-}: 
-let
+}: let
   username = specialArgs.username;
 in
   nixpkgs.lib.nixosSystem {

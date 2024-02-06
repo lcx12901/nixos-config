@@ -1,4 +1,8 @@
-{ pkgs, useremail, ...}: {
+{
+  pkgs,
+  useremail,
+  ...
+}: {
   programs.git = {
     enable = true;
 
@@ -12,6 +16,6 @@
     };
 
     lfs.enable = true;
-    ignores = [ ".direnv" "result" "dist" "node_modules" ];
+    ignores = [".direnv" "result" "dist" "node_modules"];
   };
 }

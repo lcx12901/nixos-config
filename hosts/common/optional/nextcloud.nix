@@ -1,4 +1,9 @@
-{ config, pkgs, username, ... }: {
+{
+  config,
+  pkgs,
+  username,
+  ...
+}: {
   services.nextcloud = {
     enable = true;
     hostName = "nextcloud.nezuko.lincx.top";

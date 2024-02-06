@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -22,7 +22,7 @@
 
   networking.hostName = "Nezuko";
 
-  networking.nameservers = [ "1.1.1.1 8.8.8.8" ];
+  networking.nameservers = ["1.1.1.1 8.8.8.8"];
 
   #networking.proxy.default = "http://127.0.0.1:7890";
 

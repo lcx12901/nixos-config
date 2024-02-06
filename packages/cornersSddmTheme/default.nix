@@ -1,5 +1,8 @@
-{ stdenv, fetchFromGitHub, ... }:
-
+{
+  stdenv,
+  fetchFromGitHub,
+  ...
+}:
 stdenv.mkDerivation rec {
   pname = "sddm-theme-corners";
   version = "6ff0ff455261badcae36cd7d151a34479f157a3c";

@@ -3,7 +3,7 @@
     autoScrub = {
       enable = true;
       interval = "weekly";
-      fileSystems = [ "/" ];
+      fileSystems = ["/"];
     };
   };
 }

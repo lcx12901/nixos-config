@@ -1,8 +1,13 @@
-{ specialArgs, pkgs, username, ... }: let 
+{
+  specialArgs,
+  pkgs,
+  username,
+  ...
+}: let
   cornersSddmTheme = pkgs.callPackage ../../../../packages/cornersSddmTheme {};
 in {
   # XDG portal
-  xdg.portal = { 
+  xdg.portal = {
     enable = true;
     wlr.enable = true;
     xdgOpenUsePortal = true;

@@ -1,4 +1,9 @@
-{ lib, impermanence, config, ... }: {
+{
+  lib,
+  impermanence,
+  config,
+  ...
+}: {
   imports = [
     impermanence.nixosModules.impermanence
   ];
@@ -23,7 +28,7 @@
           ".containers"
 
           ".vscode-server"
-          
+
           ".config/go-musicfox"
           ".config/chromium"
           ".config/VSCodium/User"
