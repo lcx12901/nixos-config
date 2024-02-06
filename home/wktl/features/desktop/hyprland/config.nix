@@ -4,7 +4,7 @@
       $mainMod = SUPER
 
       monitor=,highrr,auto,1
-      monitor=DP-1,2560x1440@165,0x0,1
+      # monitor=DP-1,2560x1440@165,0x0,1
 
       # autostart
       exec-once = systemctl --user import-environment &

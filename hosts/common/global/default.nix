@@ -10,5 +10,6 @@
     ./podman.nix
     ./fonts.nix
     ./pipewire.nix
+    ./trustCa.nix
   ];
 }
