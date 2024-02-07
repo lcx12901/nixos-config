@@ -1,1 +1,1 @@
-nix-shell -p btrfs-progs
+nix-shell -p btrfs-progs git

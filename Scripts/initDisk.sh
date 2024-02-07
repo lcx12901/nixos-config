@@ -53,6 +53,9 @@ fi
 
 
 echo $primaryPart
+
+sleep 2
+
 # Create a GPT partition table
 parted $path -- mklabel gpt
 
@@ -73,7 +76,7 @@ parted $path -- mkpart primary 630MB 100%
 #lsblk
 
 # NOTE: `cat shoukei.md | grep create-btrfs > btrfs.sh` to generate this script
-mkfs.fat -F 32 -n ESP /dev/nvme0n1p1
+mkfs.fat -F 32 -n ESP $secondPart
 
 # create-btrfs
 mkfs.btrfs $primaryPart
@@ -86,6 +89,8 @@ btrfs subvolume create /mnt/@swap
 btrfs subvolume create /mnt/@snapshots
 btrfs subvolume create /mnt/@persistent
 umount /mnt
+
+sleep 2
 
 mkdir /mnt/{nix,tmp,swap,persistent,snapshots,boot}
 mount -o compress-force=zstd:1,noatime,subvol=@nix $primaryPart /mnt/nix
@@ -104,6 +109,10 @@ lsblk
 
 # show swap status
 swapon -s
+
+sleep 2
+
+nixos-generate-config --root /mnt
 
 
 

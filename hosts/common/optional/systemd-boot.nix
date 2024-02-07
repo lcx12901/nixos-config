@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -34,6 +34,16 @@
     # set mode to 755, otherwise systemd will set it to 777, which cause problems.
     # relatime: Update inode access times relative to modify or change time.
     options = ["relatime" "mode=755"];
+  };
+
+  # remount swapfile in read-write mode
+  fileSystems."/swap/swapfile" = {
+    # the swapfile is located in /swap subvolume, so we need to mount /swap first.
+    depends = ["/swap"];
+
+    device = "/swap/swapfile";
+    fsType = "none";
+    options = ["bind" "rw"];
   };
 
   swapDevices = [

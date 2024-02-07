@@ -52,16 +52,6 @@
     options = ["subvol=@swap" "ro"];
   };
 
-  # remount swapfile in read-write mode
-  fileSystems."/swap/swapfile" = {
-    # the swapfile is located in /swap subvolume, so we need to mount /swap first.
-    depends = ["/swap"];
-
-    device = "/swap/swapfile";
-    fsType = "none";
-    options = ["bind" "rw"];
-  };
-
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/7942-B55E";
     fsType = "vfat";
