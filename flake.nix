@@ -19,6 +19,7 @@
 #          ▝▀▀▀    ▀▀▀▀▘       ▀▀▀▘
 # » Implemented machines:
 #    • wsl → WSL on the daily driver.
+#    • x64
 {
   description = "A tough try on NixOS";
 
@@ -88,7 +89,7 @@
     in {
       # WSL
       Mikasa = nixosSystem (Mikasa_modules // base_args);
-      # VM
+      # M600
       Nezuko = nixosSystem (Nezuko_modules // base_args);
     };
   };

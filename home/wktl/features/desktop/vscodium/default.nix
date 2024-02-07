@@ -67,6 +67,10 @@ in {
         "editor.formatOnType" = false;
       };
       "alejandra.program" = "alejandra";
+
+      "cSpell.userWords" = [
+        "nixos"
+      ];
     };
   };
 }

@@ -8,6 +8,7 @@
     ../common/users/wktl
 
     ../common/optional/brtfs.nix
+    ../common/optional/boot.nix
     ../common/optional/container.nix
     ../common/optional/nextcloud.nix
     ../common/optional/postgresql.nix

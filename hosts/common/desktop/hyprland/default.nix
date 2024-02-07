@@ -22,6 +22,7 @@ in {
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtsvg
     libsForQt5.qt5.qtquickcontrols2
+    networkmanagerapplet
   ];
 
   services.xserver = {
@@ -42,4 +43,13 @@ in {
     enable = true;
     package = specialArgs.hyprland.packages.${pkgs.system}.hyprland;
   };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [];
+  };
+  hardware.enableRedistributableFirmware = true;
+  powerManagement.cpuFreqGovernor = "performance";
 }
