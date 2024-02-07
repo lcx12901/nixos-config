@@ -65,6 +65,11 @@
       home-module = import ./home/wktl/Nezuko.nix;
     };
 
+    Emilia_modules = {
+      nixos-modules = import ./hosts/Emilia;
+      home-modules = import ./home/wktl/Emilia.nix;
+    };
+
     x64_specialArgs =
       {
         inherit username userfullname useremail;
@@ -91,6 +96,8 @@
       Mikasa = nixosSystem (Mikasa_modules // base_args);
       # M600
       Nezuko = nixosSystem (Nezuko_modules // base_args);
+      # KVM
+      Emilia = nixosSystem (Emilia_modules // base_args);
     };
   };
 
