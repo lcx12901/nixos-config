@@ -22,8 +22,6 @@
       users.wktl = {
         directories = [
           # ".local/state"
-          "nixos-config"
-          "nix-secrets"
 
           ".containers"
 
