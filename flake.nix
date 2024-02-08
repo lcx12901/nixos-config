@@ -67,7 +67,7 @@
 
     Emilia_modules = {
       nixos-modules = import ./hosts/Emilia;
-      home-modules = import ./home/wktl/Emilia.nix;
+      home-module = import ./home/wktl/Emilia.nix;
     };
 
     x64_specialArgs =
