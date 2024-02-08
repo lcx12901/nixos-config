@@ -11,12 +11,14 @@ in {
 
     extensions =
       (with extensions.vscode-marketplace; [
+        ms-ceintl.vscode-language-pack-zh-hans
         enkia.tokyo-night
         vscode-icons-team.vscode-icons
         oderwat.indent-rainbow
         wix.vscode-import-cost
         streetsidesoftware.code-spell-checker
         usernamehw.errorlens
+        dbaeumer.vscode-eslint
         kamikillerto.vscode-colorize
         jnoortheen.nix-ide
         rust-lang.rust-analyzer

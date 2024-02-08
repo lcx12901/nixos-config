@@ -4,7 +4,7 @@
 }:
 buildGoModule rec {
   name = "mihomo-meta";
-  version = "20658f6eac2b9fb876b377547ee0190eb2e57b05";
+  version = "0c384b1e4225709d1dcec61db37dc8af0388bfa3";
 
   src = fetchFromGitHub {
     owner = "MetaCubeX";
@@ -12,7 +12,7 @@ buildGoModule rec {
     # 对应的 commit 或者 tag，注意 fetchFromGitHub 不能跟随 branch！
     rev = "${version}";
 
-    hash = "sha256-BAsCtgy9lAE6DWF7LpVeyzq/uOZqpnfl8gjK+479tu4=";
+    hash = "sha256-Yy/RafNl+OWNC/+T/ESoZVpJTE5oY/mEAe9FER0AbgM=";
   };
 
   vendorHash = "sha256-tvPR5kAta4MlMTwjfxwVOacRr2nVpfalbN08mfxml64=";
@@ -25,7 +25,7 @@ buildGoModule rec {
   ldflags = [
     "-s"
     "-w"
-    "-X github.com/metacubex/mihomo/constant.Version=alpha-20658f6"
+    "-X github.com/metacubex/mihomo/constant.Version=alpha-0c384b1"
   ];
 
   tags = [

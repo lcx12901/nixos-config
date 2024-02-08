@@ -19,7 +19,6 @@
 
   home.packages = with pkgs; [
     neofetch
-    parsec-bin
     vlc
     go-musicfox
     telegram-desktop
