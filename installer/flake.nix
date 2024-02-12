@@ -17,12 +17,16 @@
         system = "x86_64-linux";
         specialArgs = inputs // {username = "wktl";};
         modules = [
-          {networking.hostName = "Emilia";}
+          {
+            networking.hostName = "Emilia";
+            system.stateVersion = "23.11";
+          }
 
           ../hosts/common/global/openssh.nix
+          ../hosts/common/global/fish.nix
           ../hosts/common/global/optin-persistence.nix
 
-          ../hosts/common/optional/system-boot.nix
+          ../hosts/common/optional/systemd-boot.nix
 
           ../hosts/common/users/wktl
 
