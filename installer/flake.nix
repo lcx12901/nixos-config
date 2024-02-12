@@ -20,7 +20,7 @@
           {networking.hostName = "Emilia";}
 
           ../hosts/common/global/openssh.nix
-          ../hosts/common/global/option-persistence.nix
+          ../hosts/common/global/optin-persistence.nix
 
           ../hosts/common/optional/system-boot.nix
 
