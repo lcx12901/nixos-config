@@ -133,6 +133,9 @@ sed -i 's/options = [ "subvol=@snapshots" ];/options = ["subvol=@snapshots" "com
 sed -i 's/options = [ "subvol=@swap" ];/options = ["subvol=@swap" "ro"];/' $configDir/hardware-configuration.nix
 sed -i 's/swapDevices = [ ];//' $configDir/hardware-configuration.nix
 
+mkdir -p /mnt/persistent/home/wktl/Coding
+cp -r ~/nixos-config /mnt/persistent/home/wktl/Coding
+
 
 
 
