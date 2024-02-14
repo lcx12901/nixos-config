@@ -65,9 +65,9 @@
       home-module = import ./home/wktl/Nezuko.nix;
     };
 
-    Emilia_modules = {
-      nixos-modules = import ./hosts/Emilia;
-      home-module = import ./home/wktl/Emilia.nix;
+    Icarus_modules = {
+      nixos-modules = import ./hosts/Icarus;
+      home-module = import ./home/wktl/Icarus.nix;
     };
 
     x64_specialArgs =
@@ -97,7 +97,7 @@
       # M600
       Nezuko = nixosSystem (Nezuko_modules // base_args);
       # KVM
-      Emilia = nixosSystem (Emilia_modules // base_args);
+      Icarus = nixosSystem (Icarus_modules // base_args);
     };
   };
 

@@ -14,7 +14,7 @@
     ../common/desktop/hyprland
   ];
 
-  networking.hostName = "Emilia";
+  networking.hostName = "Icarus";
 
   networking.nameservers = ["1.1.1.1 8.8.8.8"];
 

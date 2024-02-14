@@ -36,7 +36,7 @@ echoContent yellow "请输入要分区的硬盘 例: /dev/sda --->"
 read -r -p "要进行分区的硬盘路径:" path
 
 echo
-echoContent yellow "请输入swap分区的大小 例: 16G --->"
+echoContent yellow "请输入swap分区的大小 例: 16g --->"
 read -r -p "swap分区的大小为:" swapSize
 
 primaryPart=''
@@ -113,6 +113,17 @@ swapon -s
 sleep 2
 
 nixos-generate-config --root /mnt
+
+echo "记得复制 hardware-configuration.nix"
+
+sleep 2
+
+echo
+
+read -r -p "请输入域名:" domain
+mkdir -p /mnt/home/wktl/.ssh
+scp -r root@$domain:~/ssh-backup/* /mnt/persistent/home/wktl/.ssh
+chmod 600 ~/.ssh/id_rsa
 
 
 
