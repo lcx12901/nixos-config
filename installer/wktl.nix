@@ -16,7 +16,6 @@
 
   users.users.wktl = {
     isNormalUser = true;
-    shell = pkgs.fish;
     extraGroups = [
       "wheel"
     ];
