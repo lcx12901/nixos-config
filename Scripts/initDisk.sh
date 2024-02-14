@@ -127,11 +127,11 @@ scp -r root@$domain:~/ssh-backup/* $sshDir
 configDir="/root/nixos-config/hosts/Icarus"
 cp -r /mnt/etc/nixos/hardware-configuration.nix $configDir
 
-sed -i '/.*options\ =\ [\ "subvol=@nix"\ ];*/c\options\ =\ ["subvol=@nix"\ "noatime"\ "compress-force=zstd:1"];/' $configDir/hardware-configuration.nix
-sed -i '/.*options\ =\ [\ "subvol=@persistent"\ ];*/c\options\ =\ ["subvol=@persistent"\ "compress-force=zstd:1"];/' $configDir/hardware-configuration.nix
-sed -i '/.*options\ =\ [\ "subvol=@snapshots"\ ];*/c\options\ =\ ["subvol=@snapshots"\ "compress-force=zstd:1"];\n\ \ \ \ neededForBoot\ =\ true;/' $configDir/hardware-configuration.nix
-sed -i '/.*options\ =\ [\ "subvol=@swap"\ ];*/c\options\ =\ ["subvol=@swap"\ "ro"];/' $configDir/hardware-configuration.nix
-sed -i '/.*swapDevices\ =\ [\ ];*/c\/' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@nix\" \]\;/options \= [\"subvol\=\@nix\" \"noatime\" \"compress\-force\=zstd\:1\"\]\;/g' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@persistent\" \]\;/options \= \[\"subvol\=\@persistent\" \"compress\-force\=zstd\:1\"\]\;/g' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@snapshots\" \]\;/options \= \[\"subvol\=\@snapshots\" \"compress\-force\=zstd\:1\"\]\;\n    neededForBoot \= true\;/g' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@swap\" \]\;/options \= \[\"subvol\=\@swap\" \"ro\"\]\;/g' $configDir/hardware-configuration.nix
+sed -i 's/swapDevices \= \[ \]\;//g' $configDir/hardware-configuration.nix
 
 cd /root/nixos-config
 git add .
