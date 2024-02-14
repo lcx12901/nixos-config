@@ -124,6 +124,15 @@ mkdir -p $sshDir
 scp -r root@$domain:~/ssh-backup/* $sshDir
 
 
+configDir="~/nixos-config/hosts/Icarus"
+cp /mnt/etc/nixos/hardware-configuration.nix $configDir
+
+sed -i 's/options = [ "subvol=@nix" ];/options = ["subvol=@nix" "noatime" "compress-force=zstd:1"];/' $configDir/hardware-configuration.nix
+sed -i 's/options = [ "subvol=@persistent" ];/options = ["subvol=@persistent" "compress-force=zstd:1"];/' $configDir/hardware-configuration.nix
+sed -i 's/options = [ "subvol=@snapshots" ];/options = ["subvol=@snapshots" "compress-force=zstd:1"];\n    needForBoot = true;/' $configDir/hardware-configuration.nix
+sed -i 's/options = [ "subvol=@swap" ];/options = ["subvol=@swap" "ro"];/' $configDir/hardware-configuration.nix
+sed -i 's/swapDevices = [ ];//' $configDir/hardware-configuration.nix
+
 
 
 
