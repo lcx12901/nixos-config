@@ -51,9 +51,6 @@ else
     secondPart="${path}1"
 fi
 
-
-echo $primaryPart
-
 sleep 2
 
 # Create a GPT partition table
@@ -120,10 +117,12 @@ sleep 2
 
 echo
 
+sshDir="/mnt/persistent/home/wktl/.ssh"
+
 read -r -p "请输入域名:" domain
-mkdir -p /mnt/home/wktl/.ssh
-scp -r root@$domain:~/ssh-backup/* /mnt/persistent/home/wktl/.ssh
-chmod 600 ~/.ssh/id_rsa
+mkdir -p $sshDir
+scp -r root@$domain:~/ssh-backup/* $sshDir
+chmod 600 $sshDir/id_rsa
 
 
 
