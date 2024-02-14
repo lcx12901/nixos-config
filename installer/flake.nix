@@ -31,7 +31,7 @@
 
           ../hosts/common/global
 
-          ../hosts/common/global/optin--persistence.nix
+          ../hosts/common/global/optin-persistence.nix
 
           ../hosts/common/optional/systemd-boot.nix
 
