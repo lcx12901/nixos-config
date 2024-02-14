@@ -149,6 +149,8 @@ Host github.com
 
 ' >> $sshDir/ssh_config
 
+systemctl restart sshd
+
 
 
 
