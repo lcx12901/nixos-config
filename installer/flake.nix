@@ -31,6 +31,7 @@
           ../hosts/common/global/fish.nix
           ../hosts/common/global/optin-persistence.nix
 
+          ../hosts/common/optional/proxy.nix
           ../hosts/common/optional/systemd-boot.nix
 
           ../hosts/common/users/wktl
