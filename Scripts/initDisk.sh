@@ -132,25 +132,6 @@ git add .
 mkdir -p /mnt/persistent/home/wktl/Coding
 cp  $configDir/hardware-configuration.nix /mnt/persistent/home/wktl/Coding
 
-sshDir="/etc/ssh"
-
-read -r -p "请输入域名:" domain
-
-scp -r root@$domain:~/ssh-backup/id_isa $sshDir
-
-chmod 400 $sshDir/id_isa
-
-echo '
-
-Host github.com
-  IdentitiesOnly yes
-  HostName github.com
-  IdentityFile /etc/ssh/id_isa
-
-' >> $sshDir/ssh_config
-
-systemctl restart sshd
-
 
 
 
