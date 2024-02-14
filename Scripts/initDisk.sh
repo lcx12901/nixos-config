@@ -117,13 +117,6 @@ sleep 2
 
 echo
 
-sshDir="/mnt/persistent/home/wktl/.ssh"
-
-read -r -p "请输入域名:" domain
-mkdir -p $sshDir
-scp -r root@$domain:~/ssh-backup/* $sshDir
-
-
 configDir="/root/nixos-config/hosts/Icarus"
 cp -r /mnt/etc/nixos/hardware-configuration.nix $configDir
 
@@ -137,7 +130,24 @@ cd /root/nixos-config
 git add .
 
 mkdir -p /mnt/persistent/home/wktl/Coding
-cp -r /root/nixos-config /mnt/persistent/home/wktl/Coding
+cp  $configDir/hardware-configuration.nix /mnt/persistent/home/wktl/Coding
+
+sshDir="/etc/ssh"
+
+read -r -p "请输入域名:" domain
+
+scp -r root@$domain:~/ssh-backup/id_isa $sshDir
+
+chmod 400 $sshDir/id_isa
+
+echo '
+
+Host github.com
+  IdentitiesOnly yes
+  HostName github.com
+  IdentityFile /etc/ssh/id_isa
+
+' >> $sshDir/ssh_config
 
 
 

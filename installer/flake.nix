@@ -29,9 +29,7 @@
 
           ./host.nix
 
-          ../hosts/common/global/openssh.nix
-          ../hosts/common/global/fish.nix
-          ../hosts/common/global/optin-persistence.nix
+          ../hosts/common/global
 
           ../hosts/common/optional/systemd-boot.nix
 
