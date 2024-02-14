@@ -66,7 +66,9 @@
     };
 
     Icarus_modules = {
-      nixos-modules = import ./hosts/Icarus;
+      nixos-modules = [
+        ./hosts/Icarus
+      ];
       home-module = import ./home/wktl/Icarus.nix;
     };
 
@@ -96,7 +98,7 @@
       Mikasa = nixosSystem (Mikasa_modules // base_args);
       # M600
       Nezuko = nixosSystem (Nezuko_modules // base_args);
-      # KVM
+      # office
       Icarus = nixosSystem (Icarus_modules // base_args);
     };
   };
