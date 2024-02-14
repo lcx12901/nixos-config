@@ -27,6 +27,8 @@
             system.stateVersion = "23.11";
           }
 
+          ./host.nix
+
           ../hosts/common/global/openssh.nix
           ../hosts/common/global/fish.nix
           ../hosts/common/global/optin-persistence.nix
@@ -40,8 +42,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs;
-            home-manager.users.wktl = ./wktl.nix;
+            home-manager.users.wktl = ./hm.nix;
           }
         ];
       };
