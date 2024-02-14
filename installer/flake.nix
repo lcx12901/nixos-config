@@ -31,6 +31,8 @@
 
           ../hosts/common/global
 
+          ../hosts/common/global/optin--persistence.nix
+
           ../hosts/common/optional/systemd-boot.nix
 
           ../hosts/Icarus/hardware-configuration.nix
