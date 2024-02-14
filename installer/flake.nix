@@ -36,14 +36,14 @@
 
           ../hosts/common/users/wktl
 
-          ../hosts/Emilia/hardware-configuration.nix
+          ../hosts/Icarus/hardware-configuration.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.extraSpecialArgs = specialArgs;
+            home-manager.extraSpecialArgs = inputs // {username = "wktl";};
             home-manager.users.wktl = ./wktl.nix;
           }
         ];
