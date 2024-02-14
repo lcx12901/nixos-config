@@ -1,6 +1,6 @@
 {
   imports = [
-    ../home/wktl/features/cli/ssh
+    ../home/wktl/features/cli/ssh.nix
   ];
 
   home = {
