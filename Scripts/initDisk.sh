@@ -128,8 +128,8 @@ configDir="/root/nixos-config/hosts/Icarus"
 cp -r /mnt/etc/nixos/hardware-configuration.nix $configDir
 
 sed -i 's/options \= \[ \"subvol\=\@nix\" \]\;/options \= [\"subvol\=\@nix\" \"noatime\" \"compress\-force\=zstd\:1\"\]\;/g' $configDir/hardware-configuration.nix
-sed -i 's/options \= \[ \"subvol\=\@persistent\" \]\;/options \= \[\"subvol\=\@persistent\" \"compress\-force\=zstd\:1\"\]\;/g' $configDir/hardware-configuration.nix
-sed -i 's/options \= \[ \"subvol\=\@snapshots\" \]\;/options \= \[\"subvol\=\@snapshots\" \"compress\-force\=zstd\:1\"\]\;\n    neededForBoot \= true\;/g' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@persistent\" \]\;/options \= \[\"subvol\=\@persistent\" \"compress\-force\=zstd\:1\"\]\;\n      neededForBoot \= true\;/g' $configDir/hardware-configuration.nix
+sed -i 's/options \= \[ \"subvol\=\@snapshots\" \]\;/options \= \[\"subvol\=\@snapshots\" \"compress\-force\=zstd\:1\"\]\;/g' $configDir/hardware-configuration.nix
 sed -i 's/options \= \[ \"subvol\=\@swap\" \]\;/options \= \[\"subvol\=\@swap\" \"ro\"\]\;/g' $configDir/hardware-configuration.nix
 sed -i 's/swapDevices \= \[ \]\;//g' $configDir/hardware-configuration.nix
 
