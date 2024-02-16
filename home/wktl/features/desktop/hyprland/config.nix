@@ -138,7 +138,7 @@
       bind = $mainMod, Return, exec, kitty
       # bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
       bind = $mainMod, G, exec, chromium --gtk-version=4 --enable-features=UseOZonePlatform --ozone-platform=wayland
-      # bind = $mainMod, V, exec, codium --enable-features=UseOZonePlatform --ozone-platform=wayland
+      bind = $mainMod, M, exec, kitty musicfox
       bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
       bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
       bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态

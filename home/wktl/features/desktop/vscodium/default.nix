@@ -43,8 +43,8 @@ in {
       "editor.tabSize" = 2;
       "editor.lineNumbers" = "relative";
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'monospace', monospace";
-      "editor.codeLensFontFamily" = "'JetBrainsMono Nerd Font'";
-      "scm.inputFontFamily" = "'JetBrainsMono Nerd Font'";
+      "editor.codeLensFontFamily" = "JetBrainsMono Nerd Font";
+      "scm.inputFontFamily" = "JetBrainsMono Nerd Font";
 
       "window.zoomLevel" = 1;
       "window.titleBarStyle" = "custom";
@@ -55,10 +55,9 @@ in {
 
       "terminal.integrated.inheritEnv" = true;
       "terminal.integrated.gpuAcceleration" = "on";
-      "terminal.integrated.fontFamily" = "'JetBrainsMono Nerd Font'";
+      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.enableImages" = true;
       "terminal.integrated.smoothScrolling" = true;
-      "terminal.external.lincxExec" = "kitty";
 
       "gitlens.ai.experimental.provider" = "openai";
 
@@ -72,6 +71,7 @@ in {
 
       "cSpell.userWords" = [
         "nixos"
+        "nuxt"
       ];
     };
   };

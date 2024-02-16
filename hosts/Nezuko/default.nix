@@ -9,6 +9,7 @@
 
     ../common/optional/brtfs.nix
     ../common/optional/container.nix
+    # ../common/optional/mpd.nix
     ../common/optional/nextcloud.nix
     ../common/optional/postgresql.nix
     ../common/optional/proxy.nix
