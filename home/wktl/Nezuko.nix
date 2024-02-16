@@ -25,6 +25,9 @@
     telegram-desktop
     gnome.nautilus # Gnome File Manager
 
+    nodejs_20
+    nodePackages.pnpm
+
     playerctl # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)
     pamixer # pulseaudio command line mixer

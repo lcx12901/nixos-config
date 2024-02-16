@@ -24,7 +24,7 @@
     telegram-desktop
     gnome.nautilus # Gnome File Manager
 
-    nodePackages.nodejs
+    nodejs_20
     nodePackages.pnpm
 
     playerctl # controller for media players
