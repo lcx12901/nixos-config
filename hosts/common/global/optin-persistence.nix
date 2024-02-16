@@ -33,6 +33,7 @@
           ".config/discord"
 
           ".local/share/TelegramDesktop"
+          ".local/share/netease-cloud-music-gtk4"
 
           "Coding"
           "Music"
