@@ -40,10 +40,23 @@
     ];
 
     clock = {
-      format = " {:%H:%M}";
+      interval = 1;
+      format = " {:%B %d  %H:%M:%S}";
+      format-alt = " {:%H:%M}";
       tooltip = "true";
-      tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = " {:%d/%m}";
+      tooltip-format = "\n<span size='14pt' font='JetBrains Nerd Mono ExtraBold'>{calendar}</span>";
+      calendar = {
+        mode = "month";
+        mode-mon-col = 3;
+        on-scroll = 1;
+        on-click-right = "mode";
+        format = {
+          months = "<span color='#5e81ac'><b>{}</b></span>";
+          days = "<span color='#88c0d0'><b>{}</b></span>";
+          weekdays = "<span color='#d08770'><b>{}</b></span>";
+          today = "<span color='#bf616a'><b><u>{}</u></b></span>";
+        };
+      };
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -95,7 +108,7 @@
       format = "<span>{}</span>";
       return-type = "json";
       max-length = 48;
-      exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
+      exec = "playerctl --player=musicfox -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
       on-click-middle = "playerctl play-pause";
       on-click = "playerctl previous";
       on-click-right = "playerctl next";
@@ -121,7 +134,7 @@
     };
     network = {
       format-wifi = "  {signalStrength}%";
-      format-ethernet = " {bandwidthUpBits}  {bandwidthDownBits}";
+      format-ethernet = " {bandwidthUpBytes}  {bandwidthDownBytes}";
       tooltip-format = "Connected to {essid}{ifname} ip {ipaddr}/{cidr} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";
