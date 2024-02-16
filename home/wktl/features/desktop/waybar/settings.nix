@@ -108,7 +108,7 @@
       format = "<span>{}</span>";
       return-type = "json";
       max-length = 48;
-      exec = "playerctl --player=musicfox -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
+      exec = "playerctl --player=NeteaseCloudMusicGtk -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
       on-click-middle = "playerctl play-pause";
       on-click = "playerctl previous";
       on-click-right = "playerctl next";

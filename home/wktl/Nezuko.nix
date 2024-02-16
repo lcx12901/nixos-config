@@ -21,12 +21,9 @@
     neofetch
     parsec-bin
     vlc
-    go-musicfox
+    netease-cloud-music-gtk
     telegram-desktop
     gnome.nautilus # Gnome File Manager
-
-    nodePackages.nodejs
-    nodePackages.pnpm
 
     playerctl # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)

@@ -27,7 +27,7 @@
 
           ".vscode-server"
 
-          ".config/go-musicfox"
+          ".config/netease-cloud-music-gtk4"
           ".config/chromium"
           ".config/VSCodium/User"
           ".config/discord"
