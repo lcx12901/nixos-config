@@ -25,6 +25,7 @@
       # "custom/playerctl#foward"
       "temperature"
       "custom/playerlabel"
+      # "hyprland/window"
     ];
     modules-center = [
       "hyprland/workspaces"
@@ -73,11 +74,19 @@
         sort-by-number = true;
       };
     };
+    "hyprland/window" = {
+      format = "{}";
+      rewrite = {
+        "(.*) - Google Chrome" = "chrome";
+      };
+    };
     temperature = {
-      hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
+      hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
+      input-filename = "temp1_input";
       critical-threshold = 80;
       format = "{temperatureC}°C {icon}";
       format-icons = ["" "" ""];
+      interval = 5;
     };
     "custom/playerctl#backward" = {
       format = "󰙣 ";

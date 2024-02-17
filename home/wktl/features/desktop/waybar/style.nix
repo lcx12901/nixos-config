@@ -58,7 +58,7 @@
         background-size: 200% 200%;
     }
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #temperature,
+    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #temperature, #window,
     #custom-playerctl.backward, #custom-playerctl.play, #custom-playerctl.foward,#custom-playerlabel{
         background: #${custom.palette.tertiary_background_hex};
         font-weight: bold;
@@ -69,6 +69,16 @@
         border-radius: 24px 10px 24px 10px;
         padding-left: 10px;
         padding-right: 15px;
+    }
+    #window {
+        color: #${custom.palette.DarkOrange_accent_hex};
+        border-radius: 24px 10px 24px 10px;
+        padding-left: 10px;
+        padding-right: 15px;
+        margin-left: 7px;
+    }
+    window#waybar.empty #window {
+        background: transparent;
     }
     #cpu {
         color: #${custom.palette.Tomato_accent_hex};
@@ -157,16 +167,6 @@
       border-radius: 24px 10px 24px 10px;
       padding-left: 10px;
       padding-right: 15px;
-    }
-    #window{
-        background: #${custom.palette.tertiary_background_hex};
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 16px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-weight: normal;
-        font-style: normal;
     }
   '';
 }

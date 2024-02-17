@@ -4,7 +4,7 @@
       $mainMod = SUPER
 
       monitor=,highrr,auto,1
-      # monitor=DP-1,2560x1440@165,0x0,1
+      monitor=DP-1,2560x1440@165,0x0,1
 
       # autostart
       exec-once = systemctl --user import-environment &
@@ -139,6 +139,8 @@
       # bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
       bind = $mainMod, G, exec, chromium --gtk-version=4 --enable-features=UseOZonePlatform --ozone-platform=wayland
       bind = $mainMod, M, exec, netease-cloud-music-gtk4
+      bind = $mainMod, T, exec, telegram-desktop
+      bind = $mainMod, B, exec, bytedance-feishu
       bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
       bind = $mainMod SHIFT, F, fullscreen, 1      # 最大化（保留间隙和条形）
       bind = $mainMod, Space, togglefloating,      # 切换当前窗口的浮动状态
@@ -202,6 +204,8 @@
       windowrule = noborder,wofi
 
       windowrulev2 = float,class:^(org.telegram.desktop|telegramdesktop)$
+      windowrulev2 = float,title:飞书
+      windowrulev2 = float,title:图片
       windowrulev2 = float,title:NetEase Cloud Music Gtk4
     '';
   };
