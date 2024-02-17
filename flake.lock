@@ -26,10 +26,10 @@
     "clash-subscribe": {
       "flake": false,
       "locked": {
-        "lastModified": 1707110925,
-        "narHash": "sha256-UFymez+0hxqONfhKGwMSWw3d9F5DbV9EgcSqF4AVcQs=",
+        "lastModified": 1708182965,
+        "narHash": "sha256-VL2cvZVNZPqlxR90iMyMPvgq5x0kz3XUrXjMsT9/OLg=",
         "ref": "refs/heads/master",
-        "rev": "6689b07d1bc61043f305178aa27a73011b558901",
+        "rev": "6fac19be8803c6423ff2ca086961cbf0cd81e0a1",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/lcx12901/iQZone.git"
@@ -150,11 +150,11 @@
     },
     "hardware": {
       "locked": {
-        "lastModified": 1707842204,
-        "narHash": "sha256-M+HAq1qWQBi/gywaMZwX0odU+Qb/XeqVeANGKRBDOwU=",
+        "lastModified": 1708091350,
+        "narHash": "sha256-o28BJYi68qqvHipT7V2jkWxDiMS1LF9nxUsou+eFUPQ=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "f1b2f71c86a5b1941d20608db0b1e88a07d31303",
+        "rev": "106d3fec43bcea19cb2e061ca02531d54b542ce3",
         "type": "github"
       },
       "original": {
@@ -215,11 +215,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1708018354,
-        "narHash": "sha256-MlbqBzAjiz4Va2M/AvLN96Wq+jsCbEedhfMs5wW1yFM=",
+        "lastModified": 1708138027,
+        "narHash": "sha256-xTOrKOamqdVtW+v7j0bUTed8nqfijEMahJ7edgFtWL0=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "fbf5ba87ce57752653f3bebf6e2be090c702836e",
+        "rev": "cdcc5aba06f20005842cf966b23af50456dc7142",
         "type": "github"
       },
       "original": {
@@ -290,6 +290,23 @@
         "type": "github"
       }
     },
+    "metacubexd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1706783034,
+        "narHash": "sha256-xpFbgnu/9TJ/P9tCGn5jH0+8yVTB0zQv8Icq+B0/eo0=",
+        "owner": "MetaCubeX",
+        "repo": "metacubexd",
+        "rev": "ea9820432acd38b2845dec80e781f86841646c31",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MetaCubeX",
+        "ref": "gh-pages",
+        "repo": "metacubexd",
+        "type": "github"
+      }
+    },
     "mysecrets": {
       "flake": false,
       "locked": {
@@ -354,11 +371,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1708046047,
-        "narHash": "sha256-b+2lISVnSvRyjAcuXbeHEBvtAvybAOEuBag6iH2e0dc=",
+        "lastModified": 1708132419,
+        "narHash": "sha256-nW59wT6EgIJNc33v9gSbLFxsCYesLaHXMHgEQBCLtgU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "a559b37e6c07fdac75203c162319cfd02872be38",
+        "rev": "9f6b2b21066043d8420dc67798de0a5a5cd2318e",
         "type": "github"
       },
       "original": {
@@ -407,11 +424,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1707956935,
-        "narHash": "sha256-ZL2TrjVsiFNKOYwYQozpbvQSwvtV/3Me7Zwhmdsfyu4=",
+        "lastModified": 1708118438,
+        "narHash": "sha256-kk9/0nuVgA220FcqH/D2xaN6uGyHp/zoxPNUmPCMmEE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a4d4fe8c5002202493e87ec8dbc91335ff55552c",
+        "rev": "5863c27340ba4de8f83e7e3c023b9599c3cb3c80",
         "type": "github"
       },
       "original": {
@@ -437,11 +454,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1708076655,
-        "narHash": "sha256-KNRfg2szpJ19/NgXXB4s9r2+CCM90nq0MVUuvdQI+Ws=",
+        "lastModified": 1708181823,
+        "narHash": "sha256-RfIJHRy1eiWxj37wv+oyyqys5PwiDRnKjn/hZjmeQeA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "1155ba6a69b8a69d7edda02321a21ff993d9300e",
+        "rev": "e9c855dd90924f6a0e072ebe22660b36e84a2b54",
         "type": "github"
       },
       "original": {
@@ -458,6 +475,7 @@
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
         "impermanence": "impermanence",
+        "metacubexd": "metacubexd",
         "mysecrets": "mysecrets",
         "nix-index-database": "nix-index-database",
         "nix-ld": "nix-ld",

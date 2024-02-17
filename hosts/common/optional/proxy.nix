@@ -1,6 +1,7 @@
 {
   pkgs,
   clash-subscribe,
+  metacubexd,
   ...
 }: let
   mihomo-meta = pkgs.callPackage ../../../packages/mihomo {};
@@ -12,6 +13,8 @@ in {
   ];
 
   environment.etc."mihomo/config.yaml".source = "${clash-subscribe}/wktl.yaml";
+
+  environment.etc."mihomo/ui".source = metacubexd;
 
   systemd.services.mihomo-meta = {
     description = "mihomo-meta Daemon";

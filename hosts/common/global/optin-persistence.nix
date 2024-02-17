@@ -14,7 +14,7 @@
       # The path to be saved is first moved to the `/persistent` directory
       directories = [
         "/etc/ssh"
-        "/etc/mihomo/rule_provider"
+        "/etc/mihomo"
         "/var/log"
         "/var/lib"
       ];
@@ -27,10 +27,10 @@
 
           ".vscode-server"
 
-          ".config/netease-cloud-music-gtk4"
           ".config/chromium"
           ".config/VSCodium/User"
           ".config/discord"
+          ".config/LarkShell"
 
           ".local/share/TelegramDesktop"
           ".local/share/netease-cloud-music-gtk4"

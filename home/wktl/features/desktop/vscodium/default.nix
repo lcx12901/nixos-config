@@ -26,6 +26,7 @@ in {
       ])
       ++ (with extensions.open-vsx; [
         kamadorueda.alejandra
+        editorconfig.editorconfig
         vue.volar
       ]);
 
