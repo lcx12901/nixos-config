@@ -31,6 +31,8 @@
     pavucontrol # pulseaudio volume controle (GUI)
     pamixer # pulseaudio command line mixer
     unzip
+
+    feishu
   ];
 
   programs = {
