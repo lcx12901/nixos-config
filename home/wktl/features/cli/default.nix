@@ -4,6 +4,7 @@
     ./git.nix
     ./gh.nix
     ./fish.nix
+    ./nodejs.nix
     ./ssh.nix
   ];
 }
