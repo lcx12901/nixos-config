@@ -40,11 +40,18 @@ in {
 
       "editor.fontSize" = 17;
       "editor.fontLigatures" = true;
+      # 光标的动画样式
       "editor.cursorBlinking" = "smooth";
+      # 启用平滑插入动画
+      "editor.cursorSmoothCaretAnimation" = "on";
+      # 强制执行"#光标环绕行#"
+      "editor.cursorSurroundingLinesStyle" = "all";
       "editor.tabSize" = 2;
       "editor.lineNumbers" = "relative";
       "editor.fontFamily" = "'JetBrainsMono Nerd Font', 'monospace', monospace";
       "editor.codeLensFontFamily" = "JetBrainsMono Nerd Font";
+      # 启用括号对参考线
+      "editor.guides.bracketPairs" = true;
       "scm.inputFontFamily" = "JetBrainsMono Nerd Font";
 
       "window.zoomLevel" = 1;
@@ -61,6 +68,10 @@ in {
       "terminal.integrated.smoothScrolling" = true;
 
       "gitlens.ai.experimental.provider" = "openai";
+
+      # 在 VS Code 中重命名或移动文件时自动更新导入路径
+      "javascript.updateImportsOnFileMove.enabled" = "always";
+      "typescript.updateImportsOnFileMove.enabled" = "always";
 
       "[nix]" = {
         "editor.defaultFormatter" = "kamadorueda.alejandra";
