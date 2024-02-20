@@ -20,6 +20,8 @@
     WLR_BACKEND = "vulkan";
     WLR_RENDERER = "vulkan";
     WLR_NO_HARDWARE_CURSORS = "1";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";

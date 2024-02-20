@@ -26,9 +26,9 @@ in {
         postman.postman-for-vscode
         prisma.prisma
         philsinatra.nested-comments # 嵌套注释
-        graphqL.vscode-graphql
-        graphqL.vscode-graphql-syntax
-        wallabyjs.console-ninja  # 直接打印 console.log 结果
+        graphql.vscode-graphql
+        graphql.vscode-graphql-syntax
+        wallabyjs.console-ninja # 直接打印 console.log 结果
       ])
       ++ (with extensions.open-vsx; [
         kamadorueda.alejandra

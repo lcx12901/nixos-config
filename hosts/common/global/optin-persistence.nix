@@ -30,6 +30,7 @@
           ".config/chromium"
           ".config/VSCodium/User"
           ".config/discord"
+          ".config/Vencord"
           ".config/LarkShell"
 
           ".local/share/TelegramDesktop"

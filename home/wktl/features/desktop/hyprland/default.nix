@@ -5,6 +5,8 @@
     ./config.nix
     ./variables.nix
 
+    ../xdg
+
     ../kitty
     ../waybar
     ../wofi

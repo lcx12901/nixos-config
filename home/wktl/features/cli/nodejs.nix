@@ -5,9 +5,9 @@
   ];
 
   xdg.configFile."pnpm/rc".text = ''
-    cache-dir=~/Coding/.pnpm-store/cache
-    global-bin-dir=~/Coding/.pnpm-store
-    state-dir=~/Coding/.pnpm-store/state
-    global-dir=~/Coding/.pnpm-store/global
+    cache-dir=/home/wktl/Coding/.pnpm-store/cache
+    global-bin-dir=/home/wktl/Coding/.pnpm-store
+    state-dir=/home/wktl/Coding/.pnpm-store/state
+    global-dir=/home/wktl/Coding/.pnpm-store/global
   '';
 }
