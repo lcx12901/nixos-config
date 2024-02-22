@@ -73,6 +73,8 @@ in {
       "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.enableImages" = true;
       "terminal.integrated.smoothScrolling" = true;
+      "terminal.integrated.env.linux" = {
+      };
 
       "gitlens.ai.experimental.provider" = "openai";
 
@@ -91,6 +93,8 @@ in {
       "[prisma]" = {
         "editor.defaultFormatter" = "Prisma.prisma";
       };
+
+      "console-ninja.featureSet" = "Community";
 
       "cSpell.userWords" = [
         "nixos"

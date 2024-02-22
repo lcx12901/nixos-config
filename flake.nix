@@ -146,6 +146,8 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     # it's a private repository, use ssh protocol to authenticate via ssh-agent/ssh-key, and shallow clone to save time
     # need system key, by sudo ssh-keygen -f /etc/ssh/ssh_host_key -N '' -t rsa to change
     mysecrets = {

@@ -1,16 +1,4 @@
 {
-  custom ? {
-    font = "JetBrainsMono Nerd Font";
-    fontsize = "12";
-    primary_accent = "cba6f7";
-    secondary_accent = "89b4fa";
-    tertiary_accent = "f5f5f5";
-    background = "11111B";
-    opacity = ".85";
-    # cursor = "Numix-Cursor";
-  },
-  ...
-}: {
   programs.waybar.settings.mainBar = {
     position = "top";
     layer = "top";
@@ -26,6 +14,7 @@
       "temperature"
       "custom/playerlabel"
       # "hyprland/window"
+      "network"
     ];
     modules-center = [
       "hyprland/workspaces"
@@ -36,7 +25,6 @@
       "memory"
       "disk"
       "pulseaudio"
-      "network"
       "clock"
     ];
 
@@ -84,7 +72,7 @@
       hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
       input-filename = "temp1_input";
       critical-threshold = 80;
-      format = "{temperatureC}°C {icon}";
+      format = "{icon} {temperatureC}°C";
       format-icons = ["" "" ""];
       interval = 5;
     };
@@ -127,8 +115,8 @@
       };
     };
     memory = {
-      format = " {}%";
-      format-alt = " {used} GiB"; # 
+      format = " {used} GiB"; # 
+      format-alt = " {}%";
       interval = 2;
     };
     cpu = {
@@ -143,7 +131,7 @@
     };
     network = {
       format-wifi = "  {signalStrength}%";
-      format-ethernet = " {bandwidthUpBytes}  {bandwidthDownBytes}";
+      format-ethernet = " {bandwidthDownBytes}"; #  {bandwidthUpBytes}
       tooltip-format = "Connected to {essid}{ifname} ip {ipaddr}/{cidr} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";

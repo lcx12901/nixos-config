@@ -207,6 +207,7 @@
       windowrulev2 = float,title:飞书
       windowrulev2 = float,title:图片
       windowrulev2 = float,title:NetEase Cloud Music Gtk4
+      windowrulev2 = float,class:^(org.gnome.Nautilus|nautilus)$
     '';
   };
 }
