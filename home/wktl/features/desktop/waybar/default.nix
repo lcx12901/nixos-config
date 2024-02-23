@@ -10,4 +10,8 @@
       mesonFlags = (oa.mesonFlags or []) ++ ["-Dexperimental=true"];
     });
   };
+
+  home.packages = [
+    (pkgs.writeShellScriptBin "waySong" (builtins.readFile ./scripts/waySong))
+  ];
 }

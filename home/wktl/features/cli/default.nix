@@ -6,5 +6,6 @@
     ./fish.nix
     ./nodejs.nix
     ./ssh.nix
+    ./packages.nix
   ];
 }

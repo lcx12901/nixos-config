@@ -102,13 +102,14 @@
       on-scroll-down = "playerctl volume .05-";
     };
     "custom/playerlabel" = {
-      format = "<span>{}</span>";
+      format = "{}";
       return-type = "json";
       max-length = 48;
-      exec = "playerctl --player=NeteaseCloudMusicGtk -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
+      exec = "waySong 2> /dev/null";
       on-click-middle = "playerctl play-pause";
       on-click = "playerctl previous";
       on-click-right = "playerctl next";
+      interval = 1;
       format-icons = {
         Playing = "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>";
         Paused = "<span foreground='#928374'>󰒮 󰏥 󰒭</span>";
