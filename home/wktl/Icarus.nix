@@ -26,7 +26,7 @@
 
     nodejs_20
     nodePackages.pnpm
-    nodePackages.yarn
+    yarn
 
     playerctl # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)
