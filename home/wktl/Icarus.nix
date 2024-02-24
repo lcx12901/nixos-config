@@ -20,12 +20,13 @@
   home.packages = with pkgs; [
     neofetch
     vlc
-    go-musicfox
+    netease-cloud-music-gtk
     telegram-desktop
     gnome.nautilus # Gnome File Manager
 
     nodejs_20
     nodePackages.pnpm
+    nodePackages.yarn
 
     playerctl # controller for media players
     pavucontrol # pulseaudio volume controle (GUI)
