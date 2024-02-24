@@ -6,6 +6,6 @@ scp -r root@$domain:~/ssh-backup/* $sshDir
 
 sudo chown wktl:users $sshDir/*
 
-chmod 400 $sshDir/id_isa
+chmod 600 $sshDir/id_rsa
 
 sudo chown -R wktl:users /home/wktl/Coding
