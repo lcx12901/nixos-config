@@ -5,9 +5,10 @@
     matchBlocks = {
       "github.com" = {
         hostname = "github.com";
-        identityFile = "~/.ssh/id_isa";
+        identityFile = "~/.ssh/id_rsa";
         identitiesOnly = true;
       };
+
     };
     extraConfig = ''
       identitiesOnly yes
