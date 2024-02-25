@@ -178,6 +178,9 @@
       bind = $mainMod SHIFT, 0, movetoworkspace, 10
       bind = $mainMod CTRL, c, movetoworkspace, empty
 
+      bind = $mainMod, a, togglespecialworkspace, magic
+      bind = control SHIFT, S, movetoworkspace, special:magic
+
       # window control
       bind = $mainMod SHIFT, left, movewindow, l
       bind = $mainMod SHIFT, right, movewindow, r
@@ -208,6 +211,9 @@
       windowrulev2 = float,title:图片
       windowrulev2 = float,title:NetEase Cloud Music Gtk4
       windowrulev2 = float,class:^(org.gnome.Nautilus|nautilus)$
+      windowrulev2 = float,class:^(kitty)$
+      windowrulev2 = float,class:discord
+      windowrulev2 = float,title:^(Devtools)
     '';
   };
 }

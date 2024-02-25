@@ -41,7 +41,7 @@ song(){
       # 往第二行写入当前歌词
       sed -i "2 c $(echo $lyrics | jq -Rr @html)" $lyriscFile
     fi
-    echo "{\"text\": \"$(sed -n 1p $lyriscFile) $(songStatus)$(sed -n 2p $lyriscFile)\", \"tooltip\": \"$playerName\", \"alt\": \"$songSt\", \"class\": \"$songSt\"}" | jq --unbuffered --compact-output
+    echo "{\"text\": \"$(sed -n 1p $lyriscFile) $(post)$(sed -n 2p $lyriscFile)\", \"tooltip\": \"$playerName\", \"alt\": \"$songSt\", \"class\": \"$songSt\"}" | jq --unbuffered --compact-output
   fi
 }
 
@@ -54,15 +54,16 @@ title(){
 post() {
   if [[ $songSt == "Playing" ]];then
     dp=$($playerShell metadata --format '{{ duration(position) }}')
+    duration=$(playerctl metadata --format '{{ duration(mpris:length) }}')
     if [[ $dp != "" ]]; then
-      duration=$(feeluown status | grep 'duration' | sed 's/duration:  //' | bc)
-      le="$(date -u -d @${duration} +"%M:%S")"
-      if [[ $le != "" ]]; then
-        echo " [$dp|$le] "
+      if [[ $duration != "" ]]; then
+        echo "[$dp|$duration] "
       else
-        echo " [$dp] "
+        echo "[$dp] "
       fi
     fi
+  else
+    echo "_ z Z Z ♥  "
   fi
 	
 }

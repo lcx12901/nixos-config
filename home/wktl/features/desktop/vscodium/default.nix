@@ -99,6 +99,8 @@ in {
       "cSpell.userWords" = [
         "nixos"
         "nuxt"
+        "antfu"
+        "unocss"
       ];
     };
   };
