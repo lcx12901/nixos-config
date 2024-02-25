@@ -13,7 +13,7 @@ songSt=$($playerShell status)
 
 song(){
   # 歌曲标题
-  title=$($playerShell metadata title)
+  title=$($playerShell metadata title | jq -Rr @html)
 
   if [[ $title != "" ]]; then
     songId=$(getSongId)
@@ -30,16 +30,18 @@ song(){
       echo "" > $lyriscFile
       echo "" >> $lyriscFile
       sed -i "1 c $(echo $title | jq -Rr @html)" $lyriscFile
-      getSongMedia $songId
+      if [[ $songId != "" ]]; then
+        getSongMedia $songId
+      fi
     fi
     # 当前歌词
-    lyrics=$(cat $lyriscFile | grep "$position" | awk -F ']' '{print $NF}' | head -n 1)
+    lyrics=$(cat $lyriscFile | grep "$position" | awk -F ']' '{print $NF}' | xargs -0)
     # -n 字符串长度大于0为true
     if [ -n "$lyrics" ]; then
       # 往第二行写入当前歌词
       sed -i "2 c $(echo $lyrics | jq -Rr @html)" $lyriscFile
     fi
-    echo "{\"text\": \"$title $(sed -n 2p $lyriscFile)\", \"tooltip\": \"$playerName\", \"alt\": \"$songSt\", \"class\": \"$songSt\"}" | jq --unbuffered --compact-output
+    echo "{\"text\": \"$(sed -n 1p $lyriscFile) $(songStatus)$(sed -n 2p $lyriscFile)\", \"tooltip\": \"$playerName\", \"alt\": \"$songSt\", \"class\": \"$songSt\"}" | jq --unbuffered --compact-output
   fi
 }
 

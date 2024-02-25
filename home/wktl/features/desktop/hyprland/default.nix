@@ -10,6 +10,7 @@
     ../kitty
     ../waybar
     ../wofi
+    ../cava
     ../mako
     ../gtk
     ../wallpapers

@@ -17,7 +17,9 @@
       "network"
     ];
     modules-center = [
+      "cava#left"
       "hyprland/workspaces"
+      "cava#right"
     ];
     modules-right = [
       "tray"
@@ -68,6 +70,60 @@
         "(.*) - Google Chrome" = "chrome";
       };
     };
+    "cava#left" = {
+      "autosens" = 1;
+      "bar_delimiter" = 0;
+      "bars" = 14;
+      "sleep_timer" = 3;
+      #"hide_on_silence" = true;
+      "format-icons" = [
+        "<span foreground='#cba6f7'>▁</span>"
+        "<span foreground='#cba6f7'>▂</span>"
+        "<span foreground='#cba6f7'>▃</span>"
+        "<span foreground='#cba6f7'>▄</span>"
+        "<span foreground='#89b4fa'>▅</span>"
+        "<span foreground='#89b4fa'>▆</span>"
+        "<span foreground='#89b4fa'>▇</span>"
+        "<span foreground='#89b4fa'>█</span>"
+      ];
+      "framerate" = 60;
+      "higher_cutoff_freq" = 10000;
+      "input_delay" = 2;
+      "lower_cutoff_freq" = 50;
+      "method" = "pipewire";
+      "monstercat" = false;
+      "reverse" = false;
+      "source" = "auto";
+      "stereo" = true;
+      "waves" = false;
+    };
+    "cava#right" = {
+      "autosens" = 1;
+      "bar_delimiter" = 0;
+      "bars" = 14;
+      "sleep_timer" = 3;
+      #"hide_on_silence" = true;
+      "format-icons" = [
+        "<span foreground='#cba6f7'>▁</span>"
+        "<span foreground='#cba6f7'>▂</span>"
+        "<span foreground='#cba6f7'>▃</span>"
+        "<span foreground='#cba6f7'>▄</span>"
+        "<span foreground='#89b4fa'>▅</span>"
+        "<span foreground='#89b4fa'>▆</span>"
+        "<span foreground='#89b4fa'>▇</span>"
+        "<span foreground='#89b4fa'>█</span>"
+      ];
+      "framerate" = 60;
+      "higher_cutoff_freq" = 10000;
+      "input_delay" = 2;
+      "lower_cutoff_freq" = 50;
+      "method" = "pipewire";
+      "monstercat" = false;
+      "reverse" = false;
+      "source" = "auto";
+      "stereo" = true;
+      "waves" = false;
+    };
     temperature = {
       hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
       input-filename = "temp1_input";
@@ -76,44 +132,15 @@
       format-icons = ["" "" ""];
       interval = 5;
     };
-    "custom/playerctl#backward" = {
-      format = "󰙣 ";
-      on-click = "playerctl previous";
-      on-scroll-up = "playerctl volume .05+";
-      on-scroll-down = "playerctl volume .05-";
-    };
-    "custom/playerctl#play" = {
-      format = "{icon}";
-      return-type = "json";
-      exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
-      on-click = "playerctl play-pause";
-      on-scroll-up = "playerctl volume .05+";
-      on-scroll-down = "playerctl volume .05-";
-      format-icons = {
-        Playing = "<span>󰏥 </span>";
-        Paused = "<span> </span>";
-        Stopped = "<span> </span>";
-      };
-    };
-    "custom/playerctl#foward" = {
-      format = "󰙡 ";
-      on-click = "playerctl next";
-      on-scroll-up = "playerctl volume .05+";
-      on-scroll-down = "playerctl volume .05-";
-    };
     "custom/playerlabel" = {
       format = "{}";
       return-type = "json";
-      max-length = 48;
+      max-length = 60;
       exec = "waySong 2> /dev/null";
       on-click-middle = "playerctl play-pause";
       on-click = "playerctl previous";
       on-click-right = "playerctl next";
       interval = 1;
-      format-icons = {
-        Playing = "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>";
-        Paused = "<span foreground='#928374'>󰒮 󰏥 󰒭</span>";
-      };
     };
     memory = {
       format = " {used} GiB"; # 
