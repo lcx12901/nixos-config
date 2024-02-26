@@ -4,7 +4,7 @@
       $mainMod = SUPER
 
       monitor=,highrr,auto,1
-      monitor=DP-1,2560x1440@165,0x0,1
+      # monitor=DP-1,2560x1440@165,0x0,1
 
       # autostart
       exec-once = systemctl --user import-environment &
@@ -14,8 +14,7 @@
       exec-once = hyprctl setcursor Nordzy-cursors 22 &
       exec-once = waybar &
       exec-once = mako
-      exec-once = swww init
-      exec-once = swww img ~/.config/wallpapers/72125571_p0.jpg
+      exec-once = sleep 1 && swww init && swww img ~/.config/wallpapers/72125571_p0.jpg
 
       # fcitx5
       windowrule=pseudo,fcitx    # enable this will make fcitx5 works, but fcitx5-configtool will not work!

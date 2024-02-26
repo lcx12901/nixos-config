@@ -1,5 +1,6 @@
 {
   pkgs,
+  osConfig,
   nix-vscode-extensions,
   ...
 }: let
@@ -61,7 +62,10 @@ in {
       "editor.guides.bracketPairs" = true;
       "scm.inputFontFamily" = "JetBrainsMono Nerd Font";
 
-      "window.zoomLevel" = 1;
+      "window.zoomLevel" =
+        if osConfig.networking.hostName == "Icarus"
+        then 0.5
+        else 1;
       "window.titleBarStyle" = "custom";
 
       "files.autoSave" = "onWindowChange";

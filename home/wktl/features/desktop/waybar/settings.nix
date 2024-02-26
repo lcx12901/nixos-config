@@ -125,8 +125,12 @@
       "waves" = false;
     };
     temperature = {
-      hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
-      input-filename = "temp1_input";
+      #hwmon-path-abs = "/sys/devices/pci0000:00/0000:00:18.3/hwmon";
+      #input-filename = "temp1_input";
+      hwmon-path = [
+        "/sys/devices/pci0000:00/0000:00:18.3/hwmon/temp1_input"
+        "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+      ];
       critical-threshold = 80;
       format = "{icon} {temperatureC}°C";
       format-icons = ["" "" ""];
