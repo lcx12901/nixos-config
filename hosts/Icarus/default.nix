@@ -20,5 +20,12 @@
 
   security.polkit.enable = true;
 
+  networking.firewall.allowedTCPPortRanges = [
+    {
+      from = 8033;
+      to = 8039;
+    }
+  ];
+
   system.stateVersion = "23.11";
 }
