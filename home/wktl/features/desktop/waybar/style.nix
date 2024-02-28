@@ -1,5 +1,6 @@
 {
   config,
+  osConfig,
   nix-colors,
   ...
 }: {
@@ -15,7 +16,11 @@
       border-radius: 20px;
       font-family: JetBrainsMono Nerd Font;
       font-weight: bold;
-      font-size: 15px;
+      font-size: ${
+      if osConfig.networking.hostName == "Icarus"
+      then "13"
+      else "15"
+    }px;
       min-height: 0;
       opacity: 0.98;
     }

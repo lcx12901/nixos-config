@@ -27,5 +27,9 @@
     }
   ];
 
+  networking.extraHosts = ''
+    127.0.0.1 t3.dahui99.com
+  '';
+
   system.stateVersion = "23.11";
 }
