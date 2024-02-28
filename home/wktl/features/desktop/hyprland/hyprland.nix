@@ -1,8 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  hypr-contrib,
+  ...
+}: {
   home.packages = with pkgs; [
     swww
     wofi
     wayland
+
+    hypr-contrib.packages.${pkgs.system}.grimblast
   ];
 
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];

@@ -146,6 +146,9 @@
       bind = $mainMod, C, killactive,              # 关闭活动窗口
       bind = $mainMod SHIFT, W, exec, pkill waybar || waybar &
 
+      bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S").png
+      bind=$mainMod,bracketright,exec, grimblast --notify --cursor  copy area
+
       # switch focus
       bind = $mainMod, left, movefocus, l
       bind = $mainMod, right, movefocus, r

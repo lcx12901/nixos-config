@@ -137,6 +137,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hypr-contrib.url = "github:hyprwm/contrib";
+
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
