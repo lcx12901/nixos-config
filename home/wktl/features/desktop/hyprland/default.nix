@@ -2,6 +2,7 @@
   imports = [
     hyprland.homeManagerModules.default
     ./hyprland.nix
+    ./hyprlock.nix
     ./config.nix
     ./variables.nix
 
