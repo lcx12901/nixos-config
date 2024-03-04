@@ -6,6 +6,7 @@
       "aapbdbdomjkkjkaonfhkkikfgjllcleb" # google translate
       "fjjopahebfkmlmkekebhacaklbhiefbn" # vue devtool beta
       "gcalenpjmijncebpfijmoaglllgpjagf" # tampermonkey
+      "fmkadmapgofadopljbjfkapdkoienihi" # react-devtools
     ];
   };
 }
