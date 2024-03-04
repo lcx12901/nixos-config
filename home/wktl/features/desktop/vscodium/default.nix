@@ -85,6 +85,7 @@ in {
       # 在 VS Code 中重命名或移动文件时自动更新导入路径
       "javascript.updateImportsOnFileMove.enabled" = "always";
       "typescript.updateImportsOnFileMove.enabled" = "always";
+      "html.validate.styles" = false;
 
       "[nix]" = {
         "editor.defaultFormatter" = "kamadorueda.alejandra";
@@ -105,6 +106,7 @@ in {
         "nuxt"
         "antfu"
         "unocss"
+        "pinia"
       ];
     };
   };
