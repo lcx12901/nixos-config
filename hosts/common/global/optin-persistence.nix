@@ -37,6 +37,7 @@
           ".local/share/netease-cloud-music-gtk4"
 
           "Coding"
+          "Downloads"
           "Music"
 
           {
