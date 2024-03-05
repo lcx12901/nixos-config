@@ -9,6 +9,7 @@
     ../xdg
 
     ../kitty
+    ../neovim
     ../waybar
     ../wofi
     ../cava

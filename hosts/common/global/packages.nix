@@ -1,9 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     wget
-    vim
+    neovim-nightly
     alejandra
   ];
 
-  programs.vim.defaultEditor = true;
+  # replace default editor with neovim
+  environment.variables.EDITOR = "nvim";
 }

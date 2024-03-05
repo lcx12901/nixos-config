@@ -9,7 +9,7 @@
     # BACKGROUND
     background {
         monitor =
-        path = /home/wktl/.config/wallpapers/68977253_p0.png
+        path = /home/wktl/.config/wallpapers/wallhaven-v973e3.png
         color = rgba(25, 20, 20, 1.0)
         blur_passes = 3
         contrast = 0.8916
