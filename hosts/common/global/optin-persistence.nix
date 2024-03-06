@@ -35,6 +35,8 @@
 
           ".local/share/TelegramDesktop"
           ".local/share/netease-cloud-music-gtk4"
+          ".local/share/nvim"
+          ".local/share/z"
 
           "Coding"
           "Downloads"
