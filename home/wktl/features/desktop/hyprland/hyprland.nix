@@ -9,6 +9,7 @@
     wayland
 
     hypr-contrib.packages.${pkgs.system}.grimblast
+    neovide
   ];
 
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];

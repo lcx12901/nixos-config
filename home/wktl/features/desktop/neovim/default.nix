@@ -9,6 +9,10 @@
     vdiff = "nvim -d";
   };
 in {
+  imports = [
+    ./packages.nix
+  ];
+
   xdg.configFile = {
     "nvim" = {
       source = astronvim;
