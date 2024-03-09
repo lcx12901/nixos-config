@@ -14,7 +14,7 @@
       exec-once = hyprctl setcursor Nordzy-cursors 22 &
       exec-once = waybar &
       exec-once = mako
-      exec-once = sleep 1 && swww init && swww img ~/.config/wallpapers/72125571_p0.jpg
+      exec-once = sleep 1 && swww init && swww img ~/.config/wallpapers/wallhaven-v973e3.png
 
       # fcitx5
       windowrule=pseudo,fcitx    # enable this will make fcitx5 works, but fcitx5-configtool will not work!
