@@ -24,7 +24,6 @@ in {
         jnoortheen.nix-ide
         rust-lang.rust-analyzer
         eamodio.gitlens
-        postman.postman-for-vscode
         prisma.prisma
         philsinatra.nested-comments # 嵌套注释
         graphql.vscode-graphql
@@ -107,6 +106,9 @@ in {
         "antfu"
         "unocss"
         "pinia"
+        "nestjs"
+        "websockets"
+        "fastify"
       ];
     };
   };

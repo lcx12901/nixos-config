@@ -23,86 +23,78 @@
 {
   description = "A tough try on NixOS";
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    nur,
-    home-manager,
-    nixos-wsl,
-    nix-ld,
-    vscode-server,
-    ...
-  }: let
-    username = "wktl";
-    userfullname = "wktl Lin";
-    useremail = "wktl1991504424@gmail.com";
+  outputs = inputs:
+    with inputs; let
+      username = "wktl";
+      userfullname = "wktl Lin";
+      useremail = "wktl1991504424@gmail.com";
 
-    x64_system = "x86_64-linux";
-    allSystems = [x64_system];
+      x64_system = "x86_64-linux";
+      allSystems = [x64_system];
 
-    nixosSystem = import ./lib/nixosSystem.nix;
+      nixosSystem = import ./lib/nixosSystem.nix;
 
-    Mikasa_modules = {
-      nixos-modules = [
-        nixos-wsl.nixosModules.wsl
-        ./hosts/Mikasa
-      ];
-      home-module = import ./home/wktl/Mikasa.nix;
-    };
-
-    Nezuko_modules = {
-      nixos-modules = [
-        vscode-server.nixosModules.default
-        ({
-          config,
-          pkgs,
-          ...
-        }: {
-          services.vscode-server.enable = true;
-        })
-        ./hosts/Nezuko
-      ];
-      home-module = import ./home/wktl/Nezuko.nix;
-    };
-
-    Icarus_modules = {
-      nixos-modules = [
-        ./hosts/Icarus
-      ];
-      home-module = import ./home/wktl/Icarus.nix;
-    };
-
-    x64_specialArgs =
-      {
-        inherit username userfullname useremail;
-        pkgs = import nixpkgs {
-          system = x64_system; # refer the `system` parameter form outer scope recursively
-          overlays = [
-            nur.overlay
-            inputs.neovim-nightly-overlay.overlay
-          ];
-          # To use chrome, we need to allow the installation of non-free software
-          config.allowUnfree = true;
-        };
-      }
-      // inputs;
-  in {
-    nixosConfigurations = let
-      base_args = {
-        inherit home-manager;
-        nixpkgs = nixpkgs;
-        system = x64_system;
-        specialArgs = x64_specialArgs;
+      Mikasa_modules = {
+        nixos-modules = [
+          nixos-wsl.nixosModules.wsl
+          ./hosts/Mikasa
+        ];
+        home-module = import ./home/wktl/Mikasa.nix;
       };
+
+      Nezuko_modules = {
+        nixos-modules = [
+          vscode-server.nixosModules.default
+          ({
+            config,
+            pkgs,
+            ...
+          }: {
+            services.vscode-server.enable = true;
+          })
+          ./hosts/Nezuko
+        ];
+        home-module = import ./home/wktl/Nezuko.nix;
+      };
+
+      Icarus_modules = {
+        nixos-modules = [
+          ./hosts/Icarus
+        ];
+        home-module = import ./home/wktl/Icarus.nix;
+      };
+
+      x64_specialArgs =
+        {
+          inherit username userfullname useremail;
+          pkgs = import nixpkgs {
+            system = x64_system; # refer the `system` parameter form outer scope recursively
+            overlays = [
+              nur.overlay
+              inputs.neovim-nightly-overlay.overlay
+            ];
+            # To use chrome, we need to allow the installation of non-free software
+            config.allowUnfree = true;
+          };
+        }
+        // inputs;
     in {
-      # WSL
-      Mikasa = nixosSystem (Mikasa_modules // base_args);
-      # M600
-      Nezuko = nixosSystem (Nezuko_modules // base_args);
-      # office
-      Icarus = nixosSystem (Icarus_modules // base_args);
+      nixosConfigurations = let
+        base_args = {
+          inherit home-manager;
+          nixpkgs = nixpkgs;
+          system = x64_system;
+          specialArgs = x64_specialArgs;
+        };
+      in {
+        # WSL
+        Mikasa = nixosSystem (Mikasa_modules // base_args);
+        # M600
+        Nezuko = nixosSystem (Nezuko_modules // base_args);
+        # office
+        Icarus = nixosSystem (Icarus_modules // base_args);
+      };
     };
-  };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

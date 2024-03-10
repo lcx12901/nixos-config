@@ -26,6 +26,7 @@
           ".containers"
 
           ".vscode-server"
+          ".vscode-oss"
 
           ".config/chromium"
           ".config/VSCodium/User"

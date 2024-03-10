@@ -30,6 +30,7 @@
     #-- javascript/typescript --#
     nodePackages.nodejs
     nodePackages.pnpm
+    nest-cli
     nodePackages.typescript
     nodePackages.typescript-language-server
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
