@@ -496,11 +496,11 @@
     "metacubexd": {
       "flake": false,
       "locked": {
-        "lastModified": 1706783034,
-        "narHash": "sha256-xpFbgnu/9TJ/P9tCGn5jH0+8yVTB0zQv8Icq+B0/eo0=",
+        "lastModified": 1710158921,
+        "narHash": "sha256-iAos54MWUZPhiH8k3Zs8fLuP2eg7Hl2gYZ1OUj3O1pk=",
         "owner": "MetaCubeX",
         "repo": "metacubexd",
-        "rev": "ea9820432acd38b2845dec80e781f86841646c31",
+        "rev": "16a4cba975dc5303ca8ec2d88402a8cc6d88b75b",
         "type": "github"
       },
       "original": {
@@ -769,11 +769,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1710153753,
-        "narHash": "sha256-oILsW7rFrH1AknlW8GVh7GmQoJyYsDB31QVJV1oGXWs=",
+        "lastModified": 1710162054,
+        "narHash": "sha256-7N2nF6kLLYqGxHSJGYOsO9DDKySeD0j+hcrqPiJSSuU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ca4982238c58ad2fb44a4a5e10b203bb1b6524f1",
+        "rev": "837d2cf049b8fc727584a6e610c4af8f0e496f0e",
         "type": "github"
       },
       "original": {
