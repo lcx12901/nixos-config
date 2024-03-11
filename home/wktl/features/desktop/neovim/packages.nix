@@ -13,9 +13,9 @@
   '';
 
   home.packages = with pkgs; [
-    #-- nix
-    nil
-    rnix-lsp
+    #-- nix ----- Nix 2.16 is suffering from a CVE, wait update, can use nixd
+    # nil
+    # rnix-lsp
     # nixd
     statix # Lints and suggestions for the nix programming language
     deadnix # Find and remove unused code in .nix source files

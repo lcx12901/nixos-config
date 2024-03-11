@@ -76,9 +76,6 @@
             # To use chrome, we need to allow the installation of non-free software
             config = {
               allowUnfree = true;
-              permittedInsecurePackages = [
-                "nix-2.15.3"
-              ];
             };
           };
         }
