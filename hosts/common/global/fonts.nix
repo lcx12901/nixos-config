@@ -46,7 +46,7 @@
     fontconfig.defaultFonts = {
       serif = ["WenQuanYi Zen Hei" "Noto Serif CJK SC" "Noto Serif CJK TC" "Noto Serif CJK JP" "Noto Color Emoji"];
       sansSerif = ["WenQuanYi Zen Hei" "Noto Sans CJK SC" "Noto Sans CJK TC" "Noto Sans CJK JP" "Noto Color Emoji"];
-      monospace = ["JetBrainsMono Nerd Font Mono" "Noto Color Emoji"];
+      monospace = ["JetBrainsMono Nerd Font Mono" "WenQuanYi Zen Hei Mono" "Noto Color Emoji"];
       emoji = ["Noto Color Emoji"];
     };
   };
