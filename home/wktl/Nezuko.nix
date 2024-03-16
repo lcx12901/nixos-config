@@ -21,7 +21,6 @@
     neofetch
     parsec-bin
     vlc
-    netease-cloud-music-gtk
     telegram-desktop
     gnome.nautilus # Gnome File Manager
 

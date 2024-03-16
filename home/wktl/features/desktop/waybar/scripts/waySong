@@ -1,6 +1,6 @@
 #/bin/sh
 
-playerName=$(playerctl --list-all |  head -n 1)
+playerName="musicfox"
 playerShell="playerctl --player=$playerName"
 
 lyriscFile=~/.config/waybar/lyrics.lrc
@@ -69,9 +69,9 @@ post() {
 }
 
 getSongId() {
-  if [[ $playerName == "NeteaseCloudMusicGtk" ]];then
-    echo $($playerShell metadata mpris:trackid | cut -d "/" -f6 | cut -d "'" -f1)
-  fi
+  # if [[ $playerName == "musicfox" ]];then
+    echo $($playerShell metadata mpris:trackid | cut -d "/" -f5 | cut -d "'" -f1)
+  # fi
 }
 
 getSongMedia(){

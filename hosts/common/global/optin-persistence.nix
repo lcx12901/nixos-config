@@ -27,15 +27,15 @@
 
           ".vscode-server"
           ".vscode-oss"
-
+          ".config/mpd"
           ".config/chromium"
           ".config/VSCodium/User"
           ".config/discord"
           ".config/Vencord"
           ".config/LarkShell"
+          ".config/go-musicfox"
 
           ".local/share/TelegramDesktop"
-          ".local/share/netease-cloud-music-gtk4"
           ".local/share/nvim"
           ".local/share/z"
 

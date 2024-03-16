@@ -3,10 +3,6 @@
   username,
   ...
 }: {
-  environment.systemPackages = with pkgs; [
-    mpc-cli
-  ];
-
   services.mpd = {
     enable = true;
     musicDirectory = "/home/${username}/Music";
