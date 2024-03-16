@@ -100,6 +100,8 @@ in {
 
       "console-ninja.featureSet" = "Community";
 
+      "npm.exclude" = ["**/.direnv/**"];
+
       "cSpell.userWords" = [
         "nixos"
         "nuxt"
