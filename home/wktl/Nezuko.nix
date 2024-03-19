@@ -30,6 +30,7 @@
     unzip
 
     feishu
+    remmina
   ];
 
   programs = {
