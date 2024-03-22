@@ -496,11 +496,11 @@
     "metacubexd": {
       "flake": false,
       "locked": {
-        "lastModified": 1710158921,
-        "narHash": "sha256-iAos54MWUZPhiH8k3Zs8fLuP2eg7Hl2gYZ1OUj3O1pk=",
+        "lastModified": 1710923207,
+        "narHash": "sha256-v6aWhfegllqgDRdTxtMnXPzziNu1HL3XAyZOnhrInvk=",
         "owner": "MetaCubeX",
         "repo": "metacubexd",
-        "rev": "16a4cba975dc5303ca8ec2d88402a8cc6d88b75b",
+        "rev": "630ffcc12a71e69edf647c1439dcceaaf18d2d7b",
         "type": "github"
       },
       "original": {
@@ -639,11 +639,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1710811024,
-        "narHash": "sha256-A2s6Mx1oXZFFjZGrPIJpOGfZnQpKlBEEADIjLe1dPqY=",
+        "lastModified": 1711070085,
+        "narHash": "sha256-qrvSvaIKZGThRwmZMDpcdtbjwXY4dh1AdtkaL7WjhFs=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "ebf9b6e2c3252dfcd375a06b69723e0065091568",
+        "rev": "c969bafb141eb5736083e832ad218bb14bbdc182",
         "type": "github"
       },
       "original": {
@@ -769,11 +769,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1710845145,
-        "narHash": "sha256-BYwh8Oz9uIOtpH5deD0INTJFEBZjIcSUcEcf3+JKDW4=",
+        "lastModified": 1711071362,
+        "narHash": "sha256-uIFyl2P1SWcOMVySmdXc/1/gP9pGEkZ0EJ+FoSVc8ig=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c1bb3d347c595c580dd48fc9a47003fd4211dcd1",
+        "rev": "eb27e2c0bdfb339ce0457292a13d339ea1907fb7",
         "type": "github"
       },
       "original": {

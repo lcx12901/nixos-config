@@ -17,9 +17,6 @@
 #           ▟███▛▜███▙       ▜███▙
 #          ▟███▛  ▜███▙       ▜███▙
 #          ▝▀▀▀    ▀▀▀▀▘       ▀▀▀▘
-# » Implemented machines:
-#    • wsl → WSL on the daily driver.
-#    • x64
 {
   description = "A tough try on NixOS";
 
