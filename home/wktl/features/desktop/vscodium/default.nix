@@ -29,6 +29,7 @@ in {
         graphql.vscode-graphql
         graphql.vscode-graphql-syntax
         wallabyjs.console-ninja # 直接打印 console.log 结果
+        mhutchie.git-graph
       ])
       ++ (with extensions.open-vsx; [
         kamadorueda.alejandra
