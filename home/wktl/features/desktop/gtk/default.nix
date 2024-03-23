@@ -16,12 +16,12 @@
     };
     theme = {
       # https://github.com/catppuccin/gtk
-      name = "Catppuccin-Macchiato-Compact-Lavender-Dark";
+      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
       package = pkgs.catppuccin-gtk.override {
         # https://github.com/NixOS/nixpkgs/blob/nixos-23.05/pkgs/data/themes/catppuccin-gtk/default.nix
         accents = ["lavender"];
         size = "compact";
-        variant = "macchiato";
+        variant = "mocha";
       };
     };
     cursorTheme = {
