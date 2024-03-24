@@ -136,7 +136,7 @@
       bind = $mainMod, W, exec, pkill wofi || wofi --show drun
       bind = $mainMod, Return, exec, kitty
       # bind = $mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'
-      bind = $mainMod, G, exec, chromium --gtk-version=4 --enable-features=UseOZonePlatform --ozone-platform=wayland
+      bind = $mainMod, G, exec, chromium
       bind = $mainMod, T, exec, telegram-desktop
       bind = $mainMod, B, exec, bytedance-feishu
       bind = $mainMod, F, fullscreen, 0            # 全屏（占据整个屏幕）
