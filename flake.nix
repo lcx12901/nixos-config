@@ -73,6 +73,9 @@
             # To use chrome, we need to allow the installation of non-free software
             config = {
               allowUnfree = true;
+              permittedInsecurePackages = [
+                "openssl-1.1.1w"
+              ];
             };
           };
         }

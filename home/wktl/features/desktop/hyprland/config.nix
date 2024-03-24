@@ -211,6 +211,7 @@
       windowrulev2 = float,class:^(org.telegram.desktop|telegramdesktop)$
       windowrulev2 = float,title:飞书
       windowrulev2 = float,title:图片
+      windowrulev2 = float,title:微信
       windowrulev2 = float,title:NetEase Cloud Music Gtk4
       windowrulev2 = float,class:^(org.gnome.Nautilus|nautilus)$
       windowrulev2 = float,class:^(kitty)$

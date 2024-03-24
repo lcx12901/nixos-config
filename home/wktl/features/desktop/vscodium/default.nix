@@ -12,7 +12,7 @@ in {
 
     extensions =
       (with extensions.vscode-marketplace; [
-        ms-ceintl.vscode-language-pack-zh-hans
+        # ms-ceintl.vscode-language-pack-zh-hans
         enkia.tokyo-night
         vscode-icons-team.vscode-icons
         oderwat.indent-rainbow

@@ -9,7 +9,8 @@
     wayland
 
     hypr-contrib.packages.${pkgs.system}.grimblast
-    neovide
+    # neovide # 暂时不想搞nvim了
+    nur.repos.xddxdd.wechat-uos
   ];
 
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];

@@ -26,7 +26,6 @@
           ".containers"
 
           ".vscode-server"
-          ".vscode-oss"
           ".config/mpd"
           ".config/chromium"
           ".config/VSCodium/User"
@@ -42,6 +41,7 @@
           "Coding"
           "Downloads"
           "Music"
+          "Documents"
 
           {
             directory = ".ssh";
