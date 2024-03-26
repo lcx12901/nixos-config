@@ -49,5 +49,12 @@ in {
       mode = "0440";
       group = "podman";
     };
+    "mysql.password" = {
+      file = "${mysecrets}/mysql.password.age";
+      owner =
+        if config.services.mysql.enable
+        then config.users.users.mysql.name
+        else username;
+    };
   };
 }

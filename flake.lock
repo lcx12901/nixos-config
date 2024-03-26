@@ -513,10 +513,10 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1704804343,
-        "narHash": "sha256-8BHY4NGkutSOYO3pTPhGieTBiNTxbmUkJOiNuyu3nvQ=",
+        "lastModified": 1711456985,
+        "narHash": "sha256-egqorEv4yhsOxx4OCWf+JIz/O+aaemeviefHPunB7Pk=",
         "ref": "refs/heads/master",
-        "rev": "1bbfcf19b59d3a180b9596808f7c5ce405ec5787",
+        "rev": "cc454f7ffa32fe14fb3c77faa3c58e3866ddd34c",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/lcx12901/nix-secrets.git"
@@ -769,11 +769,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1711453554,
-        "narHash": "sha256-f6rwDTE7V9m55yoqytA+EXMs8axFhpPQvjX8L81EJHQ=",
+        "lastModified": 1711454917,
+        "narHash": "sha256-ftsufDtpDYgsAfe52qSWAv+mdf03Xv2Rnr3E3WodLqQ=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d98b152c918bfdda27524a6ed492f5f6884f04ae",
+        "rev": "562ebfd91a464029a2c3968f444a913f28b7e701",
         "type": "github"
       },
       "original": {

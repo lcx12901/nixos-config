@@ -12,6 +12,7 @@
     ../common/optional/mpd.nix
     ../common/optional/nextcloud.nix
     ../common/optional/postgresql.nix
+    ../common/optional/mysql.nix
     ../common/optional/proxy.nix
     ../common/optional/systemd-boot.nix
 
@@ -25,7 +26,7 @@
 
   networking.nameservers = ["1.1.1.1 8.8.8.8"];
 
-  #networking.proxy.default = "http://127.0.0.1:7890";
+  networking.firewall.trustedInterfaces = ["podman0"];
 
   environment.systemPackages = with pkgs; [
     ffmpeg

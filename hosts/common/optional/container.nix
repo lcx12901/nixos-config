@@ -22,6 +22,15 @@ in {
       environmentFiles = [config.age.secrets."pgadmin.envFile".path];
     };
 
+    phpmyadmin = {
+      image = "phpmyadmin:latest";
+      ports = ["8080:80"];
+      environment = {
+        PMA_ARBITRARY = "1";
+      };
+      extraOptions = ["--pull=newer"];
+    };
+
     aria2-pro = {
       image = "p3terx/aria2-pro:latest";
       autoStart = true;
