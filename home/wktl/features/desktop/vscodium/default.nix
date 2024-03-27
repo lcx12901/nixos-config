@@ -30,8 +30,6 @@ in {
         graphql.vscode-graphql-syntax
         wallabyjs.console-ninja # 直接打印 console.log 结果
         mhutchie.git-graph
-        mtxr.sqltools
-        mtxr.sqltools-driver-mysql
         mkhl.direnv
       ])
       ++ (with extensions.open-vsx; [
