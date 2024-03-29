@@ -20,6 +20,7 @@
       "fjjopahebfkmlmkekebhacaklbhiefbn" # vue devtool beta
       "gcalenpjmijncebpfijmoaglllgpjagf" # tampermonkey
       "fmkadmapgofadopljbjfkapdkoienihi" # react-devtools
+      "eggdlmopfankeonchoflhfoglaakobma" # Apifox
     ];
   };
 }
