@@ -9,8 +9,8 @@
     wayland
 
     hypr-contrib.packages.${pkgs.system}.grimblast
-    # neovide # 暂时不想搞nvim了
-    nur.repos.xddxdd.wechat-uos
+    # https://aur.archlinux.org/cgit/aur.git/plain/license.tar.gz?h=wechat-uos
+    wechat-uos
     bottles
   ];
 
