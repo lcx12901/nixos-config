@@ -34,6 +34,7 @@
           ".config/Vencord"
           ".config/LarkShell"
           ".config/go-musicfox"
+          ".config/astronvim/lua/user"
 
           ".local/share/TelegramDesktop"
           ".local/share/nvim"

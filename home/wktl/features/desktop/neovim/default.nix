@@ -18,10 +18,6 @@ in {
       source = astronvim;
       force = true;
     };
-    "astronvim/lua/user" = {
-      source = ./user_config;
-      force = true;
-    };
   };
 
   home.shellAliases = shellAliases;
