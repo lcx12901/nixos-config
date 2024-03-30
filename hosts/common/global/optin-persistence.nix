@@ -36,6 +36,7 @@
 
           ".local/share/TelegramDesktop"
           ".local/share/nvim"
+          ".local/share/bottles"
           ".local/share/z"
 
           "Coding"
