@@ -33,7 +33,6 @@
     yarn
     nodePackages.typescript
     nodePackages.typescript-language-server
-    nodePackages."@tailwindcss/language-server"
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.eslint
