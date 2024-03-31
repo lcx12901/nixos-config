@@ -21,6 +21,7 @@
       "gcalenpjmijncebpfijmoaglllgpjagf" # tampermonkey
       "fmkadmapgofadopljbjfkapdkoienihi" # react-devtools
       "eggdlmopfankeonchoflhfoglaakobma" # Apifox
+      "bpoadfkcbjbfhfodiogcnhhhpibjhbnh" # 沉浸式翻译
     ];
   };
 }

@@ -14,9 +14,9 @@
 
   home.packages = with pkgs; [
     #-- nix ----- Nix 2.16 is suffering from a CVE, wait update, can use nixd
-    # nil
+    nil
     # rnix-lsp
-    # nixd
+    nixd
     statix # Lints and suggestions for the nix programming language
     deadnix # Find and remove unused code in .nix source files
     alejandra # Nix Code Formatter
@@ -33,8 +33,10 @@
     yarn
     nodePackages.typescript
     nodePackages.typescript-language-server
+    nodePackages."@tailwindcss/language-server"
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
+    nodePackages_latest.eslint
     emmet-ls
     #-- CloudNative
     nodePackages.dockerfile-language-server-nodejs
@@ -50,5 +52,10 @@
     #-- Optional Requirements:
     gdu # disk usage analyzer, required by AstroNvim
     (ripgrep.override {withPCRE2 = true;}) # recursively searches directories for a regex pattern
+    #-- CloudNative
+    nodePackages.dockerfile-language-server-nodejs
+    jsonnet
+    jsonnet-language-server
+    hadolint # Dockerfile linter
   ];
 }

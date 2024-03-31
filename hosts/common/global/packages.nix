@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     wget
-    neovim-nightly
+    # neovim-nightly
     alejandra
   ];
 
