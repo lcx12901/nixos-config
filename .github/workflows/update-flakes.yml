@@ -24,8 +24,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "$INPUT_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh -T git@github.com
-
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v21
         with:
