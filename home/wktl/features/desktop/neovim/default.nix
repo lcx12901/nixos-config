@@ -13,13 +13,6 @@ in {
     ./packages.nix
   ];
 
-  xdg.configFile = {
-    "nvim" = {
-      source = astronvim;
-      force = true;
-    };
-  };
-
   home.shellAliases = shellAliases;
   programs.fish.shellAliases = shellAliases;
 

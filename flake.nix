@@ -141,11 +141,6 @@
 
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
-    astronvim = {
-      url = "github:AstroNvim/AstroNvim/v3.44.1";
-      flake = false;
-    };
-
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";

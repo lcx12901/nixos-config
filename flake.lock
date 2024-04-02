@@ -23,23 +23,6 @@
         "type": "github"
       }
     },
-    "astronvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1709218186,
-        "narHash": "sha256-1nfMx9XaTOfuz1IlvepJdEfrX539RRVN5RXzUR00tfk=",
-        "owner": "AstroNvim",
-        "repo": "AstroNvim",
-        "rev": "d36af2f75369e3621312c87bd0e377e7d562fc72",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AstroNvim",
-        "ref": "v3.44.1",
-        "repo": "AstroNvim",
-        "type": "github"
-      }
-    },
     "base16-schemes": {
       "flake": false,
       "locked": {
@@ -625,7 +608,6 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "astronvim": "astronvim",
         "clash-subscribe": "clash-subscribe",
         "hardware": "hardware",
         "home-manager": "home-manager_2",
