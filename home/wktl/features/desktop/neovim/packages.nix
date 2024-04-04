@@ -23,7 +23,7 @@
     #-- lua
     stylua
     lua-language-server
-    #-- bash
+    # #-- bash
     nodePackages.bash-language-server
     shellcheck
     shfmt
@@ -38,20 +38,18 @@
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.eslint
     emmet-ls
-    #-- CloudNative
-    nodePackages.dockerfile-language-server-nodejs
-    #-- Others
+    # #-- Others
     taplo # TOML language server / formatter / validator
     nodePackages.yaml-language-server
     sqlfluff # SQL linter
-    #-- Misc
+    # #-- Misc
     tree-sitter # common language parser/highlighter
     marksman # language server for markdown
     glow # markdown previewer
 
     #-- Optional Requirements:
     gdu # disk usage analyzer, required by AstroNvim
-    (ripgrep.override {withPCRE2 = true;}) # recursively searches directories for a regex pattern
+    # (ripgrep.override {withPCRE2 = true;}) # recursively searches directories for a regex pattern
     #-- CloudNative
     nodePackages.dockerfile-language-server-nodejs
     jsonnet
