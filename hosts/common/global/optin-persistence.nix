@@ -40,6 +40,8 @@
           ".local/share/bottles"
           ".local/share/z"
 
+          ".cache/nvim"
+
           "Coding"
           "Downloads"
           "Music"
