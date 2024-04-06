@@ -37,6 +37,7 @@
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.eslint
+    eslint_d
     emmet-ls
     # #-- Others
     taplo # TOML language server / formatter / validator
