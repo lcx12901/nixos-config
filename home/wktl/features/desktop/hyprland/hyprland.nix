@@ -7,6 +7,7 @@
     swww
     wofi
     wayland
+    wl-clipboard
 
     hypr-contrib.packages.${pkgs.system}.grimblast
     # https://aur.archlinux.org/cgit/aur.git/plain/license.tar.gz?h=wechat-uos

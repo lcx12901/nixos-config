@@ -15,6 +15,8 @@
       exec-once = waybar &
       exec-once = mako
       exec-once = sleep 1 && swww init && swww img ~/.config/wallpapers/wallhaven-v973e3.png
+      exec-once = wl-paste --type text --watch cliphist store
+      exec-once = wl-paste --type image --watch cliphist store
 
       # fcitx5
       windowrule=pseudo,fcitx    # enable this will make fcitx5 works, but fcitx5-configtool will not work!

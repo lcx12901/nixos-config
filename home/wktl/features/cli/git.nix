@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   useremail,
   ...
@@ -13,6 +14,15 @@
 
     extraConfig = {
       init.defaultBranch = "main";
+      diff.tool = "nvimdiff";
+      diff.guitool = "nvimdiff";
+      merge.tool = "nvimdiff";
+      merge.conflictstyle = "diff3";
+      mergetool.keepBackup = false;
+      mergetool.prompt = false;
+      mergetool."vimdiff" = {
+        layout = "LOCAL,MERGED,REMOTE";
+      };
     };
 
     lfs.enable = true;

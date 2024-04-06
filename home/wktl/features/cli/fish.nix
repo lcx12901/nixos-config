@@ -10,5 +10,8 @@
       nbn = "nix build nixpkgs#";
       nfu = "nix flake update";
     };
+    shellAliases = rec {
+      nvimdiff = "nvim -d";
+    };
   };
 }
