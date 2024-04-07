@@ -31,12 +31,15 @@ in {
         wallabyjs.console-ninja # 直接打印 console.log 结果
         mhutchie.git-graph
         mkhl.direnv
-      ])
-      ++ (with extensions.open-vsx; [
+        vue.volar
         kamadorueda.alejandra
         editorconfig.editorconfig
-        vue.volar
         antfu.unocss
+      ])
+      ++ (with extensions.open-vsx; [
+        # kamadorueda.alejandra
+        # editorconfig.editorconfig
+        # antfu.unocss
       ]);
 
     userSettings = {
