@@ -31,7 +31,7 @@ in {
         wallabyjs.console-ninja # 直接打印 console.log 结果
         mhutchie.git-graph
         mkhl.direnv
-        vue.volar
+        # vue.volar
         kamadorueda.alejandra
         editorconfig.editorconfig
         antfu.unocss
@@ -40,6 +40,7 @@ in {
         # kamadorueda.alejandra
         # editorconfig.editorconfig
         # antfu.unocss
+        # vue.volar
       ]);
 
     userSettings = {
