@@ -3,6 +3,7 @@
     enable = true;
     settings = {
       PermitRootLogin = "no";
+      PasswordAuthentication = false;
       # Automatically remove stale sockets
       StreamLocalBindUnlink = "yes";
       # Allow forwarding ports to everywhere
