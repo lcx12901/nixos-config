@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   imports = [
     ./hardware-configuration.nix
 
@@ -29,7 +29,7 @@
   ];
 
   networking.extraHosts = ''
-    127.0.0.1 t3.dahui99.com
+    127.0.0.1 t3.z9soft.cn
   '';
 
   system.stateVersion = "23.11";

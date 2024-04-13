@@ -1,7 +1,6 @@
 {
   specialArgs,
   pkgs,
-  username,
   ...
 }: let
   cornersSddmTheme = pkgs.callPackage ../../../../packages/cornersSddmTheme {};
@@ -32,11 +31,13 @@ in {
       layout = "us";
       variant = "";
     };
-    displayManager = {
-      sddm = {
-        enable = true;
-        theme = "corners";
-      };
+  };
+
+  services.displayManager = {
+    enable = true;
+    sddm = {
+      enable = true;
+      theme = "corners";
     };
   };
 
@@ -49,7 +50,6 @@ in {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
-    extraPackages = with pkgs; [];
   };
   hardware.enableRedistributableFirmware = true;
   powerManagement.cpuFreqGovernor = "performance";
