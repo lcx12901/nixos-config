@@ -1,9 +1,4 @@
-{
-  username,
-  pkgs,
-  agenix,
-  ...
-}: {
+{username, ...}: {
   imports = [
     ../common/global
     ../common/wsl.nix

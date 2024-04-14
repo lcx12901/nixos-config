@@ -218,7 +218,6 @@
       windowrulev2 = float,class:^(org.gnome.Nautilus|nautilus)$
       windowrulev2 = float,class:^(kitty)$
       windowrulev2 = float,class:discord
-      windowrulev2 = float,title:^(Devtools)
     '';
   };
 }

@@ -12,14 +12,14 @@
       # "custom/playerctl#play"
       # "custom/playerctl#foward"
       "temperature"
-      "custom/playerlabel"
+      "cava#left"
+      # "custom/playerlabel"
       # "hyprland/window"
       "network"
     ];
     modules-center = [
-      "cava#left"
       "hyprland/workspaces"
-      "cava#right"
+      # "cava#right"
     ];
     modules-right = [
       "tray"
@@ -73,7 +73,7 @@
     "cava#left" = {
       "autosens" = 1;
       "bar_delimiter" = 0;
-      "bars" = 14;
+      "bars" = 18;
       "sleep_timer" = 3;
       #"hide_on_silence" = true;
       "format-icons" = [
