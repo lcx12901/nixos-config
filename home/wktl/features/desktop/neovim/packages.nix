@@ -28,15 +28,13 @@
     shellcheck
     shfmt
     #-- javascript/typescript --#
-    nodePackages.nodejs
+    nodePackages_latest.nodejs
     nodePackages.pnpm
     yarn
-    nodePackages.typescript
     nodePackages.typescript-language-server
     nodePackages_latest.volar
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
-    nodePackages_latest.eslint
     eslint_d
     emmet-ls
     # #-- Others
