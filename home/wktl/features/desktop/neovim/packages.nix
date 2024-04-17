@@ -31,11 +31,11 @@
     nodePackages_latest.nodejs
     nodePackages.pnpm
     yarn
-    nodePackages.typescript-language-server
-    nodePackages_latest.volar
+    # nodePackages.typescript-language-server
+    # nodePackages_latest.volar
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
     nodePackages.vscode-langservers-extracted
-    eslint_d
+    # eslint_d
     emmet-ls
     # #-- Others
     taplo # TOML language server / formatter / validator
