@@ -1,9 +1,4 @@
-{
-  pkgs,
-  astronvim,
-  #neovim-nightly,
-  ...
-}: let
+{pkgs, ...}: let
   shellAliases = {
     v = "nvim";
     vdiff = "nvim -d";

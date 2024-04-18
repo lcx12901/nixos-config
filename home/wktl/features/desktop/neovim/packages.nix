@@ -13,6 +13,7 @@
   '';
 
   home.packages = with pkgs; [
+    neovide
     #-- nix ----- Nix 2.16 is suffering from a CVE, wait update, can use nixd
     nil
     # rnix-lsp
