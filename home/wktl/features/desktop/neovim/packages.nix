@@ -56,5 +56,7 @@
     jsonnet
     jsonnet-language-server
     hadolint # Dockerfile linter
+
+    ripgrep
   ];
 }
