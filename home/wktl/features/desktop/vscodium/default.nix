@@ -10,38 +10,37 @@ in {
     enable = true;
     package = pkgs.vscodium;
 
-    extensions =
-      (with extensions.vscode-marketplace; [
-        # ms-ceintl.vscode-language-pack-zh-hans
-        enkia.tokyo-night
-        vscode-icons-team.vscode-icons
-        oderwat.indent-rainbow
-        wix.vscode-import-cost
-        streetsidesoftware.code-spell-checker
-        usernamehw.errorlens
-        dbaeumer.vscode-eslint
-        kamikillerto.vscode-colorize
-        jnoortheen.nix-ide
-        rust-lang.rust-analyzer
-        eamodio.gitlens
-        prisma.prisma
-        philsinatra.nested-comments # 嵌套注释
-        graphql.vscode-graphql
-        graphql.vscode-graphql-syntax
-        wallabyjs.console-ninja # 直接打印 console.log 结果
-        mhutchie.git-graph
-        mkhl.direnv
-        # vue.volar
-        kamadorueda.alejandra
-        editorconfig.editorconfig
-        antfu.unocss
-      ])
-      ++ (with extensions.open-vsx; [
-        # kamadorueda.alejandra
-        # editorconfig.editorconfig
-        # antfu.unocss
-        # vue.volar
-      ]);
+    extensions = with extensions.vscode-marketplace; [
+      # ms-ceintl.vscode-language-pack-zh-hans
+      enkia.tokyo-night
+      vscode-icons-team.vscode-icons
+      oderwat.indent-rainbow
+      wix.vscode-import-cost
+      streetsidesoftware.code-spell-checker
+      usernamehw.errorlens
+      dbaeumer.vscode-eslint
+      kamikillerto.vscode-colorize
+      jnoortheen.nix-ide
+      rust-lang.rust-analyzer
+      eamodio.gitlens
+      prisma.prisma
+      philsinatra.nested-comments # 嵌套注释
+      graphql.vscode-graphql
+      graphql.vscode-graphql-syntax
+      # wallabyjs.console-ninja # 直接打印 console.log 结果
+      mhutchie.git-graph
+      mkhl.direnv
+      vue.volar
+      kamadorueda.alejandra
+      editorconfig.editorconfig
+      antfu.unocss
+    ];
+    # ++ (with extensions.open-vsx; [
+    #   # kamadorueda.alejandra
+    #   # editorconfig.editorconfig
+    #   # antfu.unocss
+    #   # vue.volar
+    # ]);
 
     userSettings = {
       "update.mode" = "none";
