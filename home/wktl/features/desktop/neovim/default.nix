@@ -18,7 +18,7 @@ in {
       viAlias = true;
       vimAlias = true;
 
-      # package = pkgs.neovim-nightly;
+      package = pkgs.neovim-nightly;
 
       plugins = with pkgs.vimPlugins; [
         # search all the plugins using https://search.nixos.org/packages
