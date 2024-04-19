@@ -117,6 +117,7 @@ in {
         "websockets"
         "fastify"
       ];
+      "vue.server.hybridMode" = false;
     };
   };
 }
