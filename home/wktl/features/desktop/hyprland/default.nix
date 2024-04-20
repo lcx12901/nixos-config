@@ -21,5 +21,6 @@
     ../chromium
     ../vscodium
     ../discord
+    ../firefox
   ];
 }

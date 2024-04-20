@@ -1,6 +1,6 @@
 {
   imports = [
     ../features/cli
-    ../features/desktop
+    # ../features/desktop
   ];
 }
