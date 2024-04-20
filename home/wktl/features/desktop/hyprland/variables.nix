@@ -26,6 +26,6 @@
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
     GTK_THEME = "Catppuccin-Mocha-Compact-Lavender-Dark";
-    NODE_OPTIONS = "--max-old-space-size=2048";
+    NODE_OPTIONS = "--max-old-space-size=5120";
   };
 }
