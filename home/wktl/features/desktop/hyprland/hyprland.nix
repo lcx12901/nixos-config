@@ -22,7 +22,6 @@
     #xwayland = {
     #  enable = true;
     #};
-    enableNvidiaPatches = false;
     systemd.enable = true;
   };
 }
