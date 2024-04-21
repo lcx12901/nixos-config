@@ -18,6 +18,7 @@
 
     ../common/desktop/hyprland
     ../common/desktop/virtualisation
+    ../common/desktop/game
 
     ./website
   ];

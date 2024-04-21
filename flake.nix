@@ -125,6 +125,8 @@
 
     hardware.url = "github:nixos/nixos-hardware";
 
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
     impermanence.url = "github:nix-community/impermanence";
 
     nix-index-database = {

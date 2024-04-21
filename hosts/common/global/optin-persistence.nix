@@ -37,6 +37,9 @@
 
           ".cache/nvim"
 
+          ".steam"
+          ".local/share/Steam"
+
           "Coding"
           "Downloads"
           "Music"
