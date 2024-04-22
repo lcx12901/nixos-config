@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   useremail,
   ...
@@ -23,6 +22,7 @@
       mergetool."vimdiff" = {
         layout = "LOCAL,MERGED,REMOTE";
       };
+      http.postBuffer = 157286400;
     };
 
     lfs.enable = true;
