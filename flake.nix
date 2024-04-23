@@ -140,7 +140,7 @@
     };
 
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland/da839f20f1b1a57ec78d6b041f8d1369150d253e";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
