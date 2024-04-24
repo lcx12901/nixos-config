@@ -42,10 +42,10 @@
     "clash-subscribe": {
       "flake": false,
       "locked": {
-        "lastModified": 1713875857,
-        "narHash": "sha256-9G3ZpYyur7Dp4Jpovb7tlYV7HNRqooScFDGFPyRsly0=",
+        "lastModified": 1713939768,
+        "narHash": "sha256-EFWjftWVjGnkPm9eoLRWP1Pa9fBZda1TFwQh1RT7elk=",
         "ref": "refs/heads/master",
-        "rev": "9e20f0f6ca0fca89d2e382378de2b2cc797267f9",
+        "rev": "b5859fb8128672a520bbf9bde28ad4afb4de7d86",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/lcx12901/iQZone.git"
@@ -829,11 +829,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1713912298,
-        "narHash": "sha256-r0xi+Sso/4z6r3un+dloRXcOJHnQkv5fybKJTI//wA8=",
+        "lastModified": 1713942683,
+        "narHash": "sha256-MKTAuhEk7ufhYY6+CWOCLJpiUp5y9HMFUJAnNzl9ZLw=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "12d272c11768b65067f621034eaf507932e2fc2e",
+        "rev": "a1e95b2abff572edab8894ee353e259cf7c11237",
         "type": "github"
       },
       "original": {
