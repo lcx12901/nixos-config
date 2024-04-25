@@ -64,7 +64,7 @@
             system = x64_system; # refer the `system` parameter form outer scope recursively
             overlays = [
               nur.overlay
-              inputs.neovim-nightly-overlay.overlay
+              # inputs.neovim-nightly-overlay.overlay
             ];
             # To use chrome, we need to allow the installation of non-free software
             config = {
@@ -155,7 +155,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
