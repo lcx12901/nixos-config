@@ -10,6 +10,7 @@
 
     ../kitty
     ../neovim
+    ../helix
     ../waybar
     ../wofi
     ../cava
