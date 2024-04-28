@@ -1,22 +1,3 @@
-#           ▜███▙       ▜███▙  ▟███▛
-#            ▜███▙       ▜███▙▟███▛
-#             ▜███▙       ▜██████▛
-#      ▟█████████████████▙ ▜████▛     ▟▙
-#     ▟███████████████████▙ ▜███▙    ▟██▙
-#            ▄▄▄▄▖           ▜███▙  ▟███▛
-#           ▟███▛             ▜██▛ ▟███▛
-#          ▟███▛               ▜▛ ▟███▛
-# ▟███████████▛                  ▟██████████▙
-# ▜██████████▛                  ▟███████████▛
-#       ▟███▛ ▟▙               ▟███▛
-#      ▟███▛ ▟██▙             ▟███▛
-#     ▟███▛  ▜███▙           ▝▀▀▀▀
-#     ▜██▛    ▜███▙ ▜██████████████████▛
-#      ▜▛     ▟████▙ ▜████████████████▛
-#            ▟██████▙       ▜███▙
-#           ▟███▛▜███▙       ▜███▙
-#          ▟███▛  ▜███▙       ▜███▙
-#          ▝▀▀▀    ▀▀▀▀▘       ▀▀▀▘
 {
   description = "A tough try on NixOS";
 
@@ -31,13 +12,13 @@
 
       nixosSystem = import ./lib/nixosSystem.nix;
 
-      Mikasa_modules = {
-        nixos-modules = [
-          nixos-wsl.nixosModules.wsl
-          ./hosts/Mikasa
-        ];
-        home-module = import ./home/wktl/Mikasa.nix;
-      };
+      # Mikasa_modules = {
+      #   nixos-modules = [
+      #     nixos-wsl.nixosModules.wsl
+      #     ./hosts/Mikasa
+      #   ];
+      #   home-module = import ./home/wktl/Mikasa.nix;
+      # };
 
       Nezuko_modules = {
         nixos-modules = [
@@ -86,7 +67,7 @@
         };
       in {
         # WSL
-        Mikasa = nixosSystem (Mikasa_modules // base_args);
+        # Mikasa = nixosSystem (Mikasa_modules // base_args);
         # M600
         Nezuko = nixosSystem (Nezuko_modules // base_args);
         # office
@@ -95,7 +76,6 @@
     };
 
   nixConfig = {
-    # substituers will be appended to the default substituters when fetching packages
     extra-substituters = [
       "https://nix-community.cachix.org"
       "https://hyprland.cachix.org"
@@ -118,10 +98,10 @@
 
     nur.url = "github:nix-community/NUR";
 
-    nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixos-wsl = {
+    #   url = "github:nix-community/NixOS-WSL";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     hardware.url = "github:nixos/nixos-hardware";
 
