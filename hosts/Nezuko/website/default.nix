@@ -1,8 +1,4 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{config, ...}: {
   security.acme = {
     acceptTerms = true;
     defaults.email = "wktl1991504424@gmail.com";

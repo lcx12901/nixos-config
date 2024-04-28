@@ -1,7 +1,10 @@
 {
   programs.fish = {
     enable = true;
-    shellAbbrs = rec {
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
+    '';
+    shellAbbrs = {
       n = "nix";
       nd = "nix develop -c $SHELL";
       ns = "nix shell";
@@ -10,7 +13,7 @@
       nbn = "nix build nixpkgs#";
       nfu = "nix flake update";
     };
-    shellAliases = rec {
+    shellAliases = {
       nvimdiff = "nvim -d";
     };
   };
