@@ -8,17 +8,8 @@
       useremail = "wktl1991504424@gmail.com";
 
       x64_system = "x86_64-linux";
-      # allSystems = [x64_system];
 
       nixosSystem = import ./lib/nixosSystem.nix;
-
-      # Mikasa_modules = {
-      #   nixos-modules = [
-      #     nixos-wsl.nixosModules.wsl
-      #     ./hosts/Mikasa
-      #   ];
-      #   home-module = import ./home/wktl/Mikasa.nix;
-      # };
 
       Nezuko_modules = {
         nixos-modules = [
@@ -66,8 +57,6 @@
           specialArgs = x64_specialArgs;
         };
       in {
-        # WSL
-        # Mikasa = nixosSystem (Mikasa_modules // base_args);
         # M600
         Nezuko = nixosSystem (Nezuko_modules // base_args);
         # office

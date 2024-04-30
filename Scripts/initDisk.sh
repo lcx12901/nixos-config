@@ -54,32 +54,32 @@ fi
 sleep 2
 
 # Create a GPT partition table
-parted $path -- mklabel gpt
+parted "$path" -- mklabel gpt
 
 # NixOS by default uses the ESP (EFI system partition) as its /boot partition
 # Create a 512MB EFI system partition
-parted $path -- mkpart ESP fat32 2MB 629MB
+parted "$path" -- mkpart ESP fat32 2MB 629MB
 
 # set the boot flag on the ESP partition
 # Format:
 #    set partition flag state
-parted $path -- set 1 esp on
+parted "$path" -- set 1 esp on
 
 # Create the root partition using the rest of the disk
 # Format: 
 #   mkpart [part-type name fs-type] start end
-parted $path -- mkpart primary 630MB 100%
+parted "$path" -- mkpart primary 630MB 100%
 
 #lsblk
 
 # NOTE: `cat shoukei.md | grep create-btrfs > btrfs.sh` to generate this script
-mkfs.fat -F 32 -n ESP $secondPart
+mkfs.fat -F 32 -n ESP "$secondPart"
 
 # create-btrfs
-mkfs.btrfs $primaryPart
+mkfs.btrfs "$primaryPart"
 
 # mount the root partition and create subvolumes
-mount $primaryPart /mnt
+mount "$primaryPart" /mnt
 btrfs subvolume create /mnt/@nix
 btrfs subvolume create /mnt/@tmp
 btrfs subvolume create /mnt/@swap
@@ -90,14 +90,14 @@ umount /mnt
 sleep 2
 
 mkdir /mnt/{nix,tmp,swap,persistent,snapshots,boot}
-mount -o compress-force=zstd:1,noatime,subvol=@nix $primaryPart /mnt/nix
-mount -o compress-force=zstd:1,subvol=@tmp $primaryPart /mnt/tmp
-mount -o subvol=@swap $primaryPart /mnt/swap
-mount -o compress-force=zstd:1,noatime,subvol=@persistent $primaryPart /mnt/persistent
-mount -o compress-force=zstd:1,noatime,subvol=@snapshots $primaryPart /mnt/snapshots
-mount $secondPart /mnt/boot
+mount -o compress-force=zstd:1,noatime,subvol=@nix "$primaryPart" /mnt/nix
+mount -o compress-force=zstd:1,subvol=@tmp "$primaryPart" /mnt/tmp
+mount -o subvol=@swap "$primaryPart" /mnt/swap
+mount -o compress-force=zstd:1,noatime,subvol=@persistent "$primaryPart" /mnt/persistent
+mount -o compress-force=zstd:1,noatime,subvol=@snapshots "$primaryPart" /mnt/snapshots
+mount "$secondPart" /mnt/boot
 
-btrfs filesystem mkswapfile --size $swapSize --uuid clear /mnt/swap/swapfile
+btrfs filesystem mkswapfile --size "$swapSize" --uuid clear /mnt/swap/swapfile
 
 swapon /mnt/swap/swapfile
 
@@ -126,7 +126,7 @@ sed -i 's/options \= \[ \"subvol\=\@snapshots\" \]\;/options \= \[\"subvol\=\@sn
 sed -i 's/options \= \[ \"subvol\=\@swap\" \]\;/options \= \[\"subvol\=\@swap\" \"ro\"\]\;/g' $configDir/hardware-configuration.nix
 sed -i 's/swapDevices \= \[ \]\;//g' $configDir/hardware-configuration.nix
 
-cd /root/nixos-config
+cd /root/nixos-config || return
 git add .
 
 mkdir -p /mnt/persistent/home/wktl/Coding
