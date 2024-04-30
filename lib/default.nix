@@ -1,21 +1,11 @@
-{lib, ...}: {
-  attrs = import ./attrs.nix {inherit lib;};
+{inputs}: let
+  inherit (inputs.nixpkgs) lib;
+  inherit (lib) foldl;
+  inherit (import ./core.nix {inherit lib;}) import' mergeRecursively;
 
-  # use path relative to the root of the project
-  relativeToRoot = lib.path.append ../.;
+  builders = import' ./builders.nix {inherit inputs;};
+  hardware = import' ./hardware.nix;
 
-  scanPaths = path:
-    builtins.map
-    (f: (path + "/${f}"))
-    (builtins.attrNames
-      (lib.attrsets.filterAttrs
-        (
-          path: _type:
-            (_type == "directory") # include directories
-            || (
-              (path != "default.nix") # ignore default.nix
-              && (lib.strings.hasSuffix ".nix" path) # include .nix files
-            )
-        )
-        (builtins.readDir path)));
-}
+  importLibs = [builders hardware];
+in
+  lib.extend (_: _: foldl mergeRecursively {} importLibs)

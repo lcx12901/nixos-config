@@ -1,7 +1,32 @@
 {
   description = "NixOS configuration with flakes";
 
-  outputs = inputs: import ./outputs inputs;
+  outputs = {
+    self,
+    flake-parts,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} ({withSystem, ...}: {
+      # systems for which the `perSystem` attributes will be built
+      systems = [
+        "x86_64-linux"
+        # and more if they can be supported ...
+      ];
+
+      imports = [
+        # add self back to inputs to use as `inputs.self`
+        # I depend on inputs.self *at least* once
+        {config._module.args._inputs = inputs // {inherit (inputs) self;};}
+
+        # parts and modules from inputs
+        inputs.flake-parts.flakeModules.easyOverlay
+      ];
+
+      flake = {
+        # entry-point for nixos configurations
+        nixosConfigurations = import ./hosts {inherit inputs withSystem;};
+      };
+    });
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,6 +37,11 @@
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
     impermanence.url = "github:nix-community/impermanence";
@@ -50,18 +80,5 @@
       url = "github:nix-community/haumea/v0.2.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  nixConfig = {
-    extra-substituters = [
-      "https://anyrun.cachix.org"
-      "https://hyprland.cachix.org"
-      "https://nix-gaming.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-    ];
   };
 }
