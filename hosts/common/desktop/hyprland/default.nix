@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  cornersSddmTheme = pkgs.callPackage ../../../../packages/cornersSddmTheme {};
+  myNur = pkgs.nur.repos.lcx12901;
 in {
   # XDG portal
   xdg.portal = {
@@ -17,13 +17,16 @@ in {
   };
 
   # need qt5 for sddm theme
-  environment.systemPackages = with pkgs; [
-    cornersSddmTheme
-    libsForQt5.qt5.qtgraphicaleffects
-    libsForQt5.qt5.qtsvg
-    libsForQt5.qt5.qtquickcontrols2
-    networkmanagerapplet
-  ];
+  # environment.systemPackages = with pkgs;
+  #   [
+  #     libsForQt5.qt5.qtgraphicaleffects
+  #     libsForQt5.qt5.qtsvg
+  #     libsForQt5.qt5.qtquickcontrols2
+  #     networkmanagerapplet
+  #   ]
+  #   ++ (with myNur; [
+  #     cornersSddmTheme
+  #   ]);
 
   services.xserver = {
     enable = true;
@@ -31,15 +34,21 @@ in {
       layout = "us";
       variant = "";
     };
-  };
-
-  services.displayManager = {
-    enable = true;
-    sddm = {
-      enable = true;
-      theme = "corners";
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
     };
   };
+
+  # services.displayManager = {
+  #   enable = true;
+  #   sddm = {
+  #     enable = true;
+  # theme = "corners";
+  #   };
+  # };
 
   programs.hyprland = {
     enable = true;

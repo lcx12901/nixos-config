@@ -13,7 +13,6 @@
 
   outputs = inputs @ {
     nixpkgs,
-    nixos-hardware,
     home-manager,
     ...
   }: {

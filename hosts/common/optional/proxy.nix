@@ -4,12 +4,10 @@
   metacubexd,
   ...
 }: let
-  mihomo-meta = pkgs.callPackage ../../../packages/mihomo {};
-  maxmind-geoip = pkgs.callPackage ../../../packages/maxmind-geoip {};
+  myNur = pkgs.nur.repos.lcx12901;
 in {
-  environment.systemPackages = [
-    mihomo-meta
-    maxmind-geoip
+  environment.systemPackages = with myNur; [
+    maxmindGeoIp
   ];
 
   environment.etc."mihomo/config.yaml".source = "${clash-subscribe}/wktl.yaml";
@@ -29,7 +27,7 @@ in {
       AmbientCapabilities = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME CAP_SYS_PTRACE CAP_DAC_READ_SEARCH CAP_DAC_OVERRIDE";
       Restart = "always";
       ExecStartPre = "/run/current-system/sw/bin/sleep 1s";
-      ExecStart = "${mihomo-meta}/bin/mihomo-meta -d /etc/mihomo";
+      ExecStart = "${myNur.mihomo-meta}/bin/mihomo-meta -d /etc/mihomo";
       ExecReload = "/run/current-system/sw/bin/sleep -HUP $MAINPID";
     };
   };
