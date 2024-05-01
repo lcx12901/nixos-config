@@ -13,10 +13,10 @@
 
       Nezuko_modules = {
         nixos-modules = [
-          vscode-server.nixosModules.default
-          ({...}: {
-            services.vscode-server.enable = true;
-          })
+          # vscode-server.nixosModules.default
+          # ({...}: {
+          #   services.vscode-server.enable = true;
+          # })
           ./hosts/Nezuko
         ];
         home-module = import ./home/wktl/Nezuko.nix;
@@ -123,7 +123,7 @@
 
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
+    # vscode-server.url = "github:nix-community/nixos-vscode-server";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 

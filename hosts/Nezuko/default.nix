@@ -33,6 +33,22 @@
     ffmpeg
   ];
 
+  hardware.opengl = {
+    extraPackages = with pkgs; [
+      amdvlk
+
+      # mesa
+      mesa
+
+      # vulkan
+      vulkan-tools
+      vulkan-loader
+      vulkan-validation-layers
+      vulkan-extension-layer
+    ];
+    extraPackages32 = [pkgs.driversi686Linux.amdvlk];
+  };
+
   security.polkit.enable = true;
 
   system.stateVersion = "23.11";

@@ -11,7 +11,6 @@ in {
     package = pkgs.vscodium;
 
     extensions = with extensions.vscode-marketplace; [
-      # ms-ceintl.vscode-language-pack-zh-hans
       enkia.tokyo-night
       vscode-icons-team.vscode-icons
       oderwat.indent-rainbow
@@ -21,26 +20,15 @@ in {
       dbaeumer.vscode-eslint
       kamikillerto.vscode-colorize
       jnoortheen.nix-ide
-      rust-lang.rust-analyzer
       eamodio.gitlens
-      prisma.prisma
       philsinatra.nested-comments # 嵌套注释
-      graphql.vscode-graphql
-      graphql.vscode-graphql-syntax
       # wallabyjs.console-ninja # 直接打印 console.log 结果
       mhutchie.git-graph
       mkhl.direnv
       vue.volar
       kamadorueda.alejandra
       editorconfig.editorconfig
-      antfu.unocss
     ];
-    # ++ (with extensions.open-vsx; [
-    #   # kamadorueda.alejandra
-    #   # editorconfig.editorconfig
-    #   # antfu.unocss
-    #   # vue.volar
-    # ]);
 
     userSettings = {
       "update.mode" = "none";
@@ -98,12 +86,6 @@ in {
         "editor.formatOnType" = false;
       };
       "alejandra.program" = "alejandra";
-
-      "[prisma]" = {
-        "editor.defaultFormatter" = "Prisma.prisma";
-      };
-
-      "console-ninja.featureSet" = "Community";
 
       "npm.exclude" = ["**/.direnv/**"];
 
