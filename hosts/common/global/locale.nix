@@ -17,5 +17,10 @@
       LC_TIME = "zh_CN.UTF-8";
       LANG = "zh_CN.UTF-8";
     };
+    inputMethod = {
+      enabled = "fcitx5";
+      # NOT to set GTK_IM_MODULE=fcitx
+      fcitx5.waylandFrontend = true;
+    };
   };
 }

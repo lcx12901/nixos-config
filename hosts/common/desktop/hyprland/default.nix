@@ -54,6 +54,7 @@ in {
   programs.hyprland = {
     enable = true;
     package = specialArgs.hyprland.packages.${pkgs.system}.hyprland;
+    xwayland.enable = true;
   };
 
   hardware.opengl = {
