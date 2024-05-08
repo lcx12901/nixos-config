@@ -30,6 +30,7 @@
           ".config/LarkShell"
           ".config/go-musicfox"
           ".config/nvim"
+          ".config/Postman"
           ".local/share/TelegramDesktop"
           ".local/share/nvim"
           ".local/share/bottles"

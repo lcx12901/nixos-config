@@ -13,6 +13,7 @@
     # https://aur.archlinux.org/cgit/aur.git/plain/license.tar.gz?h=wechat-uos
     wechat-uos
     bottles
+    postman
   ];
 
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
