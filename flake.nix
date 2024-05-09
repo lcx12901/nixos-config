@@ -110,14 +110,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland = {
-    #   url = "github:hyprwm/Hyprland";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     hyprland = {
-      url = "github:hyprwm/Hyprland/cba1ade848feac44b2eda677503900639581c3f4";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # hyprland = {
+    #   url = "github:hyprwm/Hyprland/cba1ade848feac44b2eda677503900639581c3f4";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     hypr-contrib.url = "github:hyprwm/contrib";
 

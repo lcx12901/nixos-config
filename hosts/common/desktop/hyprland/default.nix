@@ -2,31 +2,16 @@
   specialArgs,
   pkgs,
   ...
-}: let
-  myNur = pkgs.nur.repos.lcx12901;
-in {
+}: {
   # XDG portal
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    xdgOpenUsePortal = true;
+    xdgOpenUsePortal = false;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
     ];
   };
-
-  # need qt5 for sddm theme
-  # environment.systemPackages = with pkgs;
-  #   [
-  #     libsForQt5.qt5.qtgraphicaleffects
-  #     libsForQt5.qt5.qtsvg
-  #     libsForQt5.qt5.qtquickcontrols2
-  #     networkmanagerapplet
-  #   ]
-  #   ++ (with myNur; [
-  #     cornersSddmTheme
-  #   ]);
 
   services.xserver = {
     enable = true;
@@ -42,14 +27,6 @@ in {
       };
     };
   };
-
-  # services.displayManager = {
-  #   enable = true;
-  #   sddm = {
-  #     enable = true;
-  # theme = "corners";
-  #   };
-  # };
 
   programs.hyprland = {
     enable = true;

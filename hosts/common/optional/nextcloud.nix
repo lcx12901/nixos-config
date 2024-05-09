@@ -9,7 +9,7 @@
     hostName = "nextcloud.nezuko.lincx.top";
     https = true;
     configureRedis = true;
-    package = pkgs.nextcloud28;
+    package = pkgs.nextcloud29;
     settings = {
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
@@ -28,6 +28,7 @@
         "OC\\Preview\\MP4"
         "OC\\Preview\\AVI"
       ];
+      log_type = "file";
     };
     database.createLocally = true;
     config = {
@@ -35,6 +36,6 @@
       adminuser = username;
       adminpassFile = config.age.secrets."nextcloud.pwd".path;
     };
-    maxUploadSize = "2G";
+    maxUploadSize = "10G";
   };
 }
