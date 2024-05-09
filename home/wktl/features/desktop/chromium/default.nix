@@ -9,7 +9,7 @@
       # (only supported by chromium/chrome at this time, not electron)
       "--gtk-version=4"
       # make it use text-input-v1, which works for kwin 5.27 and weston
-      "--enable-wayland-ime"
+      # "--enable-wayland-ime"
 
       # enable hardware acceleration - vulkan api
       # "--enable-features=Vulkan"
@@ -20,7 +20,6 @@
       "fjjopahebfkmlmkekebhacaklbhiefbn" # vue devtool beta
       "gcalenpjmijncebpfijmoaglllgpjagf" # tampermonkey
       "fmkadmapgofadopljbjfkapdkoienihi" # react-devtools
-      "eggdlmopfankeonchoflhfoglaakobma" # Apifox
       "bpoadfkcbjbfhfodiogcnhhhpibjhbnh" # 沉浸式翻译
       "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
     ];

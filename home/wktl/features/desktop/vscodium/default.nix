@@ -10,25 +10,30 @@ in {
     enable = true;
     package = pkgs.vscodium;
 
-    extensions = with extensions.vscode-marketplace; [
-      enkia.tokyo-night
-      vscode-icons-team.vscode-icons
-      oderwat.indent-rainbow
-      wix.vscode-import-cost
-      streetsidesoftware.code-spell-checker
-      usernamehw.errorlens
-      dbaeumer.vscode-eslint
-      kamikillerto.vscode-colorize
-      jnoortheen.nix-ide
-      eamodio.gitlens
-      philsinatra.nested-comments # 嵌套注释
-      # wallabyjs.console-ninja # 直接打印 console.log 结果
-      mhutchie.git-graph
-      mkhl.direnv
-      vue.volar
-      kamadorueda.alejandra
-      editorconfig.editorconfig
-    ];
+    extensions =
+      (with extensions.vscode-marketplace; [
+        enkia.tokyo-night
+        vscode-icons-team.vscode-icons
+        oderwat.indent-rainbow
+        wix.vscode-import-cost
+        streetsidesoftware.code-spell-checker
+        usernamehw.errorlens
+        dbaeumer.vscode-eslint
+        kamikillerto.vscode-colorize
+        jnoortheen.nix-ide
+        eamodio.gitlens
+        philsinatra.nested-comments # 嵌套注释
+        # wallabyjs.console-ninja # 直接打印 console.log 结果
+        mhutchie.git-graph
+        mkhl.direnv
+        vue.volar
+      ])
+      ++ (with extensions.open-vsx; [
+        kamadorueda.alejandra
+        editorconfig.editorconfig
+        # antfu.unocss
+        # vue.volar
+      ]);
 
     userSettings = {
       "update.mode" = "none";

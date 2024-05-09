@@ -1,4 +1,6 @@
-{
+{pkgs, ...}: let
+  vaapiIntel = pkgs.vaapiIntel.override {enableHybridCodec = true;};
+in {
   imports = [
     ./hardware-configuration.nix
 
@@ -14,6 +16,31 @@
     ../common/desktop/virtualisation
     ../common/desktop/hyprland
   ];
+
+  # enable the i915 kernel module
+  boot.initrd.kernelModules = ["i915"];
+  boot.kernelParams = ["i915.fastboot=1" "enable_gvt=1"];
+
+  # better performance than the actual Intel driver
+  services.xserver.videoDrivers = ["modesetting"];
+
+  # OpenCL support and VAAPI
+  hardware.opengl = {
+    extraPackages = with pkgs; [
+      intel-compute-runtime
+      intel-media-driver
+      vaapiIntel
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      intel-media-driver
+      vaapiIntel
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 
   networking.hostName = "Icarus";
 
